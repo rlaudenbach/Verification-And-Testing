@@ -1,0 +1,94 @@
+﻿<AML>
+ <Item type="Life Cycle Map" id="31297C9A2CBF46F3B9AAA045B4874A74" action="add">
+  <start_state keyed_name="Preliminary" type="Life Cycle State">C3AB6F0AC13843CE87A97D91AF63B3B5</start_state>
+  <name>vt_TestPlanTemplate</name>
+  <Relationships>
+   <Item type="Life Cycle State" id="C3AB6F0AC13843CE87A97D91AF63B3B5" action="add">
+    <image>../Images/CloudManufacturerPartYellow.svg</image>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Preliminary</label>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestPlanTemplate" type="Life Cycle Map">31297C9A2CBF46F3B9AAA045B4874A74</source_id>
+    <x>45</x>
+    <y>65</y>
+    <name>Preliminary</name>
+   </Item>
+   <Item type="Life Cycle State" id="8CC6E4FD91A043319E81B42D9EDA8459" action="add">
+    <image>../Images/Checkmark.svg</image>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_TestPlanTemplate" type="Life Cycle Map">31297C9A2CBF46F3B9AAA045B4874A74</source_id>
+    <x>161</x>
+    <y>64</y>
+    <name>Released</name>
+   </Item>
+   <Item type="Life Cycle State" id="00AFB0A5C2D042899CE29BB63A8B8137" action="add">
+    <image>../Images/Discard.svg</image>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="vt_TestPlanTemplate" type="Life Cycle Map">31297C9A2CBF46F3B9AAA045B4874A74</source_id>
+    <x>301</x>
+    <y>64</y>
+    <name>Stopped</name>
+   </Item>
+   <Item type="Life Cycle Transition" id="A6224D62799E4A70921F4C34C1683746" action="add">
+    <from_state keyed_name="Stopped" type="Life Cycle State">00AFB0A5C2D042899CE29BB63A8B8137</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments>250,34</segments>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="vt_TestPlanTemplate" type="Life Cycle Map">31297C9A2CBF46F3B9AAA045B4874A74</source_id>
+    <to_state keyed_name="Released" type="Life Cycle State">8CC6E4FD91A043319E81B42D9EDA8459</to_state>
+    <x>-52</x>
+    <y>-33</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="5B9F230612804D4CB8ABEDB65D0E8765" action="add">
+    <from_state keyed_name="Released" type="Life Cycle State">8CC6E4FD91A043319E81B42D9EDA8459</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="vt_TestPlanTemplate" type="Life Cycle Map">31297C9A2CBF46F3B9AAA045B4874A74</source_id>
+    <to_state keyed_name="Stopped" type="Life Cycle State">00AFB0A5C2D042899CE29BB63A8B8137</to_state>
+   </Item>
+   <Item type="Life Cycle Transition" id="30181531BC6F4789A304015C348522AF" action="add">
+    <from_state keyed_name="Preliminary" type="Life Cycle State">C3AB6F0AC13843CE87A97D91AF63B3B5</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Creator" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Creator</name>
+     </Item>
+    </role>
+    <segments />
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="vt_TestPlanTemplate" type="Life Cycle Map">31297C9A2CBF46F3B9AAA045B4874A74</source_id>
+    <to_state keyed_name="Released" type="Life Cycle State">8CC6E4FD91A043319E81B42D9EDA8459</to_state>
+    <x>32</x>
+    <y>-4</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="9F5F5A7EA5A342378D623FFE40E6605C" action="add">
+    <from_state keyed_name="Preliminary" type="Life Cycle State">C3AB6F0AC13843CE87A97D91AF63B3B5</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="vt_TestPlanTemplate" type="Life Cycle Map">31297C9A2CBF46F3B9AAA045B4874A74</source_id>
+    <to_state keyed_name="Released" type="Life Cycle State">8CC6E4FD91A043319E81B42D9EDA8459</to_state>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

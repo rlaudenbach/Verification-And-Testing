@@ -1,0 +1,186 @@
+﻿<AML>
+ <Item type="RelationshipType" id="BA2967AF8955415D806B1F1B33DA6CF4" action="add" dependencyLevel="0">
+  <auto_search>1</auto_search>
+  <behavior>float</behavior>
+  <copy_permissions>0</copy_permissions>
+  <create_related>0</create_related>
+  <hide_in_all>0</hide_in_all>
+  <inc_rel_key_name>1</inc_rel_key_name>
+  <inc_related_key_name>1</inc_related_key_name>
+  <is_list_type>0</is_list_type>
+  <label xml:lang="en">Requirements to Verify</label>
+  <new_show_related>0</new_show_related>
+  <related_id keyed_name="sys_Reqt SolutionElement" type="ItemType" name="sys_Reqt SolutionElement">88EDB7B135E34351A2E10D38064FEE8A</related_id>
+  <related_notnull>0</related_notnull>
+  <related_option>2</related_option>
+  <relationship_id keyed_name="vt_sm_Task_ReqToVerify" type="ItemType" name="vt_sm_Task_ReqToVerify">
+   <Item type="ItemType" id="AAD9BC03B2924D0CA14CDFD843E1A289" action="add">
+    <allow_private_permission>1</allow_private_permission>
+    <auto_search>0</auto_search>
+    <enforce_discovery>0</enforce_discovery>
+    <hide_where_used>0</hide_where_used>
+    <implementation_type>table</implementation_type>
+    <instance_data>VT_SM_TASK_REQTOVerify</instance_data>
+    <is_dependent>0</is_dependent>
+    <is_relationship>1</is_relationship>
+    <is_versionable>0</is_versionable>
+    <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
+    <show_parameters_tab>1</show_parameters_tab>
+    <structure_view>tabs off</structure_view>
+    <unlock_on_logout>0</unlock_on_logout>
+    <use_src_access>1</use_src_access>
+    <name>vt_sm_Task_ReqToVerify</name>
+    <Relationships>
+     <Item type="Property" id="366D46D4978545B5A120D63DF15FB35B" action="add">
+      <column_alignment>left</column_alignment>
+      <column_width>300</column_width>
+      <data_source>
+       <Item type="Property" action="get" select="id">
+        <name>related_id</name>
+        <source_id>AAD9BC03B2924D0CA14CDFD843E1A289</source_id>
+       </Item>
+      </data_source>
+      <data_type>foreign</data_type>
+      <foreign_property>
+       <Item type="Property" action="get" select="id">
+        <keyed_name>source_id</keyed_name>
+        <source_id>
+         <Item type="ItemType" action="get" select="id">
+          <name>sys_Reqt SolutionElement</name>
+         </Item>
+        </source_id>
+       </Item>
+      </foreign_property>
+      <is_hidden>0</is_hidden>
+      <is_hidden2>0</is_hidden2>
+      <is_indexed>0</is_indexed>
+      <is_keyed>0</is_keyed>
+      <is_multi_valued>0</is_multi_valued>
+      <is_required>0</is_required>
+      <label xml:lang="en">Req Number</label>
+      <range_inclusive>0</range_inclusive>
+      <readonly>0</readonly>
+      <sort_order>10</sort_order>
+      <source_id keyed_name="vt_sm_Task_ReqToVerify" type="ItemType" name="vt_sm_Task_ReqToVerify">AAD9BC03B2924D0CA14CDFD843E1A289</source_id>
+      <track_history>0</track_history>
+      <name>req_number</name>
+     </Item>
+     <Item type="Property" id="B93028B2DD1C441EA3B4112258DCEAB7" action="add">
+      <column_alignment>left</column_alignment>
+      <column_width>300</column_width>
+      <data_source>
+       <Item type="Property" action="get" select="id">
+        <name>related_id</name>
+        <source_id>AAD9BC03B2924D0CA14CDFD843E1A289</source_id>
+       </Item>
+      </data_source>
+      <data_type>foreign</data_type>
+      <foreign_property>
+       <Item type="Property" action="get" select="id">
+        <keyed_name>req_title</keyed_name>
+        <source_id>
+         <Item type="ItemType" action="get" select="id">
+          <name>sys_Reqt SolutionElement</name>
+         </Item>
+        </source_id>
+       </Item>
+      </foreign_property>
+      <is_hidden>0</is_hidden>
+      <is_hidden2>0</is_hidden2>
+      <is_indexed>0</is_indexed>
+      <is_keyed>0</is_keyed>
+      <is_multi_valued>0</is_multi_valued>
+      <is_required>0</is_required>
+      <label xml:lang="en">Req Title</label>
+      <range_inclusive>0</range_inclusive>
+      <readonly>0</readonly>
+      <sort_order>20</sort_order>
+      <source_id keyed_name="vt_sm_Task_ReqToVerify" type="ItemType" name="vt_sm_Task_ReqToVerify">AAD9BC03B2924D0CA14CDFD843E1A289</source_id>
+      <track_history>0</track_history>
+      <name>req_title</name>
+     </Item>
+     <Item type="Property" id="A7AFE30F132C438191323D7952B4016B" action="add">
+      <column_alignment>left</column_alignment>
+      <column_width>300</column_width>
+      <data_source>
+       <Item type="Property" action="get" select="id">
+        <name>related_id</name>
+        <source_id>AAD9BC03B2924D0CA14CDFD843E1A289</source_id>
+       </Item>
+      </data_source>
+      <data_type>foreign</data_type>
+      <foreign_property>
+       <Item type="Property" action="get" select="id">
+        <keyed_name>related_id</keyed_name>
+        <source_id>
+         <Item type="ItemType" action="get" select="id">
+          <name>sys_Reqt SolutionElement</name>
+         </Item>
+        </source_id>
+       </Item>
+      </foreign_property>
+      <is_hidden>0</is_hidden>
+      <is_hidden2>0</is_hidden2>
+      <is_indexed>0</is_indexed>
+      <is_keyed>0</is_keyed>
+      <is_multi_valued>0</is_multi_valued>
+      <is_required>0</is_required>
+      <label xml:lang="en">SolElem_Number</label>
+      <range_inclusive>0</range_inclusive>
+      <readonly>0</readonly>
+      <sort_order>100</sort_order>
+      <source_id keyed_name="vt_sm_Task_ReqToVerify" type="ItemType" name="vt_sm_Task_ReqToVerify">AAD9BC03B2924D0CA14CDFD843E1A289</source_id>
+      <track_history>0</track_history>
+      <name>solelem_number</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </relationship_id>
+  <sort_order>896</sort_order>
+  <source_id keyed_name="sm_Task" type="ItemType" name="sm_Task">1A895871EF954AC7B25C89067A2EF454</source_id>
+  <name>vt_sm_Task_ReqToVerify</name>
+ </Item>
+ <Item type="ItemType" id="AAD9BC03B2924D0CA14CDFD843E1A289" action="edit">
+  <Relationships>
+   <Item type="Property" action="edit" where="source_id='AAD9BC03B2924D0CA14CDFD843E1A289' and name='related_id'">
+    <column_alignment>left</column_alignment>
+    <column_width>1</column_width>
+    <data_source keyed_name="sys_Reqt SolutionElement" type="ItemType" name="sys_Reqt SolutionElement">88EDB7B135E34351A2E10D38064FEE8A</data_source>
+    <data_type>item</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>1</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <item_behavior>float</item_behavior>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="vt_sm_Task_ReqToVerify" type="ItemType" name="vt_sm_Task_ReqToVerify">AAD9BC03B2924D0CA14CDFD843E1A289</source_id>
+    <track_history>0</track_history>
+    <name>related_id</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='AAD9BC03B2924D0CA14CDFD843E1A289' and name='sort_order'">
+    <column_alignment>left</column_alignment>
+    <column_width>70</column_width>
+    <data_type>integer</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Sequence</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>8</sort_order>
+    <source_id keyed_name="vt_sm_Task_ReqToVerify" type="ItemType" name="vt_sm_Task_ReqToVerify">AAD9BC03B2924D0CA14CDFD843E1A289</source_id>
+    <track_history>0</track_history>
+    <name>sort_order</name>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="View" action="delete" where="source_id='AAD9BC03B2924D0CA14CDFD843E1A289'" />
+ <Item type="Form" action="delete" where="name='vt_sm_Task_ReqToVerify'" />
+</AML>

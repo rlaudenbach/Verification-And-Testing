@@ -1,0 +1,232 @@
+﻿<AML>
+ <Item type="Life Cycle Map" id="207D066B463047149A71CECC50930DC4" action="add">
+  <description>Default Task LifeCycle</description>
+  <start_state keyed_name="Preliminary" type="Life Cycle State">200627A4CDAB4D7C9F5263F82C08A1B4</start_state>
+  <name>sm_Task</name>
+  <Relationships>
+   <Item type="Life Cycle State" id="28112F33BC584351AEDA116F2362FFA3" action="add">
+    <image>../Images/Blocked.svg</image>
+    <item_behavior>fixed</item_behavior>
+    <label xml:lang="en">Cancelled</label>
+    <set_is_released>1</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <state_permission_id keyed_name="Cancelled sm_Task" type="Permission">894B9220194A48968DEA5372792188F7</state_permission_id>
+    <x>260</x>
+    <y>197</y>
+    <name>Cancelled</name>
+   </Item>
+   <Item type="Life Cycle State" id="33C079A3537142CBAB26B5831D25523A" action="add">
+    <image>../images/LifeCycleState.svg</image>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Completed</label>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <x>440</x>
+    <y>101</y>
+    <name>Completed</name>
+   </Item>
+   <Item type="Life Cycle State" id="6D70B32AF2CB4497875190F6972073CC" action="add">
+    <image>../images/LifeCycleState.svg</image>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Failed</label>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <x>263</x>
+    <y>18</y>
+    <name>Failed</name>
+   </Item>
+   <Item type="Life Cycle State" id="854031B9AC024489B43E9CE5A5BD53AC" action="add">
+    <image>../Images/FollowPerson.svg</image>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">In Review</label>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>1</set_not_lockable>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <state_permission_id keyed_name="In Review sm_Task" type="Permission">0C71F0765F524BE8987FD4DAEE199A03</state_permission_id>
+    <x>622</x>
+    <y>101</y>
+    <name>In Review</name>
+   </Item>
+   <Item type="Life Cycle State" id="200627A4CDAB4D7C9F5263F82C08A1B4" action="add">
+    <image>../Images/CloudManufacturerPartYellow.svg</image>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Preliminary</label>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <state_permission_id keyed_name="sm_Task" type="Permission">FC81C992CCA3411585CFB7E435F194CB</state_permission_id>
+    <x>27</x>
+    <y>102</y>
+    <name>Preliminary</name>
+   </Item>
+   <Item type="Life Cycle State" id="E02DB580592645BE89AB35B5821895BF" action="add">
+    <image>../Images/Checkmark.svg</image>
+    <item_behavior>fixed</item_behavior>
+    <label xml:lang="en">Released</label>
+    <set_is_released>1</set_is_released>
+    <set_not_lockable>1</set_not_lockable>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <state_permission_id keyed_name="Released sm_Task" type="Permission">A27F5F1B40244B4E83CD6F799BC14C58</state_permission_id>
+    <x>807</x>
+    <y>101</y>
+    <name>Released</name>
+   </Item>
+   <Item type="Life Cycle State" id="F090B9807A9942629231215B120F111D" action="add">
+    <image>../images/LifeCycleState.svg</image>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Submitted</label>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <x>262</x>
+    <y>100</y>
+    <name>Submitted</name>
+   </Item>
+   <Item type="Life Cycle Transition" id="109B131766C44D6B939B8DB7BD1A7EB4" action="add">
+    <from_state keyed_name="Preliminary" type="Life Cycle State">200627A4CDAB4D7C9F5263F82C08A1B4</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <to_state keyed_name="Submitted" type="Life Cycle State">F090B9807A9942629231215B120F111D</to_state>
+   </Item>
+   <Item type="Life Cycle Transition" id="2F6589CA42F1494EADC585C19BA5CCB8" action="add">
+    <from_state keyed_name="Preliminary" type="Life Cycle State">200627A4CDAB4D7C9F5263F82C08A1B4</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments>135,206</segments>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <to_state keyed_name="Cancelled" type="Life Cycle State">28112F33BC584351AEDA116F2362FFA3</to_state>
+    <x>0</x>
+    <y>0</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="9D0582F778D643578C32BD1046B32292" action="add">
+    <from_state keyed_name="Preliminary" type="Life Cycle State">200627A4CDAB4D7C9F5263F82C08A1B4</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments>270,180</segments>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <to_state keyed_name="Completed" type="Life Cycle State">33C079A3537142CBAB26B5831D25523A</to_state>
+    <x>0</x>
+    <y>0</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="88DA92B40227496D80F4D655F7498B91" action="add">
+    <from_state keyed_name="Completed" type="Life Cycle State">33C079A3537142CBAB26B5831D25523A</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <to_state keyed_name="In Review" type="Life Cycle State">854031B9AC024489B43E9CE5A5BD53AC</to_state>
+   </Item>
+   <Item type="Life Cycle Transition" id="B7CC8023057C4AE8B48BF0C6CED2BD1B" action="add">
+    <from_state keyed_name="Failed" type="Life Cycle State">6D70B32AF2CB4497875190F6972073CC</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments />
+    <sort_order>896</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <to_state keyed_name="Preliminary" type="Life Cycle State">200627A4CDAB4D7C9F5263F82C08A1B4</to_state>
+    <x>0</x>
+    <y>0</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="CA4EA0F5689C4FEB99C31C6D4CA6CBF8" action="add">
+    <from_state keyed_name="Failed" type="Life Cycle State">6D70B32AF2CB4497875190F6972073CC</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments>329,66</segments>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <to_state keyed_name="Submitted" type="Life Cycle State">F090B9807A9942629231215B120F111D</to_state>
+    <x>0</x>
+    <y>0</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="AFB0C0EC42FD4F93BE90CD9AEA6F2A66" action="add">
+    <from_state keyed_name="In Review" type="Life Cycle State">854031B9AC024489B43E9CE5A5BD53AC</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments>559,18|134,18</segments>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <to_state keyed_name="Preliminary" type="Life Cycle State">200627A4CDAB4D7C9F5263F82C08A1B4</to_state>
+    <x>0</x>
+    <y>0</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="BA56CE286FB5474AAACACB6E7E7921D9" action="add">
+    <from_state keyed_name="In Review" type="Life Cycle State">854031B9AC024489B43E9CE5A5BD53AC</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <to_state keyed_name="Released" type="Life Cycle State">E02DB580592645BE89AB35B5821895BF</to_state>
+   </Item>
+   <Item type="Life Cycle Transition" id="3785BF8DD4004B9EBE8C40713C72BD24" action="add">
+    <from_state keyed_name="Submitted" type="Life Cycle State">F090B9807A9942629231215B120F111D</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <to_state keyed_name="Completed" type="Life Cycle State">33C079A3537142CBAB26B5831D25523A</to_state>
+   </Item>
+   <Item type="Life Cycle Transition" id="3A5285DD77E64A539A11D1C27933562D" action="add">
+    <from_state keyed_name="Submitted" type="Life Cycle State">F090B9807A9942629231215B120F111D</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="sm_Task" type="Life Cycle Map">207D066B463047149A71CECC50930DC4</source_id>
+    <to_state keyed_name="Failed" type="Life Cycle State">6D70B32AF2CB4497875190F6972073CC</to_state>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

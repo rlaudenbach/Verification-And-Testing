@@ -1,0 +1,10 @@
+﻿<AML>
+ <Item type="Sequence" id="5807076261D84C729442A7EF7420452B" action="add">
+  <initial_value>0</initial_value>
+  <pad_to>10</pad_to>
+  <pad_with>0</pad_with>
+  <prefix>VTR-</prefix>
+  <step>1</step>
+  <name>vt_TestRuns</name>
+ </Item>
+</AML>

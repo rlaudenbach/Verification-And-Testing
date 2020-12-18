@@ -1,0 +1,212 @@
+﻿<AML>
+ <Item type="Life Cycle Map" id="A8AF63442923497BBA1EB1FEC37913AC" action="add">
+  <start_state keyed_name="Preliminary" type="Life Cycle State">420D61EC1D244AC8A8FCE802D68EAD1B</start_state>
+  <name>vt_TestRun</name>
+  <Relationships>
+   <Item type="Life Cycle State" id="6CAC7BA93C244B88B9D26BE3BC5A604C" action="add">
+    <image>../Images/Discard.svg</image>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <x>179</x>
+    <y>149</y>
+    <name>Cancelled</name>
+   </Item>
+   <Item type="Life Cycle State" id="A34B0B39D5AC4B43AD1E34F0E12574CF" action="add">
+    <image>../Images/Delete.svg</image>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <x>474</x>
+    <y>158</y>
+    <name>Fail</name>
+   </Item>
+   <Item type="Life Cycle State" id="DD48BE63E6904BD590D5225E60DFF3AD" action="add">
+    <image>../Images/Checkmark.svg</image>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <x>474</x>
+    <y>58</y>
+    <name>Pass</name>
+   </Item>
+   <Item type="Life Cycle State" id="5B33AF13819D460C814FCD5DEE9527C5" action="add">
+    <image>../Images/EditRow.svg</image>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <x>181</x>
+    <y>58</y>
+    <name>Planning</name>
+   </Item>
+   <Item type="Life Cycle State" id="420D61EC1D244AC8A8FCE802D68EAD1B" action="add">
+    <image>../Images/CloudManufacturerPartYellow.svg</image>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Preliminary</label>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <x>52</x>
+    <y>60</y>
+    <name>Preliminary</name>
+   </Item>
+   <Item type="Life Cycle State" id="2E701602E7CF42928314B4A7CF393213" action="add">
+    <image>../Images/FollowPerson.svg</image>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <x>363</x>
+    <y>160</y>
+    <name>Result Review</name>
+   </Item>
+   <Item type="Life Cycle State" id="940EF87736AF48A2B42DC113AA3AE68E" action="add">
+    <image>../Images/AffectedItem.svg</image>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <x>315</x>
+    <y>59</y>
+    <name>Running</name>
+   </Item>
+   <Item type="Life Cycle Transition" id="3651619EEAB14A04BA0A08D01182B016" action="add">
+    <from_state keyed_name="Result Review" type="Life Cycle State">2E701602E7CF42928314B4A7CF393213</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Manager" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Manager</name>
+     </Item>
+    </role>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <to_state keyed_name="Fail" type="Life Cycle State">A34B0B39D5AC4B43AD1E34F0E12574CF</to_state>
+   </Item>
+   <Item type="Life Cycle Transition" id="DE331E6C22B34386807BBA58F5B9AF37" action="add">
+    <from_state keyed_name="Result Review" type="Life Cycle State">2E701602E7CF42928314B4A7CF393213</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Manager" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Manager</name>
+     </Item>
+    </role>
+    <segments />
+    <sort_order>768</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <to_state keyed_name="Pass" type="Life Cycle State">DD48BE63E6904BD590D5225E60DFF3AD</to_state>
+    <x>65</x>
+    <y>-67</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="236085ED60AB4C16A685C7FD9E3A9ABA" action="add">
+    <from_state keyed_name="Preliminary" type="Life Cycle State">420D61EC1D244AC8A8FCE802D68EAD1B</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <to_state keyed_name="Planning" type="Life Cycle State">5B33AF13819D460C814FCD5DEE9527C5</to_state>
+   </Item>
+   <Item type="Life Cycle Transition" id="3DB425428B9B4776A075A8EB735D275B" action="add">
+    <from_state keyed_name="Preliminary" type="Life Cycle State">420D61EC1D244AC8A8FCE802D68EAD1B</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments>200,24</segments>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <to_state keyed_name="Running" type="Life Cycle State">940EF87736AF48A2B42DC113AA3AE68E</to_state>
+    <x>100</x>
+    <y>-52</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="499041B663CC468CAEE187A20648D230" action="add">
+    <from_state keyed_name="Preliminary" type="Life Cycle State">420D61EC1D244AC8A8FCE802D68EAD1B</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Creator" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Creator</name>
+     </Item>
+    </role>
+    <segments />
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <to_state keyed_name="Planning" type="Life Cycle State">5B33AF13819D460C814FCD5DEE9527C5</to_state>
+    <x>42</x>
+    <y>-6</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="4E5A66A53E6343CBA88902E9F911011E" action="add">
+    <from_state keyed_name="Planning" type="Life Cycle State">5B33AF13819D460C814FCD5DEE9527C5</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <to_state keyed_name="Running" type="Life Cycle State">940EF87736AF48A2B42DC113AA3AE68E</to_state>
+   </Item>
+   <Item type="Life Cycle Transition" id="CAA3F35388C94404B7AF1D1571F6ACBB" action="add">
+    <from_state keyed_name="Planning" type="Life Cycle State">5B33AF13819D460C814FCD5DEE9527C5</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <to_state keyed_name="Cancelled" type="Life Cycle State">6CAC7BA93C244B88B9D26BE3BC5A604C</to_state>
+   </Item>
+   <Item type="Life Cycle Transition" id="0C1D70B02BF34E579CF56840AE6A246B" action="add">
+    <from_state keyed_name="Running" type="Life Cycle State">940EF87736AF48A2B42DC113AA3AE68E</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <to_state keyed_name="Fail" type="Life Cycle State">A34B0B39D5AC4B43AD1E34F0E12574CF</to_state>
+   </Item>
+   <Item type="Life Cycle Transition" id="1B62A7CC243C406FB8D259CBF8E1D37A" action="add">
+    <from_state keyed_name="Running" type="Life Cycle State">940EF87736AF48A2B42DC113AA3AE68E</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments />
+    <sort_order>640</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <to_state keyed_name="Result Review" type="Life Cycle State">2E701602E7CF42928314B4A7CF393213</to_state>
+    <x>-2</x>
+    <y>63</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="87EE6CA1A7364E59B9AC33E0B8C6215D" action="add">
+    <from_state keyed_name="Running" type="Life Cycle State">940EF87736AF48A2B42DC113AA3AE68E</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</source_id>
+    <to_state keyed_name="Pass" type="Life Cycle State">DD48BE63E6904BD590D5225E60DFF3AD</to_state>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

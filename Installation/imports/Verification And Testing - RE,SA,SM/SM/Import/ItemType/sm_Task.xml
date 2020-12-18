@@ -1,0 +1,41 @@
+﻿<AML>
+ <Item type="ItemType" id="1A895871EF954AC7B25C89067A2EF454" action="edit">
+  <name>sm_Task</name>
+  <Relationships>
+   <Item type="Property" id="079E9E4F5577465BA53F2E4BF75CC421" action="add">
+    <column_alignment>center</column_alignment>
+    <column_width>30</column_width>
+    <data_source>
+     <Item type="Property" action="get" select="id">
+      <name>current_state</name>
+      <source_id>1A895871EF954AC7B25C89067A2EF454</source_id>
+     </Item>
+    </data_source>
+    <data_type>foreign</data_type>
+    <foreign_property>
+     <Item type="Property" action="get" select="id">
+      <keyed_name>image</keyed_name>
+      <source_id>
+       <Item type="ItemType" action="get" select="id">
+        <name>Life Cycle State</name>
+       </Item>
+      </source_id>
+     </Item>
+    </foreign_property>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">°</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>1407</sort_order>
+    <source_id keyed_name="sm_Task" type="ItemType" name="sm_Task">1A895871EF954AC7B25C89067A2EF454</source_id>
+    <track_history>0</track_history>
+    <name>current_state_image</name>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,321 @@
+﻿<AML>
+ <Item type="Form" id="FFBC86B4753E4F979371A2EC5BDE7539" action="add">
+  <category_form>0</category_form>
+  <height>234</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>699</width>
+  <name>vt_TestPlan_Design</name>
+  <Relationships>
+   <Item type="Body" id="E634CD47CE7441E08B73B3DA243ECE55" action="add">
+    <bg_color>#FFFFFF</bg_color>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestPlan_Design" type="Form">FFBC86B4753E4F979371A2EC5BDE7539</source_id>
+    <Relationships>
+     <Item type="Field" id="5C8CDE9A9FF5432C871895975A819444" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>class structure</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Test Type</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>1280</sort_order>
+      <source_id keyed_name="E634CD47CE7441E08B73B3DA243ECE55" type="Body">E634CD47CE7441E08B73B3DA243ECE55</source_id>
+      <source_source_id keyed_name="vt_TestPlan_Design" type="Form">FFBC86B4753E4F979371A2EC5BDE7539</source_source_id>
+      <tab_index>128</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>247</x>
+      <y>8</y>
+      <name>classification</name>
+     </Item>
+     <Item type="Field" id="699C84E6ADAD454A93717AC5648E1A91" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Description</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="description" type="Property">388689B5A75944E1874FBB3B48A2731F</propertytype_id>
+      <sort_order>896</sort_order>
+      <source_id keyed_name="E634CD47CE7441E08B73B3DA243ECE55" type="Body">E634CD47CE7441E08B73B3DA243ECE55</source_id>
+      <source_source_id keyed_name="vt_TestPlan_Design" type="Form">FFBC86B4753E4F979371A2EC5BDE7539</source_source_id>
+      <tab_index>40</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>350</textarea_cols>
+      <textarea_rows>50</textarea_rows>
+      <x>10</x>
+      <y>50</y>
+      <name>description</name>
+     </Item>
+     <Item type="Field" id="7E694BFAC60D438086BBD84AFFFEA1A3" action="add">
+      <border_width>0</border_width>
+      <display_length>200</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>item</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Design Representation</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="design_representation_id" type="Property">F97BC5DF94EE4CFF938AA796CCE2D756</propertytype_id>
+      <sort_order>1152</sort_order>
+      <source_id keyed_name="E634CD47CE7441E08B73B3DA243ECE55" type="Body">E634CD47CE7441E08B73B3DA243ECE55</source_id>
+      <source_source_id keyed_name="vt_TestPlan_Design" type="Form">FFBC86B4753E4F979371A2EC5BDE7539</source_source_id>
+      <tab_index>100</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>389</x>
+      <y>129</y>
+      <name>design_representation_id</name>
+     </Item>
+     <Item type="Field" id="E055E1DBDD97449081FCF0D9499F3FC7" action="add">
+      <border_width>0</border_width>
+      <display_length>30</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>1</is_disabled>
+      <is_visible>0</is_visible>
+      <label xml:lang="en">Gen</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="E634CD47CE7441E08B73B3DA243ECE55" type="Body">E634CD47CE7441E08B73B3DA243ECE55</source_id>
+      <source_source_id keyed_name="vt_TestPlan_Design" type="Form">FFBC86B4753E4F979371A2EC5BDE7539</source_source_id>
+      <tab_index>12</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>188</x>
+      <y>8</y>
+      <name>generation</name>
+     </Item>
+     <Item type="Field" id="071C1F5DE9AC4D0A8FF13A08F0DB9132" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Number</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="item_number" type="Property">AC70E80A5B7F4D199DC8A7A07D83B972</propertytype_id>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="E634CD47CE7441E08B73B3DA243ECE55" type="Body">E634CD47CE7441E08B73B3DA243ECE55</source_id>
+      <source_source_id keyed_name="vt_TestPlan_Design" type="Form">FFBC86B4753E4F979371A2EC5BDE7539</source_source_id>
+      <tab_index>10</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>10</x>
+      <y>10</y>
+      <name>item_number</name>
+     </Item>
+     <Item type="Field" id="1D393A081A0B453D95DFCFC325CDB5EF" action="add">
+      <border_width>0</border_width>
+      <display_length>30</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>1</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Rev</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="E634CD47CE7441E08B73B3DA243ECE55" type="Body">E634CD47CE7441E08B73B3DA243ECE55</source_id>
+      <source_source_id keyed_name="vt_TestPlan_Design" type="Form">FFBC86B4753E4F979371A2EC5BDE7539</source_source_id>
+      <tab_index>11</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>145</x>
+      <y>10</y>
+      <name>major_rev</name>
+     </Item>
+     <Item type="Field" id="EADE8F308E00435382403D93F7203BE1" action="add">
+      <border_width>0</border_width>
+      <display_length>350</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Name</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="name" type="Property">CCB13815499842C9B9EDB6952EC22BD8</propertytype_id>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="E634CD47CE7441E08B73B3DA243ECE55" type="Body">E634CD47CE7441E08B73B3DA243ECE55</source_id>
+      <source_source_id keyed_name="vt_TestPlan_Design" type="Form">FFBC86B4753E4F979371A2EC5BDE7539</source_source_id>
+      <tab_index>20</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>10</x>
+      <y>50</y>
+      <name>name</name>
+     </Item>
+     <Item type="Field" id="CB7FBD4BF7554A18930AE1FB3226BCBC" action="add">
+      <border_width>0</border_width>
+      <display_length>200</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>item</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Owner</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="E634CD47CE7441E08B73B3DA243ECE55" type="Body">E634CD47CE7441E08B73B3DA243ECE55</source_id>
+      <source_source_id keyed_name="vt_TestPlan_Design" type="Form">FFBC86B4753E4F979371A2EC5BDE7539</source_source_id>
+      <tab_index>30</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>390</x>
+      <y>50</y>
+      <name>owned_by_id</name>
+     </Item>
+     <Item type="Field" id="4C0AA7CDF60F4FA3A92CF3EE245C2414" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Status</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="E634CD47CE7441E08B73B3DA243ECE55" type="Body">E634CD47CE7441E08B73B3DA243ECE55</source_id>
+      <source_source_id keyed_name="vt_TestPlan_Design" type="Form">FFBC86B4753E4F979371A2EC5BDE7539</source_source_id>
+      <tab_index>15</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>390</x>
+      <y>10</y>
+      <name>state</name>
+     </Item>
+     <Item type="Field" id="4B321BF0F2884A1B8AED07BB63C70D01" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Test Result Summary</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="test_run_result_summary" type="Property">CFAD374F97534CF9BC36C98EA778A607</propertytype_id>
+      <sort_order>1408</sort_order>
+      <source_id keyed_name="E634CD47CE7441E08B73B3DA243ECE55" type="Body">E634CD47CE7441E08B73B3DA243ECE55</source_id>
+      <source_source_id keyed_name="vt_TestPlan_Design" type="Form">FFBC86B4753E4F979371A2EC5BDE7539</source_source_id>
+      <tab_index>90</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>400</textarea_cols>
+      <textarea_rows>130</textarea_rows>
+      <x>680</x>
+      <y>10</y>
+      <name>test_run_result_summary</name>
+     </Item>
+     <Item type="Field" id="F3234A643CF245E0A655E2362B911DE1" action="add">
+      <border_width>0</border_width>
+      <display_length>200</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>item</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">From Test Plan Template</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="testplan_template_id" type="Property">E10A33CE558640C08693A45BDDF95E4F</propertytype_id>
+      <sort_order>1024</sort_order>
+      <source_id keyed_name="E634CD47CE7441E08B73B3DA243ECE55" type="Body">E634CD47CE7441E08B73B3DA243ECE55</source_id>
+      <source_source_id keyed_name="vt_TestPlan_Design" type="Form">FFBC86B4753E4F979371A2EC5BDE7539</source_source_id>
+      <tab_index>3456</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>390</x>
+      <y>90</y>
+      <name>testplan_template_id</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="Field" id="5C8CDE9A9FF5432C871895975A819444" action="edit">
+  <!-- Please note: this AML depends on the "vt_TestPlan" ItemType. Please make sure it exists before running this. -->
+  <propertytype_id>
+   <Item type="Property" action="get" select="id">
+    <name>classification</name>
+    <source_id type="ItemType" keyed_name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+   </Item>
+  </propertytype_id>
+ </Item>
+ <Item type="Field" id="E055E1DBDD97449081FCF0D9499F3FC7" action="edit">
+  <!-- Please note: this AML depends on the "vt_TestPlan" ItemType. Please make sure it exists before running this. -->
+  <propertytype_id>
+   <Item type="Property" action="get" select="id">
+    <name>generation</name>
+    <source_id type="ItemType" keyed_name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+   </Item>
+  </propertytype_id>
+ </Item>
+ <Item type="Field" id="1D393A081A0B453D95DFCFC325CDB5EF" action="edit">
+  <!-- Please note: this AML depends on the "vt_TestPlan" ItemType. Please make sure it exists before running this. -->
+  <propertytype_id>
+   <Item type="Property" action="get" select="id">
+    <name>major_rev</name>
+    <source_id type="ItemType" keyed_name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+   </Item>
+  </propertytype_id>
+ </Item>
+ <Item type="Field" id="CB7FBD4BF7554A18930AE1FB3226BCBC" action="edit">
+  <!-- Please note: this AML depends on the "vt_TestPlan" ItemType. Please make sure it exists before running this. -->
+  <propertytype_id>
+   <Item type="Property" action="get" select="id">
+    <name>owned_by_id</name>
+    <source_id type="ItemType" keyed_name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+   </Item>
+  </propertytype_id>
+ </Item>
+ <Item type="Field" id="4C0AA7CDF60F4FA3A92CF3EE245C2414" action="edit">
+  <!-- Please note: this AML depends on the "vt_TestPlan" ItemType. Please make sure it exists before running this. -->
+  <propertytype_id>
+   <Item type="Property" action="get" select="id">
+    <name>state</name>
+    <source_id type="ItemType" keyed_name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+   </Item>
+  </propertytype_id>
+ </Item>
+</AML>

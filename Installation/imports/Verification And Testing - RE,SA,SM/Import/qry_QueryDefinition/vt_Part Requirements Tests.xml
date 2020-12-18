@@ -1,0 +1,513 @@
+﻿<AML>
+ <Item type="qry_QueryDefinition" id="7A97AFBB8D7449469F62F2A9232A21F2" action="add">
+  <name>vt_Part Requirements Tests</name>
+  <Relationships>
+   <Item type="qry_QueryItem" id="8E684954B510428B82163D1852E780B7" action="add">
+    <item_type keyed_name="Part" type="ItemType" name="Part">4F1AC04A2B484F3ABA4E20DB63808A88</item_type>
+    <ref_id>946EC049245D4737BF55B46BA73956D9</ref_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>Part</alias>
+   </Item>
+   <Item type="qry_QueryItem" id="F8A9410A9CE74F3B9174A6E15EE4A51B" action="add">
+    <item_type keyed_name="re_Part_Requirement" type="ItemType" name="re_Part_Requirement">69DB81F8A58246E9A1BB92658AB4AE36</item_type>
+    <ref_id>5B13FB5149DD4E3FA962B18A94EB0302</ref_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>re_Part_Requirement</alias>
+   </Item>
+   <Item type="qry_QueryItem" id="8893745A66EC4D75BB991DF03AB00844" action="add">
+    <item_type keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</item_type>
+    <ref_id>CA9216B2F0DA441396D7985EA7AB19B8</ref_id>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>re_Requirement</alias>
+    <Relationships>
+     <Item type="qry_QueryItemSelectProperty" id="9C21B136A10241EFAC7A9B47FB9B5E09" action="add">
+      <property_name>id</property_name>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="re_Requirement" type="qry_QueryItem">8893745A66EC4D75BB991DF03AB00844</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="710C23DF721543E0A6223473B2CC4D02" action="add">
+      <property_name>req_title</property_name>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="re_Requirement" type="qry_QueryItem">8893745A66EC4D75BB991DF03AB00844</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="DD8CE304D35F42BCA8711B577ABCFFB4" action="add">
+      <property_name>state</property_name>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="re_Requirement" type="qry_QueryItem">8893745A66EC4D75BB991DF03AB00844</source_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="qry_QueryItem" id="4F9FF8A6D218430F8F31C337D3D38D62" action="add">
+    <item_type keyed_name="sys_Reqt SolutionElement" type="ItemType" name="sys_Reqt SolutionElement">88EDB7B135E34351A2E10D38064FEE8A</item_type>
+    <ref_id>A43234D5D8D84E5CBB282256E18738B5</ref_id>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>sys_Reqt SolutionElement</alias>
+   </Item>
+   <Item type="qry_QueryItem" id="9515B48413CD4035B4A915EE2E37FB47" action="add">
+    <item_type keyed_name="vt_TestRun_ReqToValidate" type="ItemType" name="vt_TestRun_ReqToValidate">9DE58E51C66A4A109838599A590ADB67</item_type>
+    <ref_id>DA7A3E34DF6649B0A66A815473CB1776</ref_id>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>vt_TestRun_ReqToVerify rel_id</alias>
+   </Item>
+   <Item type="qry_QueryItem" id="15FD309C2AF246539ECA16D7B86E22D8" action="add">
+    <item_type keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</item_type>
+    <ref_id>F6A00BDD9D9E410BA9723EEC226A9593</ref_id>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>vt_TestRun</alias>
+    <Relationships>
+     <Item type="qry_QueryItemSelectProperty" id="80EDC00C5B5C44E2A0DD46A0F29FFD98" action="add">
+      <property_name>id</property_name>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">15FD309C2AF246539ECA16D7B86E22D8</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="F2E3276E95574BD5AC84F57F764EE8AD" action="add">
+      <property_name>classification</property_name>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">15FD309C2AF246539ECA16D7B86E22D8</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="2A92E541C3F2426DB0F80C2E1292DA4B" action="add">
+      <property_name>name</property_name>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">15FD309C2AF246539ECA16D7B86E22D8</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="9031842AB36D4395A9A7917D6938F454" action="add">
+      <property_name>state</property_name>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">15FD309C2AF246539ECA16D7B86E22D8</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="6013E3A87CA54D5CBF05FB5FD6AD919A" action="add">
+      <property_name>current_state_image</property_name>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">15FD309C2AF246539ECA16D7B86E22D8</source_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="qry_QueryItem" id="95D4F86D62FE466ABE603A8DFCF5C18A" action="add">
+    <item_type keyed_name="vt_TestPlan_Run" type="ItemType" name="vt_TestPlan_Run">499399C15E324431AF828FCE1154CBCF</item_type>
+    <ref_id>B849B2DF5E4A4D80972B3F9992B68D34</ref_id>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>vt_TestPlan_Run related_id</alias>
+   </Item>
+   <Item type="qry_QueryItem" id="62FCC418877742B7BE9284516156A475" action="add">
+    <item_type keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</item_type>
+    <ref_id>2F3FCBF462344C7F9991CFCC784CAEC9</ref_id>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>vt_TestPlan</alias>
+    <Relationships>
+     <Item type="qry_QueryItemSelectProperty" id="ED25070B90764D58BAD8B97648957906" action="add">
+      <property_name>id</property_name>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="vt_TestPlan" type="qry_QueryItem">62FCC418877742B7BE9284516156A475</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="3241A605806142CB97EA7A359FDC7881" action="add">
+      <property_name>name</property_name>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="vt_TestPlan" type="qry_QueryItem">62FCC418877742B7BE9284516156A475</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="FB34326D1A614180B8072B9BD029F8BE" action="add">
+      <property_name>classification</property_name>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="vt_TestPlan" type="qry_QueryItem">62FCC418877742B7BE9284516156A475</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="B0B9960918F4427BBFBF9AA9938E8B19" action="add">
+      <property_name>state</property_name>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="vt_TestPlan" type="qry_QueryItem">62FCC418877742B7BE9284516156A475</source_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="qry_QueryItem" id="261576517AE84C69A7EA36D97CA82F80" action="add">
+    <item_type keyed_name="sys_Reqt SolutionElement" type="ItemType" name="sys_Reqt SolutionElement">88EDB7B135E34351A2E10D38064FEE8A</item_type>
+    <ref_id>53AC40586FA14DBBAE5E2A8B3EAB7DEB</ref_id>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>sys_Reqt SolutionElement rel_id</alias>
+   </Item>
+   <Item type="qry_QueryItem" id="4C36B61FC6DA4FE3963A23BEDCFAC741" action="add">
+    <item_type keyed_name="vt_TestRun_ReqToValidate" type="ItemType" name="vt_TestRun_ReqToValidate">9DE58E51C66A4A109838599A590ADB67</item_type>
+    <ref_id>5263DDF495CE48C2BE8B90357E25EAE4</ref_id>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>vt_TestRun_ReqToVerify rel_id1</alias>
+   </Item>
+   <Item type="qry_QueryItem" id="8E435DA9E3C44D6C8AA4E8E7D8C93050" action="add">
+    <item_type keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</item_type>
+    <ref_id>F7F5E5594EAB44E29EBD1873EBC64136</ref_id>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>vt_TestRun_1</alias>
+    <Relationships>
+     <Item type="qry_QueryItemSelectProperty" id="B223B6F7DB17409584B26564D06125EA" action="add">
+      <property_name>id</property_name>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="vt_TestRun_1" type="qry_QueryItem">8E435DA9E3C44D6C8AA4E8E7D8C93050</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="1282D2BF1BB64AB397802FCA142032E8" action="add">
+      <property_name>classification</property_name>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="vt_TestRun_1" type="qry_QueryItem">8E435DA9E3C44D6C8AA4E8E7D8C93050</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="A1710C11D6B74AB9BED4DD2324FED41D" action="add">
+      <property_name>name</property_name>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="vt_TestRun_1" type="qry_QueryItem">8E435DA9E3C44D6C8AA4E8E7D8C93050</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="14512A8F60A34B5DB49069CB5CD96201" action="add">
+      <property_name>state</property_name>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="vt_TestRun_1" type="qry_QueryItem">8E435DA9E3C44D6C8AA4E8E7D8C93050</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="79A0FAAFEAAD4B16B1FE8ACF1805E1D8" action="add">
+      <property_name>current_state_image</property_name>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="vt_TestRun_1" type="qry_QueryItem">8E435DA9E3C44D6C8AA4E8E7D8C93050</source_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="qry_QueryItem" id="B3F4C31C20BF44E799343A45BEF3600A" action="add">
+    <item_type keyed_name="vt_TestPlan_Run" type="ItemType" name="vt_TestPlan_Run">499399C15E324431AF828FCE1154CBCF</item_type>
+    <ref_id>50E0996F834F4B4B90EE7DD64F6766DF</ref_id>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>vt_TestPlan_Run related_id_1</alias>
+   </Item>
+   <Item type="qry_QueryItem" id="113EC51B19734C3B89005F745AA80A62" action="add">
+    <item_type keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</item_type>
+    <ref_id>1076FEC0600446E58CC58EF29D25F884</ref_id>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>vt_TestPlan_1</alias>
+    <Relationships>
+     <Item type="qry_QueryItemSelectProperty" id="E22C402278B24EAD90C28E31496F0A6F" action="add">
+      <property_name>id</property_name>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="vt_TestPlan_1" type="qry_QueryItem">113EC51B19734C3B89005F745AA80A62</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="938A06476C9D42689BCF98D4B181567C" action="add">
+      <property_name>classification</property_name>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="vt_TestPlan_1" type="qry_QueryItem">113EC51B19734C3B89005F745AA80A62</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="84A42FDF65D84AF1B559AFAF6BD5C5B3" action="add">
+      <property_name>name</property_name>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="vt_TestPlan_1" type="qry_QueryItem">113EC51B19734C3B89005F745AA80A62</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="0A3E6B847CA64AE2A37862BF0D870ECE" action="add">
+      <property_name>state</property_name>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="vt_TestPlan_1" type="qry_QueryItem">113EC51B19734C3B89005F745AA80A62</source_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="qry_QueryItem" id="F8D48F19ADB04695B4671644B085D192" action="add">
+    <item_type keyed_name="vt_sm_Task_ReqToValidate" type="ItemType" name="vt_sm_Task_ReqToValidate">AAD9BC03B2924D0CA14CDFD843E1A289</item_type>
+    <ref_id>1BCA86E6A5724C2796088510C73ED360</ref_id>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>vt_sm_Task_ReqToVerify rel_id</alias>
+   </Item>
+   <Item type="qry_QueryItem" id="85C43C2AD63F4D4E974AD588069BE706" action="add">
+    <item_type keyed_name="sm_Task" type="ItemType" name="sm_Task">1A895871EF954AC7B25C89067A2EF454</item_type>
+    <ref_id>793356C6E68448588207B6C3626A2ECF</ref_id>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>sm_Task</alias>
+    <Relationships>
+     <Item type="qry_QueryItemSelectProperty" id="7E1826C626F745AA8EA269AFCA676B9A" action="add">
+      <property_name>id</property_name>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="sm_Task" type="qry_QueryItem">85C43C2AD63F4D4E974AD588069BE706</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="77BD599D691241F8AC7A4B082C907D2E" action="add">
+      <property_name>name</property_name>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="sm_Task" type="qry_QueryItem">85C43C2AD63F4D4E974AD588069BE706</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="0B7A13A1134747678F5BF6A9D065BF8F" action="add">
+      <property_name>state</property_name>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="sm_Task" type="qry_QueryItem">85C43C2AD63F4D4E974AD588069BE706</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="5CCB2FA997184571B7E2EEA7017CE4ED" action="add">
+      <property_name>stage</property_name>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="sm_Task" type="qry_QueryItem">85C43C2AD63F4D4E974AD588069BE706</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="C43A5532C825470C9EFD565E7A09337F" action="add">
+      <property_name>item_number</property_name>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="sm_Task" type="qry_QueryItem">85C43C2AD63F4D4E974AD588069BE706</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="866D7A6FE5694C4AAEA9730A8EEA25DB" action="add">
+      <property_name>current_state_image</property_name>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="sm_Task" type="qry_QueryItem">85C43C2AD63F4D4E974AD588069BE706</source_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="qry_QueryItem" id="AD8FF0B0C000442EA9398A1E1FD6DF4E" action="add">
+    <item_type keyed_name="sm_Study Task" type="ItemType" name="sm_Study Task">8401352D44B3414881523FF382980725</item_type>
+    <ref_id>20E596F9AEDD4C569A5A5174AF34C922</ref_id>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>sm_Study Task related_id</alias>
+   </Item>
+   <Item type="qry_QueryItem" id="036D8891CAE64A57A1782B1F19B4FC2C" action="add">
+    <item_type keyed_name="sm_Study" type="ItemType" name="sm_Study">69C1280BA9434BD0A867DFB39CFB4EB1</item_type>
+    <ref_id>AB76BAF60B934B5DB5525A3093EF6B94</ref_id>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+    <alias>sm_Study</alias>
+    <Relationships>
+     <Item type="qry_QueryItemSelectProperty" id="617DB6502FFB4D9D8BB5E5FE086382D6" action="add">
+      <property_name>id</property_name>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="sm_Study" type="qry_QueryItem">036D8891CAE64A57A1782B1F19B4FC2C</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="3E94E62497394431A08796F56A634D90" action="add">
+      <property_name>classification</property_name>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="sm_Study" type="qry_QueryItem">036D8891CAE64A57A1782B1F19B4FC2C</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="D6B392DD77DA46B3AA5F6237A49CA03B" action="add">
+      <property_name>name</property_name>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="sm_Study" type="qry_QueryItem">036D8891CAE64A57A1782B1F19B4FC2C</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="4F38F708AD6340C4AD90817293667D03" action="add">
+      <property_name>current_state</property_name>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="sm_Study" type="qry_QueryItem">036D8891CAE64A57A1782B1F19B4FC2C</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="C439CD76F31547BEA801F03A19BD8589" action="add">
+      <property_name>item_number</property_name>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="sm_Study" type="qry_QueryItem">036D8891CAE64A57A1782B1F19B4FC2C</source_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="qry_QueryReference" id="6AC1F27FB2EF45CCB84EA0C060E86A80" action="add">
+    <child_ref_id>946EC049245D4737BF55B46BA73956D9</child_ref_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="87773BEB78014D83B5FB673D5DDEC43B" action="add">
+    <child_ref_id>5B13FB5149DD4E3FA962B18A94EB0302</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="id" />
+		<property name="source_id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>946EC049245D4737BF55B46BA73956D9</parent_ref_id>
+    <ref_id>B1A83178C1C64E8D948BB8BCFF691B58</ref_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="53801A22FFC642F39527620938B32227" action="add">
+    <child_ref_id>CA9216B2F0DA441396D7985EA7AB19B8</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="related_id" />
+		<property name="id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>5B13FB5149DD4E3FA962B18A94EB0302</parent_ref_id>
+    <ref_id>D2873B81BD254F0E841B815564B2CC9B</ref_id>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="57A4B073277B44DB88620A9AA77F5319" action="add">
+    <child_ref_id>A43234D5D8D84E5CBB282256E18738B5</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="id" />
+		<property name="source_id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>CA9216B2F0DA441396D7985EA7AB19B8</parent_ref_id>
+    <ref_id>CE7DA7D7502942FDBC4599E8FA07A5A8</ref_id>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="2B5F86B0364246FCA71588433DE12517" action="add">
+    <child_ref_id>DA7A3E34DF6649B0A66A815473CB1776</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="id" />
+		<property name="related_id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>A43234D5D8D84E5CBB282256E18738B5</parent_ref_id>
+    <ref_id>C7939BE39A604E01A11EB4376F7AEEB5</ref_id>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="7578E2F2F52541DA83113CA2D4316F64" action="add">
+    <child_ref_id>F6A00BDD9D9E410BA9723EEC226A9593</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="source_id" />
+		<property name="id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>DA7A3E34DF6649B0A66A815473CB1776</parent_ref_id>
+    <ref_id>2A321E954CC644C8AB1E413D2DC12749</ref_id>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="56424DF1A3B34492982F952BBB13455A" action="add">
+    <child_ref_id>B849B2DF5E4A4D80972B3F9992B68D34</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="id" />
+		<property name="related_id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>F6A00BDD9D9E410BA9723EEC226A9593</parent_ref_id>
+    <ref_id>9DE5DFF68E9A4B1098D783F744789F21</ref_id>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="DA28B52099DC44338BE80D35AAEE1DA7" action="add">
+    <child_ref_id>2F3FCBF462344C7F9991CFCC784CAEC9</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="source_id" />
+		<property name="id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>B849B2DF5E4A4D80972B3F9992B68D34</parent_ref_id>
+    <ref_id>C9699F1BBB84457E89EE74343A164E3F</ref_id>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="D7BA5070617F47688A130653482BA753" action="add">
+    <child_ref_id>53AC40586FA14DBBAE5E2A8B3EAB7DEB</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="id" />
+		<property name="related_id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>946EC049245D4737BF55B46BA73956D9</parent_ref_id>
+    <ref_id>39F1379B11D14F21AFA153EB20A2C3BC</ref_id>
+    <sort_order>1280</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="B241FDBCF92846B69FC48BB8FABB659A" action="add">
+    <child_ref_id>5263DDF495CE48C2BE8B90357E25EAE4</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="id" />
+		<property name="related_id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>53AC40586FA14DBBAE5E2A8B3EAB7DEB</parent_ref_id>
+    <ref_id>E09FE78980704584B1D078E23763D3F2</ref_id>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="5D9256FC2A9243C080A248999571AF05" action="add">
+    <child_ref_id>F7F5E5594EAB44E29EBD1873EBC64136</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="source_id" />
+		<property name="id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>5263DDF495CE48C2BE8B90357E25EAE4</parent_ref_id>
+    <ref_id>AE102B50455D4A958C8D910D9B241FE4</ref_id>
+    <sort_order>1536</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="22245CE14C72450DACC8E49DCBCE8620" action="add">
+    <child_ref_id>50E0996F834F4B4B90EE7DD64F6766DF</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="id" />
+		<property name="related_id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>F7F5E5594EAB44E29EBD1873EBC64136</parent_ref_id>
+    <ref_id>3008DD19A5994D3695DC31AF5189C104</ref_id>
+    <sort_order>1664</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="FD35AB0C53E847948A635F4270F4D410" action="add">
+    <child_ref_id>1076FEC0600446E58CC58EF29D25F884</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="source_id" />
+		<property name="id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>50E0996F834F4B4B90EE7DD64F6766DF</parent_ref_id>
+    <ref_id>098A1484ED75459EA3169B2DDA74A1B8</ref_id>
+    <sort_order>1792</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="A1D29C1D25AC4D77997D4CB5D33F2419" action="add">
+    <child_ref_id>1BCA86E6A5724C2796088510C73ED360</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="id" />
+		<property name="related_id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>A43234D5D8D84E5CBB282256E18738B5</parent_ref_id>
+    <ref_id>56A58125F48C4EB2BC8CF10E9929A149</ref_id>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="74FBEAE59AD34E60BC1F0F00DC1D2D36" action="add">
+    <child_ref_id>793356C6E68448588207B6C3626A2ECF</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="source_id" />
+		<property name="id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>1BCA86E6A5724C2796088510C73ED360</parent_ref_id>
+    <ref_id>FDBDB5670A42406C92936C3B752C9D72</ref_id>
+    <sort_order>2048</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="CE3AE910C01B43E9982FFE1072361118" action="add">
+    <child_ref_id>20E596F9AEDD4C569A5A5174AF34C922</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="id" />
+		<property name="related_id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>793356C6E68448588207B6C3626A2ECF</parent_ref_id>
+    <ref_id>32AFE84877E04BCBAB4884F9CEE5F2E0</ref_id>
+    <sort_order>2176</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="86681666807F4CC1A0744116230E689C" action="add">
+    <child_ref_id>AB76BAF60B934B5DB5525A3093EF6B94</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="source_id" />
+		<property name="id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>20E596F9AEDD4C569A5A5174AF34C922</parent_ref_id>
+    <ref_id>04C3B132D81B4A8EAB18C31500044C9F</ref_id>
+    <sort_order>2304</sort_order>
+    <source_id keyed_name="vt_Part Requirements Tests" type="qry_QueryDefinition">7A97AFBB8D7449469F62F2A9232A21F2</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

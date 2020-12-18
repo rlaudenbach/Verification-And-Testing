@@ -1,0 +1,433 @@
+﻿<AML>
+ <Item type="ItemType" id="882DE843C30D4DCF9F3DFDE02C414092" action="add">
+  <allow_private_permission>1</allow_private_permission>
+  <auto_search>1</auto_search>
+  <class_structure><![CDATA[<class id="882DE843C30D4DCF9F3DFDE02C414092"><class id="0731035DF3DF4E1FA1D8DE2EBADF8405" name="Design Validation" /><class id="3BC99BBD9FDC451EB104A05B56090903" name="Physical Testing" /></class>]]></class_structure>
+  <enforce_discovery>1</enforce_discovery>
+  <hide_where_used>0</hide_where_used>
+  <implementation_type>table</implementation_type>
+  <instance_data>VT_TESTPLAN</instance_data>
+  <is_dependent>0</is_dependent>
+  <is_relationship>0</is_relationship>
+  <is_versionable>1</is_versionable>
+  <label xml:lang="en">Test Plan</label>
+  <label_plural xml:lang="en">Test Plans</label_plural>
+  <large_icon>../Images/Custom/vt_TestPlan.svg</large_icon>
+  <manual_versioning>1</manual_versioning>
+  <maxrecords>500</maxrecords>
+  <open_icon>../Images/Custom/vt_TestPlan.svg</open_icon>
+  <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
+  <show_parameters_tab>1</show_parameters_tab>
+  <structure_view>tabs on</structure_view>
+  <unlock_on_logout>0</unlock_on_logout>
+  <use_src_access>0</use_src_access>
+  <name>vt_TestPlan</name>
+  <Relationships>
+   <Item type="Property" id="FA32AB8B6E7843199FEE966782FC5BB1" action="add">
+    <column_alignment>center</column_alignment>
+    <column_width>30</column_width>
+    <data_source>
+     <Item type="Property" action="get" select="id">
+      <name>current_state</name>
+      <source_id>882DE843C30D4DCF9F3DFDE02C414092</source_id>
+     </Item>
+    </data_source>
+    <data_type>foreign</data_type>
+    <foreign_property>
+     <Item type="Property" action="get" select="id">
+      <keyed_name>image</keyed_name>
+      <source_id>
+       <Item type="ItemType" action="get" select="id">
+        <name>Life Cycle State</name>
+       </Item>
+      </source_id>
+     </Item>
+    </foreign_property>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">°</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>14</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <track_history>0</track_history>
+    <name>current_state_image</name>
+   </Item>
+   <Item type="Property" id="388689B5A75944E1874FBB3B48A2731F" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>400</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Description</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>40</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <stored_length>512</stored_length>
+    <track_history>0</track_history>
+    <name>description</name>
+   </Item>
+   <Item type="Property" id="F97BC5DF94EE4CFF938AA796CCE2D756" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <data_source keyed_name="sm_DesignRepresentation" type="ItemType" name="sm_DesignRepresentation">F43A478B10394C11A97EB555E7FE9DE8</data_source>
+    <data_type>item</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Design Representation</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>100</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <track_history>0</track_history>
+    <name>design_representation_id</name>
+   </Item>
+   <Item type="Property" id="6A8770E7E6D14EA895753C7ACA630DED" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <data_source keyed_name="PhysicalPart" type="ItemType" name="PhysicalPart">63C54E049C974E9AAE25A7A0FE17CADA</data_source>
+    <data_type>item</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Physical Part</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>101</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <track_history>0</track_history>
+    <name>physical_part_id</name>
+   </Item>
+   <Item type="Property" id="E40900C3AA6D44A8927F6877A62DCE4B" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>150</column_width>
+    <data_source>
+     <Item type="Property" action="get" select="id">
+      <name>physical_part_id</name>
+      <source_id>882DE843C30D4DCF9F3DFDE02C414092</source_id>
+     </Item>
+    </data_source>
+    <data_type>foreign</data_type>
+    <foreign_property>
+     <Item type="Property" action="get" select="id">
+      <keyed_name>serial_number</keyed_name>
+      <source_id>
+       <Item type="ItemType" action="get" select="id">
+        <name>PhysicalPart</name>
+       </Item>
+      </source_id>
+     </Item>
+    </foreign_property>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Serial Number</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>102</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <track_history>0</track_history>
+    <name>physical_part_serno</name>
+   </Item>
+   <Item type="Property" id="CFAD374F97534CF9BC36C98EA778A607" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>350</column_width>
+    <data_type>text</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Test Result Summary</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>90</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <track_history>0</track_history>
+    <name>test_run_result_summary</name>
+   </Item>
+   <Item type="Property" id="E10A33CE558640C08693A45BDDF95E4F" action="add">
+    <column_alignment>left</column_alignment>
+    <data_source keyed_name="vt_TestPlanTemplate" type="ItemType" name="vt_TestPlanTemplate">8D687A6DD31946FFAE7DFEB17C1E6F6F</data_source>
+    <data_type>item</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">From Test Plan Template</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <track_history>0</track_history>
+    <name>testplan_template_id</name>
+   </Item>
+   <Item type="View" id="C5E421113DB044EAAE12300E9A5FF2DE" action="add">
+    <client>js</client>
+    <display_priority>1</display_priority>
+    <related_id keyed_name="vt_TestPlan_Add" type="Form">F827075CAE2B403B8BA2611966A54D03</related_id>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <show_ssvc>0</show_ssvc>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <type>add</type>
+   </Item>
+   <Item type="View" id="9F685E8E40174A85BAD86AB37A5C77B8" action="add">
+    <client>js</client>
+    <display_priority>90</display_priority>
+    <form_classification>Physical Testing</form_classification>
+    <related_id keyed_name="vt_TestPlan_Physical" type="Form">7624FF4553254E35845486AD11232FD5</related_id>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <show_ssvc>0</show_ssvc>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <type>default</type>
+   </Item>
+   <Item type="View" id="DCB3B5AD6D4D40ABAD8994ED8F3DCB30" action="add">
+    <client>js</client>
+    <display_priority>99</display_priority>
+    <form_classification>Design Validation</form_classification>
+    <related_id keyed_name="vt_TestPlan_Design" type="Form">FFBC86B4753E4F979371A2EC5BDE7539</related_id>
+    <role keyed_name="World" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>World</name>
+     </Item>
+    </role>
+    <show_ssvc>0</show_ssvc>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <type>default</type>
+   </Item>
+   <Item type="ItemType Life Cycle" id="08FE0DE192CB470389AD57CEF16B1A4D" action="add">
+    <related_id keyed_name="vt_TestPlan" type="Life Cycle Map">8E98FD2AB82D49ECA03408898D47BD1D</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+   </Item>
+   <Item type="TOC Access" id="DD4101A4115C4B909F6C063E81BF9935" action="add">
+    <related_id keyed_name="Verification And Testing" type="Identity">38E2EC0CBFA14F79995C60A29E96D962</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <category>Verification And Testing</category>
+   </Item>
+   <Item type="Can Add" id="FD8261E0C7B9464DB5F39544A5CB4CA3" action="add">
+    <can_add>1</can_add>
+    <related_id keyed_name="Verification And Testing" type="Identity">38E2EC0CBFA14F79995C60A29E96D962</related_id>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+   </Item>
+   <Item type="Allowed Permission" id="B6DF9FF7317246A29D679803B801878D" action="add">
+    <is_default>1</is_default>
+    <related_id keyed_name="vt_TestPlan" type="Permission">29700527CC644D85912125E1FA42E2D4</related_id>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="ItemType" id="882DE843C30D4DCF9F3DFDE02C414092" action="edit">
+  <Relationships>
+   <Item type="Property" id="AC70E80A5B7F4D199DC8A7A07D83B972" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>100</column_width>
+    <data_source keyed_name="vt_TestPlans">8B6A7B7287F1458C94A7E96432505493</data_source>
+    <data_type>sequence</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>1</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <keyed_name_order>1</keyed_name_order>
+    <label xml:lang="en">Number</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <track_history>0</track_history>
+    <name>item_number</name>
+   </Item>
+   <Item type="Property" id="CCB13815499842C9B9EDB6952EC22BD8" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>250</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>1</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>1</is_required>
+    <label xml:lang="en">Name</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>20</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <stored_length>64</stored_length>
+    <track_history>0</track_history>
+    <name>name</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='882DE843C30D4DCF9F3DFDE02C414092' and name='classification'">
+    <column_alignment>left</column_alignment>
+    <column_width>150</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>1</is_required>
+    <label xml:lang="en">Test Type</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <stored_length>512</stored_length>
+    <track_history>0</track_history>
+    <name>classification</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='882DE843C30D4DCF9F3DFDE02C414092' and name='generation'">
+    <column_alignment>left</column_alignment>
+    <column_width>50</column_width>
+    <data_type>integer</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Gen</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>1</readonly>
+    <sort_order>12</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <track_history>0</track_history>
+    <name>generation</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='882DE843C30D4DCF9F3DFDE02C414092' and name='major_rev'">
+    <column_alignment>left</column_alignment>
+    <column_width>50</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Rev</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>11</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <stored_length>8</stored_length>
+    <track_history>0</track_history>
+    <name>major_rev</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='882DE843C30D4DCF9F3DFDE02C414092' and name='minor_rev'">
+    <column_alignment>left</column_alignment>
+    <data_type>string</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en" />
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>1920</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <stored_length>8</stored_length>
+    <track_history>0</track_history>
+    <name>minor_rev</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='882DE843C30D4DCF9F3DFDE02C414092' and name='owned_by_id'">
+    <column_alignment>left</column_alignment>
+    <column_width>150</column_width>
+    <data_source keyed_name="Identity" type="ItemType" name="Identity">E582AB17663F4EF28460015B2BE9E094</data_source>
+    <data_type>item</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Owner</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>30</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <track_history>0</track_history>
+    <name>owned_by_id</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='882DE843C30D4DCF9F3DFDE02C414092' and name='state'">
+    <column_alignment>left</column_alignment>
+    <column_width>150</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Status</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>1</readonly>
+    <sort_order>15</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <stored_length>32</stored_length>
+    <track_history>0</track_history>
+    <name>state</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='882DE843C30D4DCF9F3DFDE02C414092' and name='superseded_date'">
+    <column_alignment>left</column_alignment>
+    <data_type>date</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Superseded Date</label>
+    <pattern>short_date_time</pattern>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3200</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+    <track_history>0</track_history>
+    <name>superseded_date</name>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

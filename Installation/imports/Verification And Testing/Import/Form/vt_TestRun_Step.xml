@@ -1,0 +1,16 @@
+﻿<AML>
+ <Item type="Form" id="6CAADA00DEE645D5B210307898D02068" action="add">
+  <category_form>0</category_form>
+  <height>234</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>699</width>
+  <name>vt_TestRun_Step</name>
+  <Relationships>
+   <Item type="Body" id="6BEB2C9A7466475AB7CAA2A53CA8B940" action="add">
+    <bg_color>#FFFFFF</bg_color>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestRun_Step" type="Form">6CAADA00DEE645D5B210307898D02068</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>
