@@ -32,9 +32,21 @@
     <name>vt_TestPlan_Struct</name>
    </Item>
   </relationship_id>
-  <sort_order>20</sort_order>
+  <sort_order>30</sort_order>
   <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
   <name>vt_TestPlan_Struct</name>
+  <Relationships>
+   <Item type="Relationship Grid Event" id="716B01BBB76C40C688C54D51F152BA69" action="add">
+    <grid_event>oninsertrow</grid_event>
+    <related_id keyed_name="Increment Sequence Number" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>Increment Sequence Number</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestPlan_Struct" type="RelationshipType">71CDE3E279424155AFC9B1F571768971</source_id>
+   </Item>
+  </Relationships>
  </Item>
  <Item type="ItemType" id="C5499FE3D68A4EC1AB3F5EAA5DCC01D9" action="edit">
   <Relationships>

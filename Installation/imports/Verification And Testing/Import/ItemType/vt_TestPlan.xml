@@ -23,6 +23,12 @@
   <use_src_access>0</use_src_access>
   <name>vt_TestPlan</name>
   <Relationships>
+   <Item type="ITPresentationConfiguration" id="0327EAF7910C4B516B77D6069BFA2DFF" action="add">
+    <client>js</client>
+    <related_id keyed_name="vt_TestPlan_TOC_Configuration" type="PresentationConfiguration">0327EAF7910C4B5136326AA7318BB90D</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+   </Item>
    <Item type="Property" id="FA32AB8B6E7843199FEE966782FC5BB1" action="add">
     <column_alignment>center</column_alignment>
     <column_width>30</column_width>
@@ -230,6 +236,18 @@
     <sort_order>384</sort_order>
     <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
     <type>default</type>
+   </Item>
+   <Item type="Server Event" id="4C1B050B4C4143F590CD5F2672E71B04" action="add">
+    <event_version>version_1</event_version>
+    <is_required>0</is_required>
+    <related_id keyed_name="vt_CreateTestPlan_fromTempl" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>vt_CreateTestPlan_fromTempl</name>
+     </Item>
+    </related_id>
+    <server_event>onBeforeAdd</server_event>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
    </Item>
    <Item type="ItemType Life Cycle" id="08FE0DE192CB470389AD57CEF16B1A4D" action="add">
     <related_id keyed_name="vt_TestPlan" type="Life Cycle Map">8E98FD2AB82D49ECA03408898D47BD1D</related_id>

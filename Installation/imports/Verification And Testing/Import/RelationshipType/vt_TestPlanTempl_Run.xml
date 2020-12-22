@@ -11,8 +11,9 @@
   <is_list_type>0</is_list_type>
   <label xml:lang="en">Test Runs</label>
   <new_show_related>0</new_show_related>
-  <related_notnull>0</related_notnull>
-  <related_option>1</related_option>
+  <related_id keyed_name="vt_TestRunTemplate" type="ItemType" name="vt_TestRunTemplate">EB831C8867F54872B325B9407DBCFD8D</related_id>
+  <related_notnull>1</related_notnull>
+  <related_option>2</related_option>
   <relationship_id keyed_name="vt_TestPlanTempl_Run" type="ItemType" name="vt_TestPlanTempl_Run">
    <Item type="ItemType" id="252EDF483E20411DAE0196AE7C0FC8E2" action="add">
     <allow_private_permission>1</allow_private_permission>
@@ -30,25 +31,46 @@
     <unlock_on_logout>0</unlock_on_logout>
     <use_src_access>1</use_src_access>
     <name>vt_TestPlanTempl_Run</name>
-    <Relationships>
-     <Item type="View" id="CC2DD75EB4504C66A86BE62C73304416" action="add">
-      <client>js</client>
-      <related_id keyed_name="vt_TestPlanTempl_Run" type="Form">CCF4FD30A06847969631C6F531C6A6A0</related_id>
-      <role keyed_name="World" type="Identity">
-       <Item type="Identity" action="get" select="id">
-        <name>World</name>
-       </Item>
-      </role>
-      <show_ssvc>0</show_ssvc>
-      <sort_order>128</sort_order>
-      <source_id keyed_name="vt_TestPlanTempl_Run" type="ItemType" name="vt_TestPlanTempl_Run">252EDF483E20411DAE0196AE7C0FC8E2</source_id>
-      <type>default</type>
-     </Item>
-    </Relationships>
    </Item>
   </relationship_id>
   <sort_order>10</sort_order>
   <source_id keyed_name="vt_TestPlanTemplate" type="ItemType" name="vt_TestPlanTemplate">8D687A6DD31946FFAE7DFEB17C1E6F6F</source_id>
   <name>vt_TestPlanTempl_Run</name>
+  <Relationships>
+   <Item type="Relationship Grid Event" id="1C98059594394A3F941C074BDDE6FAFD" action="add">
+    <grid_event>oninsertrow</grid_event>
+    <related_id keyed_name="Increment Sequence Number" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>Increment Sequence Number</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestPlanTempl_Run" type="RelationshipType">2695BC8818DF4F52AAE08A4D22FAB783</source_id>
+   </Item>
+  </Relationships>
  </Item>
+ <Item type="ItemType" id="252EDF483E20411DAE0196AE7C0FC8E2" action="edit">
+  <Relationships>
+   <Item type="Property" action="edit" where="source_id='252EDF483E20411DAE0196AE7C0FC8E2' and name='sort_order'">
+    <column_alignment>left</column_alignment>
+    <column_width>70</column_width>
+    <data_type>integer</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Sequence</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>8</sort_order>
+    <source_id keyed_name="vt_TestPlanTempl_Run" type="ItemType" name="vt_TestPlanTempl_Run">252EDF483E20411DAE0196AE7C0FC8E2</source_id>
+    <track_history>0</track_history>
+    <name>sort_order</name>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="View" action="delete" where="source_id='252EDF483E20411DAE0196AE7C0FC8E2'" />
+ <Item type="Form" action="delete" where="name='vt_TestPlanTempl_Run'" />
 </AML>

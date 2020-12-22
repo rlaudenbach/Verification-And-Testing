@@ -1,0 +1,86 @@
+﻿<AML>
+ <Item type="Permission" id="58930278D0AE4BF995830B64A9B0E1AC" action="add">
+  <is_private>0</is_private>
+  <name>vt_TestRun Complete</name>
+  <Relationships>
+   <Item type="Access" id="73860B1D40134A179BFA341963254976" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</related_id>
+    <show_permissions_warning>1</show_permissions_warning>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestRun Complete" type="Permission">58930278D0AE4BF995830B64A9B0E1AC</source_id>
+   </Item>
+   <Item type="Access" id="8A4B88E1A906449C92C86FA66E4237B9" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="Creator" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Creator</name>
+     </Item>
+    </related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_TestRun Complete" type="Permission">58930278D0AE4BF995830B64A9B0E1AC</source_id>
+   </Item>
+   <Item type="Access" id="90141937B3794318BEBE960B58835D30" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="All Employees" type="Identity">B32BD81D1AD04207BF1E61E39A4E0E13</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="vt_TestRun Complete" type="Permission">58930278D0AE4BF995830B64A9B0E1AC</source_id>
+   </Item>
+   <Item type="Access" id="ADA005F573BE4466968FA9906B5FD6A0" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="vt_TestRun Complete" type="Permission">58930278D0AE4BF995830B64A9B0E1AC</source_id>
+   </Item>
+   <Item type="Access" id="C9B0D132B1AF4336AA1F304C0AE23B04" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="Manager" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Manager</name>
+     </Item>
+    </related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_TestRun Complete" type="Permission">58930278D0AE4BF995830B64A9B0E1AC</source_id>
+   </Item>
+   <Item type="Access" id="E7FD40320AC24591BE8FCB1C630664EC" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Administrators" type="Identity">2618D6F5A90949BAA7E920D1B04C7EE1</related_id>
+    <show_permissions_warning>1</show_permissions_warning>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="vt_TestRun Complete" type="Permission">58930278D0AE4BF995830B64A9B0E1AC</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

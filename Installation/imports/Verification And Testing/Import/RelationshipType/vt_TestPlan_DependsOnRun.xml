@@ -50,5 +50,17 @@
   <sort_order>10</sort_order>
   <source_id keyed_name="vt_TestPlan_Run" type="ItemType" name="vt_TestPlan_Run">499399C15E324431AF828FCE1154CBCF</source_id>
   <name>vt_TestPlan_DependsOnRun</name>
+  <Relationships>
+   <Item type="Relationship Grid Event" id="9E87498A9AE44E13BB7DCF075F1093F9" action="add">
+    <grid_event>oninsertrow</grid_event>
+    <related_id keyed_name="Increment Sequence Number" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>Increment Sequence Number</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestPlan_DependsOnRun" type="RelationshipType">192715986CEC497288A088E039AC6CD2</source_id>
+   </Item>
+  </Relationships>
  </Item>
 </AML>

@@ -47,12 +47,41 @@
       <source_id keyed_name="vt_TestPlan_Run" type="ItemType" name="vt_TestPlan_Run">499399C15E324431AF828FCE1154CBCF</source_id>
       <type>default</type>
      </Item>
+     <Item type="Server Event" id="0861324B084347DEA69DABF27A422088" action="add">
+      <event_version>version_1</event_version>
+      <is_required>0</is_required>
+      <related_id keyed_name="vt_TestPlanRun_DeleteRun" type="Method">
+       <Item type="Method" action="get" select="id">
+        <name>vt_TestPlanRun_DeleteRun</name>
+       </Item>
+      </related_id>
+      <server_event>onBeforeDelete</server_event>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="vt_TestPlan_Run" type="ItemType" name="vt_TestPlan_Run">499399C15E324431AF828FCE1154CBCF</source_id>
+     </Item>
+     <Item type="Item Action" id="DDC79E7EA51A4CB0B702B93228F8FC98" action="add">
+      <related_id keyed_name="vt_ReRun_TestRun" type="Action">15AD7FD47F3447FB8942565ACE9A5922</related_id>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="vt_TestPlan_Run" type="ItemType" name="vt_TestPlan_Run">499399C15E324431AF828FCE1154CBCF</source_id>
+     </Item>
     </Relationships>
    </Item>
   </relationship_id>
   <sort_order>10</sort_order>
   <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
   <name>vt_TestPlan_Run</name>
+  <Relationships>
+   <Item type="Relationship Grid Event" id="1DFB9EEC6590432A849635457D92773E" action="add">
+    <grid_event>oninsertrow</grid_event>
+    <related_id keyed_name="Increment Sequence Number" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>Increment Sequence Number</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestPlan_Run" type="RelationshipType">CF68CAEF0028464A8C11B3ED94DCB14B</source_id>
+   </Item>
+  </Relationships>
  </Item>
  <Item type="ItemType" id="499399C15E324431AF828FCE1154CBCF" action="edit">
   <Relationships>

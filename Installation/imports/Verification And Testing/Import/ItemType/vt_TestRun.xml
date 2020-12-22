@@ -220,6 +220,30 @@
     <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
     <type>default</type>
    </Item>
+   <Item type="Server Event" id="FC2979E8C6A440B3B27B2484EF9CC53D" action="add">
+    <event_version>version_1</event_version>
+    <is_required>0</is_required>
+    <related_id keyed_name="vt_TestRun_PromoteAutomations" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>vt_TestRun_PromoteAutomations</name>
+     </Item>
+    </related_id>
+    <server_event>onAfterPromote</server_event>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
+   </Item>
+   <Item type="Server Event" id="0B0A2AB194E247E4A38FFB704106DB0F" action="add">
+    <event_version>version_1</event_version>
+    <is_required>0</is_required>
+    <related_id keyed_name="vt_TestRun_PromoteAutomations" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>vt_TestRun_PromoteAutomations</name>
+     </Item>
+    </related_id>
+    <server_event>onBeforePromote</server_event>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
+   </Item>
    <Item type="ItemType Life Cycle" id="94BFBD300FA544518AD3AE43F0AEB908" action="add">
     <related_id keyed_name="vt_TestRun" type="Life Cycle Map">A8AF63442923497BBA1EB1FEC37913AC</related_id>
     <sort_order>128</sort_order>
@@ -306,16 +330,16 @@
     <name>classification</name>
    </Item>
    <Item type="Property" action="edit" where="source_id='649075A9EDBC4D55ACFF015E8D98A7A6' and name='generation'">
-    <column_alignment>left</column_alignment>
-    <column_width>50</column_width>
+    <column_alignment>center</column_alignment>
+    <column_width>65</column_width>
     <data_type>integer</data_type>
-    <is_hidden>1</is_hidden>
-    <is_hidden2>1</is_hidden2>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
     <is_indexed>0</is_indexed>
     <is_keyed>0</is_keyed>
     <is_multi_valued>0</is_multi_valued>
     <is_required>0</is_required>
-    <label xml:lang="en">Gen</label>
+    <label xml:lang="en">Repeats</label>
     <range_inclusive>0</range_inclusive>
     <readonly>1</readonly>
     <sort_order>12</sort_order>
@@ -327,8 +351,8 @@
     <column_alignment>left</column_alignment>
     <column_width>50</column_width>
     <data_type>string</data_type>
-    <is_hidden>0</is_hidden>
-    <is_hidden2>0</is_hidden2>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
     <is_indexed>0</is_indexed>
     <is_keyed>0</is_keyed>
     <is_multi_valued>0</is_multi_valued>

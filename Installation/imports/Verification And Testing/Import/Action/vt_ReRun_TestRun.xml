@@ -1,0 +1,15 @@
+﻿<AML>
+ <Item type="Action" id="15AD7FD47F3447FB8942565ACE9A5922" action="add">
+  <item_query>&lt;Item type="{@type}" action="get"&gt;&lt;id&gt;&lt;xsl:value-of select="@id" /&gt;&lt;/id&gt;&lt;/Item&gt;</item_query>
+  <label xml:lang="en">Re Run Test</label>
+  <location>server</location>
+  <method keyed_name="vt_ReRun_TestRun" type="Method">
+   <Item type="Method" action="get" select="id">
+    <name>vt_ReRun_TestRun</name>
+   </Item>
+  </method>
+  <target>none</target>
+  <type>item</type>
+  <name>vt_ReRun_TestRun</name>
+ </Item>
+</AML>

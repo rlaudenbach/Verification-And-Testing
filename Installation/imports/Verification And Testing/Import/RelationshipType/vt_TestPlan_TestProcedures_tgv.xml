@@ -1,5 +1,5 @@
 ﻿<AML>
- <Item type="RelationshipType" id="E4FDFA12BE264232825D41B8191618F2" action="add" dependencyLevel="0">
+ <Item type="RelationshipType" id="1D25095A65F84229970510FF2E6A005F" action="add" dependencyLevel="0">
   <auto_search>1</auto_search>
   <behavior>float</behavior>
   <copy_permissions>0</copy_permissions>
@@ -8,18 +8,18 @@
   <inc_rel_key_name>1</inc_rel_key_name>
   <inc_related_key_name>1</inc_related_key_name>
   <is_list_type>0</is_list_type>
-  <label xml:lang="en">Verification</label>
+  <label xml:lang="en">Test Procedures</label>
   <new_show_related>0</new_show_related>
   <related_notnull>0</related_notnull>
   <related_option>2</related_option>
-  <relationship_id keyed_name="vt_Part Requirements Tests_tgv" type="ItemType" name="vt_Part Requirements Tests_tgv">
-   <Item type="ItemType" id="FF73D886E1694438AB0902813698CF14" action="add">
+  <relationship_id keyed_name="vt_TestPlan_TestProcedures_tgv" type="ItemType" name="vt_TestPlan_TestProcedures_tgv">
+   <Item type="ItemType" id="83CB784BB3CA40129BCBD9336341A774" action="add">
     <allow_private_permission>1</allow_private_permission>
     <auto_search>0</auto_search>
     <enforce_discovery>0</enforce_discovery>
     <hide_where_used>0</hide_where_used>
     <implementation_type>table</implementation_type>
-    <instance_data>VT_PART_REQUIREMENTS_TESTS_TGV</instance_data>
+    <instance_data>VT_TESTPLAN_TESTPROCEDURES_TGV</instance_data>
     <is_dependent>0</is_dependent>
     <is_relationship>1</is_relationship>
     <is_versionable>0</is_versionable>
@@ -28,26 +28,26 @@
     <structure_view>tabs off</structure_view>
     <unlock_on_logout>0</unlock_on_logout>
     <use_src_access>1</use_src_access>
-    <name>vt_Part Requirements Tests_tgv</name>
+    <name>vt_TestPlan_TestProcedures_tgv</name>
    </Item>
   </relationship_id>
-  <sort_order>1151</sort_order>
-  <source_id keyed_name="Part" type="ItemType" name="Part">4F1AC04A2B484F3ABA4E20DB63808A88</source_id>
-  <name>vt_Part Requirements Tests_tgv</name>
+  <sort_order>20</sort_order>
+  <source_id keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</source_id>
+  <name>vt_TestPlan_TestProcedures_tgv</name>
   <Relationships>
-   <Item type="Relationship View" id="CE1F8D6585ED4AF9AFA65360FBA630FE" action="add">
-    <parameters>'tgvdId=F0A013015FD144C8BF9F023651035957&amp;startConditionProvider=ItemDefault({"id":"id"})'</parameters>
+   <Item type="Relationship View" id="F37F91C577F641208543A4E663DD8C18" action="add">
+    <parameters>'tgvdId=FD24C5E40F254ECBBA7FD24EDDDA5A7E&amp;startConditionProvider=ItemDefault({"id":"id"})'</parameters>
     <related_id keyed_name="World" type="Identity">
      <Item type="Identity" action="get" select="id">
       <name>World</name>
      </Item>
     </related_id>
     <sort_order>128</sort_order>
-    <source_id keyed_name="vt_Part Requirements Tests_tgv" type="RelationshipType">E4FDFA12BE264232825D41B8191618F2</source_id>
+    <source_id keyed_name="vt_TestPlan_TestProcedures_tgv" type="RelationshipType">1D25095A65F84229970510FF2E6A005F</source_id>
     <start_page>../Modules/aras.innovator.TreeGridView/Views/MainPage.html</start_page>
    </Item>
   </Relationships>
  </Item>
- <Item type="View" action="delete" where="source_id='FF73D886E1694438AB0902813698CF14'" />
- <Item type="Form" action="delete" where="name='vt_Part Requirements Tests_tgv'" />
+ <Item type="View" action="delete" where="source_id='83CB784BB3CA40129BCBD9336341A774'" />
+ <Item type="Form" action="delete" where="name='vt_TestPlan_TestProcedures_tgv'" />
 </AML>

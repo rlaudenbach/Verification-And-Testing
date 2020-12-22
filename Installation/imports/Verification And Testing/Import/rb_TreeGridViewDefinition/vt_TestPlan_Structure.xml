@@ -1,7 +1,7 @@
 ﻿<AML>
  <Item type="rb_TreeGridViewDefinition" id="F4829B4DCAA545EBA2BA8811177885CE" action="add">
   <max_child_items>100</max_child_items>
-  <max_query_depth>2</max_query_depth>
+  <max_query_depth>1</max_query_depth>
   <max_query_depth_is_onload>1</max_query_depth_is_onload>
   <query_definition keyed_name="vt_TestPlan_Structure" type="qry_QueryDefinition">1243A946FD1D49E796B9BAB862AF94D3</query_definition>
   <name>vt_TestPlan_Structure</name>
@@ -38,13 +38,21 @@
       <template>{"text_template":"{vt_TestPlan.id/@keyed_name}"}</template>
       <tree_row_ref_id>6B5C043D232C4AC49BCF9221ED2ABB4B</tree_row_ref_id>
      </Item>
+     <Item type="rb_ColumnMapping" id="4CD9636750C94E8380F6A935D6217EBD" action="add">
+      <cell_view_type>Item</cell_view_type>
+      <data_template>{"id": "{vt_TestProcedure.id}", "type": "vt_TestProcedure"}</data_template>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="5D124E8FB42645A0BB7EE50F32161E50" type="rb_ColumnDefinition">5D124E8FB42645A0BB7EE50F32161E50</source_id>
+      <template>{"text_template":"{vt_TestProcedure.item_number} {vt_TestProcedure.major_rev}.{vt_TestProcedure.generation}","item_type_name":"vt_TestProcedure","item_id":"{vt_TestProcedure.id}"}</template>
+      <tree_row_ref_id>102DAB6FD7164636B45A908D914BB8F9</tree_row_ref_id>
+     </Item>
     </Relationships>
    </Item>
    <Item type="rb_ColumnDefinition" id="7193753272DE4A6C81D9FCD8E162D15A" action="add">
     <builder_method keyed_name="rb_DefaultColumnBuilderMethod" type="Method">AD1F071AA1B1437396D7ABCD67D10EA7</builder_method>
     <header xml:lang="en">Status</header>
     <name>61D3E32688E947C7B0E61BF9926D214F</name>
-    <position_order>1</position_order>
+    <position_order>2</position_order>
     <sort_order>256</sort_order>
     <source_id keyed_name="vt_TestPlan_Structure" type="rb_TreeGridViewDefinition">F4829B4DCAA545EBA2BA8811177885CE</source_id>
     <width>115</width>
@@ -70,13 +78,20 @@
       <template>{"text_template":"{vt_TestPlan.state}"}</template>
       <tree_row_ref_id>6B5C043D232C4AC49BCF9221ED2ABB4B</tree_row_ref_id>
      </Item>
+     <Item type="rb_ColumnMapping" id="60E33C6818C04CE2828932BC3F6EE91A" action="add">
+      <cell_view_type>Text</cell_view_type>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="7193753272DE4A6C81D9FCD8E162D15A" type="rb_ColumnDefinition">7193753272DE4A6C81D9FCD8E162D15A</source_id>
+      <template>{"text_template":"{vt_TestProcedure.state}"}</template>
+      <tree_row_ref_id>102DAB6FD7164636B45A908D914BB8F9</tree_row_ref_id>
+     </Item>
     </Relationships>
    </Item>
    <Item type="rb_ColumnDefinition" id="62C1C8CDDD184F7189498A184AF4BF81" action="add">
     <builder_method keyed_name="rb_DefaultColumnBuilderMethod" type="Method">AD1F071AA1B1437396D7ABCD67D10EA7</builder_method>
     <header xml:lang="en">Name</header>
     <name>28F4376B3E164757959FC9AB69A7F966</name>
-    <position_order>2</position_order>
+    <position_order>3</position_order>
     <sort_order>384</sort_order>
     <source_id keyed_name="vt_TestPlan_Structure" type="rb_TreeGridViewDefinition">F4829B4DCAA545EBA2BA8811177885CE</source_id>
     <width>412</width>
@@ -102,37 +117,12 @@
       <template>{"text_template":"{vt_TestPlan.name}"}</template>
       <tree_row_ref_id>6B5C043D232C4AC49BCF9221ED2ABB4B</tree_row_ref_id>
      </Item>
-    </Relationships>
-   </Item>
-   <Item type="rb_ColumnDefinition" id="FDFBC06905544E8489A0325083B0B7EA" action="add">
-    <builder_method keyed_name="rb_DefaultColumnBuilderMethod" type="Method">AD1F071AA1B1437396D7ABCD67D10EA7</builder_method>
-    <header xml:lang="en">Repeats</header>
-    <name>E0C722161C8440F784DDB692DA126089</name>
-    <position_order>3</position_order>
-    <sort_order>512</sort_order>
-    <source_id keyed_name="vt_TestPlan_Structure" type="rb_TreeGridViewDefinition">F4829B4DCAA545EBA2BA8811177885CE</source_id>
-    <width>62</width>
-    <Relationships>
-     <Item type="rb_ColumnMapping" id="7D400F11E1AE44BDB7275E890E7FACE0" action="add">
+     <Item type="rb_ColumnMapping" id="4E1B5900FD5B47DD816A3FE2A6B6CB91" action="add">
       <cell_view_type>Text</cell_view_type>
-      <sort_order>128</sort_order>
-      <source_id keyed_name="FDFBC06905544E8489A0325083B0B7EA" type="rb_ColumnDefinition">FDFBC06905544E8489A0325083B0B7EA</source_id>
-      <template>{"text_template":"{vt_TestRun.generation}"}</template>
-      <tree_row_ref_id>C236947AA35A486FB1A09A9312A32E11</tree_row_ref_id>
-     </Item>
-     <Item type="rb_ColumnMapping" id="90554AD822244E50A8AC30DFC2273D33" action="add">
-      <cell_view_type>Text</cell_view_type>
-      <sort_order>256</sort_order>
-      <source_id keyed_name="FDFBC06905544E8489A0325083B0B7EA" type="rb_ColumnDefinition">FDFBC06905544E8489A0325083B0B7EA</source_id>
-      <template>{"text_template":""}</template>
-      <tree_row_ref_id>5A3353ADDF7844DFAC9768766C9C511D</tree_row_ref_id>
-     </Item>
-     <Item type="rb_ColumnMapping" id="A1E770241F884798B1E2E705489BCFD5" action="add">
-      <cell_view_type>Text</cell_view_type>
-      <sort_order>384</sort_order>
-      <source_id keyed_name="FDFBC06905544E8489A0325083B0B7EA" type="rb_ColumnDefinition">FDFBC06905544E8489A0325083B0B7EA</source_id>
-      <template>{"text_template":""}</template>
-      <tree_row_ref_id>6B5C043D232C4AC49BCF9221ED2ABB4B</tree_row_ref_id>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="62C1C8CDDD184F7189498A184AF4BF81" type="rb_ColumnDefinition">62C1C8CDDD184F7189498A184AF4BF81</source_id>
+      <template>{"text_template":"{vt_TestProcedure.name}"}</template>
+      <tree_row_ref_id>102DAB6FD7164636B45A908D914BB8F9</tree_row_ref_id>
      </Item>
     </Relationships>
    </Item>
@@ -165,6 +155,13 @@
       <source_id keyed_name="3B16F49BE456408CAB511E1F6E665575" type="rb_ColumnDefinition">3B16F49BE456408CAB511E1F6E665575</source_id>
       <template>{"text_template":"{vt_TestPlan.owned_by_id/@keyed_name}"}</template>
       <tree_row_ref_id>6B5C043D232C4AC49BCF9221ED2ABB4B</tree_row_ref_id>
+     </Item>
+     <Item type="rb_ColumnMapping" id="1E2BCFA43CD549EEB8E120C237692792" action="add">
+      <cell_view_type>Text</cell_view_type>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="3B16F49BE456408CAB511E1F6E665575" type="rb_ColumnDefinition">3B16F49BE456408CAB511E1F6E665575</source_id>
+      <template>{"text_template":"{vt_TestProcedure.owned_by_id/@keyed_name}"}</template>
+      <tree_row_ref_id>102DAB6FD7164636B45A908D914BB8F9</tree_row_ref_id>
      </Item>
     </Relationships>
    </Item>
@@ -236,6 +233,24 @@
      </Item>
     </Relationships>
    </Item>
+   <Item type="rb_ColumnDefinition" id="169CDF62500E45269D9146BF6ED5DE25" action="add">
+    <builder_method keyed_name="rb_DefaultColumnBuilderMethod" type="Method">AD1F071AA1B1437396D7ABCD67D10EA7</builder_method>
+    <header xml:lang="en">Repeats</header>
+    <name>61365AFB5D8A40DCAB20B80AF3FA7F44</name>
+    <position_order>1</position_order>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="vt_TestPlan_Structure" type="rb_TreeGridViewDefinition">F4829B4DCAA545EBA2BA8811177885CE</source_id>
+    <width>75</width>
+    <Relationships>
+     <Item type="rb_ColumnMapping" id="37827DC733244417A17E23AAB5ACB096" action="add">
+      <cell_view_type>Text</cell_view_type>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="169CDF62500E45269D9146BF6ED5DE25" type="rb_ColumnDefinition">169CDF62500E45269D9146BF6ED5DE25</source_id>
+      <template>{"text_template":"{vt_TestRun.generation}"}</template>
+      <tree_row_ref_id>C236947AA35A486FB1A09A9312A32E11</tree_row_ref_id>
+     </Item>
+    </Relationships>
+   </Item>
    <Item type="rb_TreeRowDefinition" id="2114BE8A821847C6ABF1AD1FB3BD7A59" action="add">
     <query_item_ref_id>429AEAED23D9411CB1169698BE09C292</query_item_ref_id>
     <ref_id>C236947AA35A486FB1A09A9312A32E11</ref_id>
@@ -258,6 +273,12 @@
     <query_item_ref_id>69A801D3D7954F3AB1A37A430F61CA8B</query_item_ref_id>
     <ref_id>6B5C043D232C4AC49BCF9221ED2ABB4B</ref_id>
     <sort_order>512</sort_order>
+    <source_id keyed_name="vt_TestPlan_Structure" type="rb_TreeGridViewDefinition">F4829B4DCAA545EBA2BA8811177885CE</source_id>
+   </Item>
+   <Item type="rb_TreeRowDefinition" id="D6BA617D65B74FD3AB8AEDC1A3EA2025" action="add">
+    <query_item_ref_id>B6BB9659EE0A441B85A4C5F77EF8EF94</query_item_ref_id>
+    <ref_id>102DAB6FD7164636B45A908D914BB8F9</ref_id>
+    <sort_order>640</sort_order>
     <source_id keyed_name="vt_TestPlan_Structure" type="rb_TreeGridViewDefinition">F4829B4DCAA545EBA2BA8811177885CE</source_id>
    </Item>
    <Item type="rb_TreeRowReference" id="EC58E10642F34F3A86E8E34A47EECFF3" action="add">
@@ -296,6 +317,14 @@
     <parent_ref_id>5A3353ADDF7844DFAC9768766C9C511D</parent_ref_id>
     <reference_type>join</reference_type>
     <sort_order>640</sort_order>
+    <source_id keyed_name="vt_TestPlan_Structure" type="rb_TreeGridViewDefinition">F4829B4DCAA545EBA2BA8811177885CE</source_id>
+    <view_order>128</view_order>
+   </Item>
+   <Item type="rb_TreeRowReference" id="34379475C69C4C26BE7343240F9076C1" action="add">
+    <child_ref_id>102DAB6FD7164636B45A908D914BB8F9</child_ref_id>
+    <parent_ref_id>BF182D4266C249B8B2FC4663BD98301F</parent_ref_id>
+    <reference_type>child</reference_type>
+    <sort_order>768</sort_order>
     <source_id keyed_name="vt_TestPlan_Structure" type="rb_TreeGridViewDefinition">F4829B4DCAA545EBA2BA8811177885CE</source_id>
     <view_order>128</view_order>
    </Item>

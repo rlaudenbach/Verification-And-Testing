@@ -73,6 +73,18 @@
   <sort_order>10</sort_order>
   <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
   <name>vt_TestRun_Step</name>
+  <Relationships>
+   <Item type="Relationship Grid Event" id="8A7A0E2004254FDF8590B6980082F53F" action="add">
+    <grid_event>oninsertrow</grid_event>
+    <related_id keyed_name="Increment Sequence Number" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>Increment Sequence Number</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestRun_Step" type="RelationshipType">64513002163E4DDF9214B652DDA4226D</source_id>
+   </Item>
+  </Relationships>
  </Item>
  <Item type="ItemType" id="59700D50ECF047F08EA59A2E1D7742B5" action="edit">
   <Relationships>

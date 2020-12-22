@@ -1,0 +1,154 @@
+﻿<AML>
+ <Item type="Method" id="55CFC8E3A603497E910813360EF6ADA2" action="add">
+  <comments>onBeforeAdd</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[//System.Diagnostics.Debugger.Launch();System.Diagnostics.Debugger.Break();
+
+// detect if reference to test plan template is set.
+string testPlanTemplateId = this.getProperty("testplan_template_id","");
+
+// for debugging --> testPlanTemplateId = "87960E3BDD0341FD85002A007F450C34";
+
+if (testPlanTemplateId == "" ) {
+    return this;  // nothing to do
+}
+
+//##TODO## only single level test plan templates !! -- Add support for multi level (sub plan templates) later.
+
+// get test plan template
+string aml = "";
+aml += "<Item type='vt_TestPlanTemplate' action='get' select='name,owned_by_id,state' >";
+aml += " <id>"+testPlanTemplateId+"</id>";
+aml += " <state>Released</state>";
+aml += " <Relationships>";
+aml += "  <Item type='vt_TestPlanTempl_Run' action='get' select='sort_order,related_id' >";
+aml += "   <related_id>";
+aml += "    <Item type='vt_TestRunTemplate' action='get' select='name,owned_by_id,state' >";
+aml += "     <Relationships>";
+aml += "      <Item type='vt_TestPlanTempl_RunProcedure' action='get' select='sort_order,related_id' >";
+aml += "       <related_id>";
+aml += "        <Item type='vt_TestProcedure' action='get' select='id' >";
+aml += "        </Item>";
+aml += "       </related_id>";
+aml += "      </Item>";
+aml += "     </Relationships>";
+aml += "    </Item>";
+aml += "   </related_id>";
+aml += "  </Item>";
+aml += " </Relationships>";
+aml += "</Item>";
+Item testPlanTempl = this.newItem("");
+testPlanTempl.loadAML(aml);
+testPlanTempl = testPlanTempl.apply(); 
+if (testPlanTempl.isError()) { return this.getInnovator().newError("Error: the referenced template cannot be found! It may not be released");}
+//if (testPlanTempl.getItemCount()<= 0) { return this.getInnovator().newError("Error: the referenced template cannot be found! It may not be released");}
+
+Item testPlanTemplRuns = testPlanTempl.getRelationships("vt_TestPlanTempl_Run");
+int testPlanTemplRunsCount = testPlanTemplRuns.getItemCount();
+if (testPlanTemplRunsCount < 0) {
+    return this;  // nothing to do
+}
+
+// get existing test run relationships and remove them
+Item testRunRels = this.getRelationships("vt_TestPlan_Run");
+for (int i=0; i<testRunRels.getItemCount(); i++) {
+    testRunRels.removeRelationship(testRunRels.getItemByIndex(i));
+}
+
+Item testPlanItem = TransformRunTemplToRunItem(testPlanTempl, this.getProperty("classification",""));
+
+Item testPlanRuns = testPlanItem.getRelationships("vt_TestPlan_Run");
+for (int i=0; i<testPlanRuns.getItemCount(); i++) {
+    this.addRelationship(testPlanRuns.getItemByIndex(i));
+}
+
+return testPlanItem;
+}
+
+//-----------
+private Item TransformRunTemplToRunItem (Item testPlanTempl, string classification) {
+    Item transformedItems = testPlanTempl.getItemsByXPath("//Item");
+    
+    // Administrators, Aras PLM, Creator, Owner, Manager
+    string blockedOwnerIdentities = ",2618D6F5A90949BAA7E920D1B04C7EE1,2618D6F5A90949BAA7E920D1B04C7EE1,5C36664D72304E16991B56C007FE1772,8FE5430B42014D94AE83246F299D9CC4,538B300BB2A347F396C436E9EEE1976C,9200A800443E4A5AAA80D0BCE5760307";
+    
+    string verifiedOwnerIdentities = "";
+    
+    for (int i=0; i<transformedItems.getItemCount(); i++) {
+        Item transformedItem = transformedItems.getItemByIndex(i);
+        
+        
+        string itemAction = "add";        
+        switch (transformedItem.getType()) {
+            case "vt_TestPlanTemplate":
+                transformedItem.setType("vt_TestPlan");
+                break;
+            
+            case "vt_TestPlanTempl_Run":
+                transformedItem.setType("vt_TestPlan_Run");
+                break;
+            
+            case "vt_TestRunTemplate":
+                transformedItem.setType("vt_TestRun");
+                transformedItem.setProperty("classification", classification);
+                break;
+
+            case "vt_TestPlanTempl_RunProcedure":
+                transformedItem.setType("vt_TestRun_SatisfiedProcedure");
+                break;
+
+            case "vt_TestProcedure":
+                itemAction = "get";  // create reference to this item
+                break;
+        }
+
+        transformedItem.setAction(itemAction);
+        transformedItem.removeProperty("state");
+        transformedItem.removeAttribute("typeId");
+
+        if (itemAction == "add") {
+            
+            transformedItem.removeProperty("id");
+            transformedItem.removeAttribute("id");
+            
+            string ownedById = transformedItem.getProperty("owned_by_id","");
+            if (ownedById != "") {
+                if (verifiedOwnerIdentities.IndexOf(","+ownedById) < 0) {
+
+                    transformedItem.removeProperty("owned_by_id");
+                    
+                    // set new owner only if not an alias nor blocked identities
+                    if (!IdentityIsAlias(ownedById)) {
+                        if (blockedOwnerIdentities.IndexOf(","+ownedById) < 0) {
+                            if (verifiedOwnerIdentities.IndexOf(","+ownedById) < 0) {
+                                verifiedOwnerIdentities += ","+ownedById;
+                            }
+                            transformedItem.setProperty("owned_by_id",ownedById);
+                        }
+                    }
+                    else {
+                        if (blockedOwnerIdentities.IndexOf(","+ownedById) < 0) {
+                            blockedOwnerIdentities += ","+ownedById;
+                        }
+                    }
+                }
+            }            
+        }
+    }
+ 
+    return testPlanTempl;
+}
+
+//-----------
+private bool IdentityIsAlias (string identityId) {
+    string SQL = "SELECT keyed_name FROM [Identity] WHERE [Identity].id='"+identityId+"' AND [Identity].is_alias='1'";
+    Item itm = this.getInnovator().applySQL(SQL);
+
+    return (itm.getItemCount() > 0);
+
+    
+]]></method_code>
+  <method_type>C#</method_type>
+  <name>vt_CreateTestPlan_fromTempl</name>
+ </Item>
+</AML>

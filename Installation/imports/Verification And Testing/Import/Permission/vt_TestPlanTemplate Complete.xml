@@ -1,0 +1,75 @@
+﻿<AML>
+ <Item type="Permission" id="D2718BEEE9834E60818F9EEB6C27DAF5" action="add">
+  <is_private>0</is_private>
+  <name>vt_TestPlanTemplate Complete</name>
+  <Relationships>
+   <Item type="Access" id="4C2C721F7CE445CE9CFAD60633EB088F" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="Creator" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Creator</name>
+     </Item>
+    </related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_TestPlanTemplate Complete" type="Permission">D2718BEEE9834E60818F9EEB6C27DAF5</source_id>
+   </Item>
+   <Item type="Access" id="9E1B432043894005A1AACA4902140608" action="add">
+    <can_change_access>1</can_change_access>
+    <can_delete>1</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>1</can_update>
+    <related_id keyed_name="Aras PLM" type="Identity">56A96DA9E981481688563E2D14D5D878</related_id>
+    <show_permissions_warning>1</show_permissions_warning>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestPlanTemplate Complete" type="Permission">D2718BEEE9834E60818F9EEB6C27DAF5</source_id>
+   </Item>
+   <Item type="Access" id="B4B650CD5AAB4B338DD1DDF20DDF511C" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="All Employees" type="Identity">B32BD81D1AD04207BF1E61E39A4E0E13</related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="vt_TestPlanTemplate Complete" type="Permission">D2718BEEE9834E60818F9EEB6C27DAF5</source_id>
+   </Item>
+   <Item type="Access" id="F4FF7DA81F2A45E9A3A1F0314EFAD78A" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="Manager" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Manager</name>
+     </Item>
+    </related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_TestPlanTemplate Complete" type="Permission">D2718BEEE9834E60818F9EEB6C27DAF5</source_id>
+   </Item>
+   <Item type="Access" id="FA9F5A03826F4FCFBFC2275AF6E565BA" action="add">
+    <can_change_access>0</can_change_access>
+    <can_delete>0</can_delete>
+    <can_discover>1</can_discover>
+    <can_get>1</can_get>
+    <can_update>0</can_update>
+    <related_id keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </related_id>
+    <show_permissions_warning>0</show_permissions_warning>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="vt_TestPlanTemplate Complete" type="Permission">D2718BEEE9834E60818F9EEB6C27DAF5</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

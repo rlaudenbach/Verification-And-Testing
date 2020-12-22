@@ -1,0 +1,201 @@
+﻿<AML>
+ <Item type="qry_QueryDefinition" id="D3A7AFCBBE094C8C95F452B6BAAB3F3F" action="add">
+  <name>vt_TestRun Repeats</name>
+  <Relationships>
+   <Item type="qry_QueryItem" id="37A9D2062CBE418C8C041E93DF1A398F" action="add">
+    <item_type keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</item_type>
+    <ref_id>916D92F1DA044C9BBB8C2EB15166B03B</ref_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestRun Repeats" type="qry_QueryDefinition">D3A7AFCBBE094C8C95F452B6BAAB3F3F</source_id>
+    <alias>vt_TestRun</alias>
+    <Relationships>
+     <Item type="qry_QueryItemSelectProperty" id="417E4D4632A94AFA9689C905BBBFF2EF" action="add">
+      <property_name>id</property_name>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">37A9D2062CBE418C8C041E93DF1A398F</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="4F52C2C2C1794A7D8D123D2C7783F95E" action="add">
+      <property_name>item_number</property_name>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">37A9D2062CBE418C8C041E93DF1A398F</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="E9CFFC9200EA480EA586438529501040" action="add">
+      <property_name>name</property_name>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">37A9D2062CBE418C8C041E93DF1A398F</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="51E127033ABA4757A1941BD6A8B89D67" action="add">
+      <property_name>state</property_name>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">37A9D2062CBE418C8C041E93DF1A398F</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="269CF08805E84C07A042054063A03847" action="add">
+      <property_name>current_state_image</property_name>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">37A9D2062CBE418C8C041E93DF1A398F</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="325418E3BFFD43649F19A5D51C7FAD9D" action="add">
+      <property_name>generation</property_name>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">37A9D2062CBE418C8C041E93DF1A398F</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="695042835F274832B55D64ACB3C5E8EA" action="add">
+      <property_name>description</property_name>
+      <sort_order>896</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">37A9D2062CBE418C8C041E93DF1A398F</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="86DE9379860040E5972703274BB4BFFF" action="add">
+      <property_name>classification</property_name>
+      <sort_order>1024</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">37A9D2062CBE418C8C041E93DF1A398F</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="A221C58165FA4680A3AA946042FBCDF0" action="add">
+      <property_name>test_run_result_summary</property_name>
+      <sort_order>1152</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">37A9D2062CBE418C8C041E93DF1A398F</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="82D834AD5D4D4C57A52EB6EA78D1CEEE" action="add">
+      <property_name>completed_on</property_name>
+      <sort_order>1280</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">37A9D2062CBE418C8C041E93DF1A398F</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="C1AE22EE771C4289BF41FDF0D2E29E7B" action="add">
+      <property_name>started_on</property_name>
+      <sort_order>1408</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">37A9D2062CBE418C8C041E93DF1A398F</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="1F68F715B8EE4EB7859B080A630EFE15" action="add">
+      <property_name>physical_part_serno</property_name>
+      <sort_order>1536</sort_order>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">37A9D2062CBE418C8C041E93DF1A398F</source_id>
+     </Item>
+     <Item type="qry_QueryItemSortProperty" id="734C4791A2674D79B25B81F6E73D8FE6" action="add">
+      <property_name>generation</property_name>
+      <sort_order>128</sort_order>
+      <sort_order_direction>desc</sort_order_direction>
+      <source_id keyed_name="vt_TestRun" type="qry_QueryItem">37A9D2062CBE418C8C041E93DF1A398F</source_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="qry_QueryItem" id="D143DD2F90AF493D9E6537BA1C5050C0" action="add">
+    <item_type keyed_name="sm_DesignRepresentation" type="ItemType" name="sm_DesignRepresentation">F43A478B10394C11A97EB555E7FE9DE8</item_type>
+    <ref_id>C4050BAD8C3C41778D2DB00A57E0D605</ref_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_TestRun Repeats" type="qry_QueryDefinition">D3A7AFCBBE094C8C95F452B6BAAB3F3F</source_id>
+    <alias>sm_DesignRepresentation</alias>
+    <Relationships>
+     <Item type="qry_QueryItemSelectProperty" id="F2C1F5E687D0411081966F88D180A4F8" action="add">
+      <property_name>classification</property_name>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="sm_DesignRepresentation" type="qry_QueryItem">D143DD2F90AF493D9E6537BA1C5050C0</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="657316F43FA442158F7CD86F8C926DA2" action="add">
+      <property_name>id</property_name>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="sm_DesignRepresentation" type="qry_QueryItem">D143DD2F90AF493D9E6537BA1C5050C0</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="84E7F80A0C294221BF804189E010C379" action="add">
+      <property_name>item_number</property_name>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="sm_DesignRepresentation" type="qry_QueryItem">D143DD2F90AF493D9E6537BA1C5050C0</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="C4143D14B5FD44EC8E3933AB27E0C59A" action="add">
+      <property_name>itemtype</property_name>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="sm_DesignRepresentation" type="qry_QueryItem">D143DD2F90AF493D9E6537BA1C5050C0</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="E8BD9510627E4EA3B2014121E8114C5C" action="add">
+      <property_name>major_rev</property_name>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="sm_DesignRepresentation" type="qry_QueryItem">D143DD2F90AF493D9E6537BA1C5050C0</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="6FAAF56F880E40A2988943DE1D68D141" action="add">
+      <property_name>generation</property_name>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="sm_DesignRepresentation" type="qry_QueryItem">D143DD2F90AF493D9E6537BA1C5050C0</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="5E02831BEADD49DAA451F83458FF99FF" action="add">
+      <property_name>state</property_name>
+      <sort_order>896</sort_order>
+      <source_id keyed_name="sm_DesignRepresentation" type="qry_QueryItem">D143DD2F90AF493D9E6537BA1C5050C0</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="F7A20A877CFB45369113A97F3195E885" action="add">
+      <property_name>name</property_name>
+      <sort_order>1024</sort_order>
+      <source_id keyed_name="sm_DesignRepresentation" type="qry_QueryItem">D143DD2F90AF493D9E6537BA1C5050C0</source_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="qry_QueryItem" id="20CA0C61CA184257A093680A02ED851A" action="add">
+    <item_type keyed_name="PhysicalPart" type="ItemType" name="PhysicalPart">63C54E049C974E9AAE25A7A0FE17CADA</item_type>
+    <ref_id>CE174EEFF2C240C78BA9B447B40663B4</ref_id>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_TestRun Repeats" type="qry_QueryDefinition">D3A7AFCBBE094C8C95F452B6BAAB3F3F</source_id>
+    <alias>PhysicalPart</alias>
+    <Relationships>
+     <Item type="qry_QueryItemSelectProperty" id="D4C60F20FBCA4D4DAF94286EC64FF4C8" action="add">
+      <property_name>id</property_name>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="PhysicalPart" type="qry_QueryItem">20CA0C61CA184257A093680A02ED851A</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="DD4EC3481A0F43678290A3F1C7A754B4" action="add">
+      <property_name>name</property_name>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="PhysicalPart" type="qry_QueryItem">20CA0C61CA184257A093680A02ED851A</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="299AF784138742D79D99AAB1DEEEBC51" action="add">
+      <property_name>serial_number</property_name>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="PhysicalPart" type="qry_QueryItem">20CA0C61CA184257A093680A02ED851A</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="C129AE799F944C6FAE67A4DAD91D2E37" action="add">
+      <property_name>part</property_name>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="PhysicalPart" type="qry_QueryItem">20CA0C61CA184257A093680A02ED851A</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="7CAF36FEFC994DD59555AF28DA80F630" action="add">
+      <property_name>state</property_name>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="PhysicalPart" type="qry_QueryItem">20CA0C61CA184257A093680A02ED851A</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="674C1EF92B4A45128FC0FB67FB0BF25A" action="add">
+      <property_name>part_number</property_name>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="PhysicalPart" type="qry_QueryItem">20CA0C61CA184257A093680A02ED851A</source_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="qry_QueryReference" id="7C4540C6625646E1A430091F0F957B9A" action="add">
+    <child_ref_id>916D92F1DA044C9BBB8C2EB15166B03B</child_ref_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestRun Repeats" type="qry_QueryDefinition">D3A7AFCBBE094C8C95F452B6BAAB3F3F</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="2E25D87436064C69ACD7A5B4BE57396F" action="add">
+    <child_ref_id>C4050BAD8C3C41778D2DB00A57E0D605</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="design_representation_id" />
+		<property name="id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>916D92F1DA044C9BBB8C2EB15166B03B</parent_ref_id>
+    <ref_id>661123AFDA154244A6D3E60D9E01AF15</ref_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_TestRun Repeats" type="qry_QueryDefinition">D3A7AFCBBE094C8C95F452B6BAAB3F3F</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="2AEA5278BBE74EDC8A30657C4FD1A07E" action="add">
+    <child_ref_id>CE174EEFF2C240C78BA9B447B40663B4</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="physical_part_id" />
+		<property name="id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>916D92F1DA044C9BBB8C2EB15166B03B</parent_ref_id>
+    <ref_id>A3C92524D0EE40F7A384081C031BB5DB</ref_id>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_TestRun Repeats" type="qry_QueryDefinition">D3A7AFCBBE094C8C95F452B6BAAB3F3F</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

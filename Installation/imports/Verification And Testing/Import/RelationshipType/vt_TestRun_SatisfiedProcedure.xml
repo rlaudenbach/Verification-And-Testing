@@ -1,0 +1,117 @@
+﻿<AML>
+ <Item type="RelationshipType" id="FF780C69DE704C969FC758EAEFE5F3C4" action="add" dependencyLevel="0">
+  <auto_search>1</auto_search>
+  <behavior>hard_fixed</behavior>
+  <copy_permissions>0</copy_permissions>
+  <create_related>0</create_related>
+  <grid_view>intermix</grid_view>
+  <hide_in_all>0</hide_in_all>
+  <inc_rel_key_name>1</inc_rel_key_name>
+  <inc_related_key_name>1</inc_related_key_name>
+  <is_list_type>0</is_list_type>
+  <label xml:lang="en">Test Procedures</label>
+  <new_show_related>0</new_show_related>
+  <related_id keyed_name="vt_TestProcedure" type="ItemType" name="vt_TestProcedure">9BCB4CF7D5824B50A795DE10A1A50CD9</related_id>
+  <related_notnull>1</related_notnull>
+  <related_option>0</related_option>
+  <relationship_id keyed_name="vt_TestRun_SatisfiedProcedure" type="ItemType" name="vt_TestRun_SatisfiedProcedure">
+   <Item type="ItemType" id="A53DADF360AA47E8B4969547199AA91E" action="add">
+    <allow_private_permission>1</allow_private_permission>
+    <auto_search>0</auto_search>
+    <enforce_discovery>0</enforce_discovery>
+    <hide_where_used>0</hide_where_used>
+    <implementation_type>table</implementation_type>
+    <instance_data>VT_TESTRUN_SATISFIEDPROCEDURE</instance_data>
+    <is_dependent>0</is_dependent>
+    <is_relationship>1</is_relationship>
+    <is_versionable>0</is_versionable>
+    <revisions keyed_name="Default" type="Revision">7FE395DD8B9F4E1090756A34B733D75E</revisions>
+    <show_parameters_tab>1</show_parameters_tab>
+    <structure_view>tabs off</structure_view>
+    <unlock_on_logout>0</unlock_on_logout>
+    <use_src_access>1</use_src_access>
+    <name>vt_TestRun_SatisfiedProcedure</name>
+    <Relationships>
+     <Item type="Property" id="F4A549A785E345228565227EE84E4055" action="add">
+      <column_alignment>left</column_alignment>
+      <column_width>120</column_width>
+      <data_source keyed_name="vtTestRun_SatisfiedProc Status">CA9F616E2F1242E7B6DA090DB0E2F63B</data_source>
+      <data_type>list</data_type>
+      <default_value xml:lang="en">Open</default_value>
+      <is_hidden>0</is_hidden>
+      <is_hidden2>0</is_hidden2>
+      <is_indexed>0</is_indexed>
+      <is_keyed>0</is_keyed>
+      <is_multi_valued>0</is_multi_valued>
+      <is_required>1</is_required>
+      <label xml:lang="en">Statisfied</label>
+      <range_inclusive>0</range_inclusive>
+      <readonly>0</readonly>
+      <sort_order>9</sort_order>
+      <source_id keyed_name="vt_TestRun_SatisfiedProcedure" type="ItemType" name="vt_TestRun_SatisfiedProcedure">A53DADF360AA47E8B4969547199AA91E</source_id>
+      <stored_length>256</stored_length>
+      <track_history>0</track_history>
+      <name>satisfy_status</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </relationship_id>
+  <sort_order>25</sort_order>
+  <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
+  <name>vt_TestRun_SatisfiedProcedure</name>
+  <Relationships>
+   <Item type="Relationship Grid Event" id="2B374935E2F44544819B7CC99CF8DBB1" action="add">
+    <grid_event>oninsertrow</grid_event>
+    <related_id keyed_name="Increment Sequence Number" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>Increment Sequence Number</name>
+     </Item>
+    </related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestRun_SatisfiedProcedure" type="RelationshipType">FF780C69DE704C969FC758EAEFE5F3C4</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="ItemType" id="A53DADF360AA47E8B4969547199AA91E" action="edit">
+  <Relationships>
+   <Item type="Property" action="edit" where="source_id='A53DADF360AA47E8B4969547199AA91E' and name='related_id'">
+    <column_alignment>left</column_alignment>
+    <data_source keyed_name="vt_TestProcedure" type="ItemType" name="vt_TestProcedure">9BCB4CF7D5824B50A795DE10A1A50CD9</data_source>
+    <data_type>item</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>1</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <item_behavior>float</item_behavior>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>3456</sort_order>
+    <source_id keyed_name="vt_TestRun_SatisfiedProcedure" type="ItemType" name="vt_TestRun_SatisfiedProcedure">A53DADF360AA47E8B4969547199AA91E</source_id>
+    <track_history>0</track_history>
+    <name>related_id</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='A53DADF360AA47E8B4969547199AA91E' and name='sort_order'">
+    <column_alignment>left</column_alignment>
+    <column_width>70</column_width>
+    <data_type>integer</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Sequence</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>8</sort_order>
+    <source_id keyed_name="vt_TestRun_SatisfiedProcedure" type="ItemType" name="vt_TestRun_SatisfiedProcedure">A53DADF360AA47E8B4969547199AA91E</source_id>
+    <track_history>0</track_history>
+    <name>sort_order</name>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="View" action="delete" where="source_id='A53DADF360AA47E8B4969547199AA91E'" />
+ <Item type="Form" action="delete" where="name='vt_TestRun_SatisfiedProcedure'" />
+</AML>

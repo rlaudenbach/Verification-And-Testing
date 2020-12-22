@@ -1,0 +1,35 @@
+﻿<AML>
+ <Item type="List" id="CA9F616E2F1242E7B6DA090DB0E2F63B" action="add">
+  <name>vtTestRun_SatisfiedProc Status</name>
+  <Relationships>
+   <Item type="Value" id="2002204073E14475B40A90D0C0FF6936" action="add">
+    <inactive>0</inactive>
+    <label xml:lang="en">Open</label>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vtTestRun_SatisfiedProc Status" type="List">CA9F616E2F1242E7B6DA090DB0E2F63B</source_id>
+    <value>Open</value>
+   </Item>
+   <Item type="Value" id="EA0068D0341F40FF905BCD3E1128B715" action="add">
+    <inactive>0</inactive>
+    <label xml:lang="en">In Review</label>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vtTestRun_SatisfiedProc Status" type="List">CA9F616E2F1242E7B6DA090DB0E2F63B</source_id>
+    <value>In Review</value>
+   </Item>
+   <Item type="Value" id="9F146206558C4DA8A34A0786A840C67F" action="add">
+    <inactive>0</inactive>
+    <label xml:lang="en">Satisfied</label>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vtTestRun_SatisfiedProc Status" type="List">CA9F616E2F1242E7B6DA090DB0E2F63B</source_id>
+    <value>Satisfied</value>
+   </Item>
+   <Item type="Value" id="AE222FC34C7E42049788B141605D67E5" action="add">
+    <inactive>0</inactive>
+    <label xml:lang="en">Unsatisfied</label>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="vtTestRun_SatisfiedProc Status" type="List">CA9F616E2F1242E7B6DA090DB0E2F63B</source_id>
+    <value>Unsatisfied</value>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

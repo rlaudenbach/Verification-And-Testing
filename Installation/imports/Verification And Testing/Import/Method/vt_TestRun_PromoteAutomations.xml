@@ -1,0 +1,86 @@
+﻿<AML>
+ <Item type="Method" id="151FBE37EBFB4006A91E32F9D6A4BE81" action="add">
+  <comments>called from onBeforePromote and onAfterPromote</comments>
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Server Events:
+// 'onBeforePromote AND onAfterPromote'  --> enables checking during promotion to next state
+
+//System.Diagnostics.Debugger.Launch();System.Diagnostics.Debugger.Break();
+
+// check if triggered from onBeforePromote or onAfterPromote
+string idlist = this.getAttribute("idlist","");
+Item thisItem = null;
+string beforeState = "";
+if (idlist != "") {
+    // assumption:  this is comming from an onBeforePromote or onAfterPromote Event !!!
+    
+    string itemId = idlist.Substring(0,32);
+    thisItem = this.getInnovator().getItemById(this.getType(),itemId);
+    string thisItemState = thisItem.getProperty("state","");
+    
+    beforeState = (string)RequestState["beforeState"];
+    if (beforeState == null || beforeState == "") {
+        // in this case: thisItemState is from "onBeforePromote"
+        RequestState.Add("beforeState", thisItemState);
+        return this;  // nothing to do,  wait for next call from "onAfterPromote"
+    }
+    else {
+        // in this case: thisItemState is from "onAfterPromote"
+        RequestState.Remove("beforeState");
+    }
+}
+
+string promotedState = thisItem.getProperty("state","");
+
+switch (promotedState) {
+    case "Running":
+        SetDateToNow (thisItem, "started_on");
+        break;
+    case "Pass":
+    case "Fail":
+        SetDateToNow (thisItem, "completed_on");
+        break;
+}
+
+return this;
+}
+
+// ---------
+private Item SetDateToNow (Item thisItem, string dateProperty) {
+    
+    DateTime dtNow = System.DateTime.UtcNow;
+    string tmpPtrn = "yyyy-MM-ddTHH:mm:ss";
+    string tmpDt = dtNow.ToString(tmpPtrn, DateTimeFormatInfo.InvariantInfo);
+    I18NSessionContext sCntxt = this.getInnovator().getI18NSessionContext();
+    string tmpDate = sCntxt.ConvertUtcDateTimeToNeutral(tmpDt, tmpPtrn);
+    
+    
+    // need to use SQL to update dates because item can be in a non lockable state !!!
+    string tn = thisItem.getType().Replace(" ","_");
+    string SQLcmd = String.Format("UPDATE {0} SET {0}.{1}='{2}' WHERE {0}.id='{3}'", tn, dateProperty, tmpDate, thisItem.getID());
+    this.getInnovator().applySQL(SQLcmd);
+
+/*
+    Item updtCmd = this.newItem(thisItem.getType(), "edit");
+    updtCmd.setID(thisItem.getID());
+
+    updtCmd.setProperty(dateProperty, tmpDate);
+    updtCmd.setAttribute("version","0");
+    updtCmd.setAttribute("serverEvents","0");
+    updtCmd.setAttribute("doGetItem", "0");
+
+    Aras.Server.Security.Identity plmIdentity = Aras.Server.Security.Identity.GetByName("Aras PLM");
+    bool PermissionWasSet = Aras.Server.Security.Permissions.GrantIdentity(plmIdentity);
+
+    updtCmd = updtCmd.apply();
+   
+    if (PermissionWasSet) {Aras.Server.Security.Permissions.RevokeIdentity(plmIdentity);}
+ */   
+    return thisItem;
+}
+
+void endOfMethod() {]]></method_code>
+  <method_type>C#</method_type>
+  <name>vt_TestRun_PromoteAutomations</name>
+ </Item>
+</AML>

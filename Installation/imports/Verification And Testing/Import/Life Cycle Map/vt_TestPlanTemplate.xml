@@ -11,28 +11,31 @@
     <set_not_lockable>0</set_not_lockable>
     <sort_order>128</sort_order>
     <source_id keyed_name="vt_TestPlanTemplate" type="Life Cycle Map">31297C9A2CBF46F3B9AAA045B4874A74</source_id>
+    <state_permission_id keyed_name="vt_TestPlanTemplate" type="Permission">0F55E7FA07B045958B24480B586CF60A</state_permission_id>
     <x>45</x>
     <y>65</y>
     <name>Preliminary</name>
    </Item>
    <Item type="Life Cycle State" id="8CC6E4FD91A043319E81B42D9EDA8459" action="add">
     <image>../Images/Checkmark.svg</image>
-    <set_is_released>0</set_is_released>
+    <item_behavior>float</item_behavior>
+    <set_is_released>1</set_is_released>
     <set_not_lockable>0</set_not_lockable>
     <sort_order>384</sort_order>
     <source_id keyed_name="vt_TestPlanTemplate" type="Life Cycle Map">31297C9A2CBF46F3B9AAA045B4874A74</source_id>
+    <state_permission_id keyed_name="vt_TestPlanTemplate Complete" type="Permission">D2718BEEE9834E60818F9EEB6C27DAF5</state_permission_id>
     <x>161</x>
     <y>64</y>
     <name>Released</name>
    </Item>
    <Item type="Life Cycle State" id="00AFB0A5C2D042899CE29BB63A8B8137" action="add">
     <image>../Images/Discard.svg</image>
-    <set_is_released>0</set_is_released>
-    <set_not_lockable>0</set_not_lockable>
+    <set_is_released>1</set_is_released>
+    <set_not_lockable>1</set_not_lockable>
     <sort_order>768</sort_order>
     <source_id keyed_name="vt_TestPlanTemplate" type="Life Cycle Map">31297C9A2CBF46F3B9AAA045B4874A74</source_id>
     <x>301</x>
-    <y>64</y>
+    <y>65</y>
     <name>Stopped</name>
    </Item>
    <Item type="Life Cycle Transition" id="A6224D62799E4A70921F4C34C1683746" action="add">
@@ -61,6 +64,21 @@
     <sort_order>896</sort_order>
     <source_id keyed_name="vt_TestPlanTemplate" type="Life Cycle Map">31297C9A2CBF46F3B9AAA045B4874A74</source_id>
     <to_state keyed_name="Stopped" type="Life Cycle State">00AFB0A5C2D042899CE29BB63A8B8137</to_state>
+   </Item>
+   <Item type="Life Cycle Transition" id="C6BFC4C51AB740B983F8F1D63736CB08" action="add">
+    <from_state keyed_name="Released" type="Life Cycle State">8CC6E4FD91A043319E81B42D9EDA8459</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments>112,27</segments>
+    <sort_order>1408</sort_order>
+    <source_id keyed_name="vt_TestPlanTemplate" type="Life Cycle Map">31297C9A2CBF46F3B9AAA045B4874A74</source_id>
+    <to_state keyed_name="Preliminary" type="Life Cycle State">C3AB6F0AC13843CE87A97D91AF63B3B5</to_state>
+    <x>0</x>
+    <y>0</y>
    </Item>
    <Item type="Life Cycle Transition" id="30181531BC6F4789A304015C348522AF" action="add">
     <from_state keyed_name="Preliminary" type="Life Cycle State">C3AB6F0AC13843CE87A97D91AF63B3B5</from_state>

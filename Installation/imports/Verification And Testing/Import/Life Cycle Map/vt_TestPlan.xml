@@ -5,20 +5,24 @@
   <Relationships>
    <Item type="Life Cycle State" id="4FBD6F32F0034F0280B76081622BF3CB" action="add">
     <image>../Images/Checkmark.svg</image>
-    <set_is_released>0</set_is_released>
+    <item_behavior>fixed</item_behavior>
+    <set_is_released>1</set_is_released>
     <set_not_lockable>0</set_not_lockable>
     <sort_order>640</sort_order>
     <source_id keyed_name="vt_TestPlan" type="Life Cycle Map">8E98FD2AB82D49ECA03408898D47BD1D</source_id>
+    <state_permission_id keyed_name="vt_TestPlan Complete" type="Permission">4705BA47283740B39B30FDC4E6DCDB15</state_permission_id>
     <x>651</x>
     <y>59</y>
     <name>Complete</name>
    </Item>
    <Item type="Life Cycle State" id="679A681B16F34804B05E10B641AA4289" action="add">
     <image>../Images/check.svg</image>
-    <set_is_released>0</set_is_released>
+    <item_behavior>fixed</item_behavior>
+    <set_is_released>1</set_is_released>
     <set_not_lockable>0</set_not_lockable>
     <sort_order>768</sort_order>
     <source_id keyed_name="vt_TestPlan" type="Life Cycle Map">8E98FD2AB82D49ECA03408898D47BD1D</source_id>
+    <state_permission_id keyed_name="vt_TestPlan Complete" type="Permission">4705BA47283740B39B30FDC4E6DCDB15</state_permission_id>
     <x>651</x>
     <y>170</y>
     <name>Partial Complete</name>
@@ -29,6 +33,7 @@
     <set_not_lockable>0</set_not_lockable>
     <sort_order>384</sort_order>
     <source_id keyed_name="vt_TestPlan" type="Life Cycle Map">8E98FD2AB82D49ECA03408898D47BD1D</source_id>
+    <state_permission_id keyed_name="vt_TestPlan" type="Permission">29700527CC644D85912125E1FA42E2D4</state_permission_id>
     <x>343</x>
     <y>53</y>
     <name>Plan Review</name>
@@ -39,6 +44,7 @@
     <set_not_lockable>0</set_not_lockable>
     <sort_order>256</sort_order>
     <source_id keyed_name="vt_TestPlan" type="Life Cycle Map">8E98FD2AB82D49ECA03408898D47BD1D</source_id>
+    <state_permission_id keyed_name="vt_TestPlan" type="Permission">29700527CC644D85912125E1FA42E2D4</state_permission_id>
     <x>188</x>
     <y>52</y>
     <name>Planning</name>
@@ -51,6 +57,7 @@
     <set_not_lockable>0</set_not_lockable>
     <sort_order>128</sort_order>
     <source_id keyed_name="vt_TestPlan" type="Life Cycle Map">8E98FD2AB82D49ECA03408898D47BD1D</source_id>
+    <state_permission_id keyed_name="vt_TestPlan" type="Permission">29700527CC644D85912125E1FA42E2D4</state_permission_id>
     <x>49</x>
     <y>54</y>
     <name>Preliminary</name>
@@ -61,6 +68,7 @@
     <set_not_lockable>0</set_not_lockable>
     <sort_order>512</sort_order>
     <source_id keyed_name="vt_TestPlan" type="Life Cycle Map">8E98FD2AB82D49ECA03408898D47BD1D</source_id>
+    <state_permission_id keyed_name="vt_TestPlan" type="Permission">29700527CC644D85912125E1FA42E2D4</state_permission_id>
     <x>494</x>
     <y>55</y>
     <name>Running</name>
@@ -68,9 +76,10 @@
    <Item type="Life Cycle State" id="7CE4EABF7F32420FB6B207E9C761325B" action="add">
     <image>../Images/Discard.svg</image>
     <set_is_released>0</set_is_released>
-    <set_not_lockable>0</set_not_lockable>
+    <set_not_lockable>1</set_not_lockable>
     <sort_order>896</sort_order>
     <source_id keyed_name="vt_TestPlan" type="Life Cycle Map">8E98FD2AB82D49ECA03408898D47BD1D</source_id>
+    <state_permission_id keyed_name="vt_TestPlan Complete" type="Permission">4705BA47283740B39B30FDC4E6DCDB15</state_permission_id>
     <x>496</x>
     <y>175</y>
     <name>Stopped</name>
