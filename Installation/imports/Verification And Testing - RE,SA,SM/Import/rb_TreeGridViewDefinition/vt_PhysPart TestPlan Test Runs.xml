@@ -1,0 +1,214 @@
+﻿<AML>
+ <Item type="rb_TreeGridViewDefinition" id="B9A664C1114A4EAAB01E4E54F9FEC26D" action="add">
+  <max_child_items>100</max_child_items>
+  <max_query_depth>1</max_query_depth>
+  <max_query_depth_is_onload>1</max_query_depth_is_onload>
+  <query_definition keyed_name="vt_PhysPart TestPlan Test Runs" type="qry_QueryDefinition">AAA9BD51EB4A4714BF2ED74377468C4A</query_definition>
+  <name>vt_PhysPart TestPlan Test Runs</name>
+  <Relationships>
+   <Item type="rb_ColumnDefinition" id="6882ACCBB1E944BD9457D15F84B44080" action="add">
+    <builder_method keyed_name="rb_DefaultColumnBuilderMethod" type="Method">AD1F071AA1B1437396D7ABCD67D10EA7</builder_method>
+    <header xml:lang="en">TestPlan / Test Run</header>
+    <name>vt_PhysPart TestPlan Test Runs</name>
+    <position_order>0</position_order>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="rb_TreeGridViewDefinition">B9A664C1114A4EAAB01E4E54F9FEC26D</source_id>
+    <width>228</width>
+    <Relationships>
+     <Item type="rb_ColumnMapping" id="C8001471213A4319819C2BA8CD062C39" action="add">
+      <cell_view_type>Item</cell_view_type>
+      <data_template>{"id": "{vt_TestPlan physical_part_id.id}", "type": "vt_TestPlan"}</data_template>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="6882ACCBB1E944BD9457D15F84B44080" type="rb_ColumnDefinition">6882ACCBB1E944BD9457D15F84B44080</source_id>
+      <template>{"text_template":"{vt_TestPlan physical_part_id.id/@keyed_name}","item_type_name":"vt_TestPlan","item_id":"{vt_TestPlan physical_part_id.id}"}</template>
+      <tree_row_ref_id>0913417ACB024C2DA5A1ED179A7C5120</tree_row_ref_id>
+     </Item>
+     <Item type="rb_ColumnMapping" id="A1C6F87503EC43B2B2ECE75E3ADBA089" action="add">
+      <cell_view_type>Item</cell_view_type>
+      <data_template>{"id": "{vt_TestRun physical_part_id.id}", "type": "vt_TestRun"}</data_template>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="6882ACCBB1E944BD9457D15F84B44080" type="rb_ColumnDefinition">6882ACCBB1E944BD9457D15F84B44080</source_id>
+      <template>{"icon":"{vt_TestRun physical_part_id.current_state_image}","text_template":"{vt_TestRun physical_part_id.item_number}","item_type_name":"vt_TestRun","item_id":"{vt_TestRun physical_part_id.id}"}</template>
+      <tree_row_ref_id>57B15A5B5F684A0B80076AC9789A8227</tree_row_ref_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="rb_ColumnDefinition" id="8EA7BA5CEEF54CF485B1D98108A4967B" action="add">
+    <builder_method keyed_name="rb_DefaultColumnBuilderMethod" type="Method">AD1F071AA1B1437396D7ABCD67D10EA7</builder_method>
+    <header xml:lang="en">Status</header>
+    <name>246ED682B74F4112B37B7D7CD89BE009</name>
+    <position_order>1</position_order>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="rb_TreeGridViewDefinition">B9A664C1114A4EAAB01E4E54F9FEC26D</source_id>
+    <width>100</width>
+    <Relationships>
+     <Item type="rb_ColumnMapping" id="93024C34D3994C3CA37083C0240BD7A4" action="add">
+      <cell_view_type>Text</cell_view_type>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="8EA7BA5CEEF54CF485B1D98108A4967B" type="rb_ColumnDefinition">8EA7BA5CEEF54CF485B1D98108A4967B</source_id>
+      <template>{"text_template":"{vt_TestPlan physical_part_id.state}"}</template>
+      <tree_row_ref_id>0913417ACB024C2DA5A1ED179A7C5120</tree_row_ref_id>
+     </Item>
+     <Item type="rb_ColumnMapping" id="760DF95D5F46465096F79E867422B839" action="add">
+      <cell_view_type>Text</cell_view_type>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="8EA7BA5CEEF54CF485B1D98108A4967B" type="rb_ColumnDefinition">8EA7BA5CEEF54CF485B1D98108A4967B</source_id>
+      <template>{"text_template":"{vt_TestRun physical_part_id.state}"}</template>
+      <tree_row_ref_id>57B15A5B5F684A0B80076AC9789A8227</tree_row_ref_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="rb_ColumnDefinition" id="EB7A141AA8C74D958B2278B53C4790EE" action="add">
+    <builder_method keyed_name="rb_DefaultColumnBuilderMethod" type="Method">AD1F071AA1B1437396D7ABCD67D10EA7</builder_method>
+    <header xml:lang="en">Name</header>
+    <name>5789697BA3EB4AF2AD66AF12FE70E64E</name>
+    <position_order>3</position_order>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="rb_TreeGridViewDefinition">B9A664C1114A4EAAB01E4E54F9FEC26D</source_id>
+    <width>442</width>
+    <Relationships>
+     <Item type="rb_ColumnMapping" id="FDBCCB1B9E304ABDA3F4A8C3D65B0690" action="add">
+      <cell_view_type>Text</cell_view_type>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="EB7A141AA8C74D958B2278B53C4790EE" type="rb_ColumnDefinition">EB7A141AA8C74D958B2278B53C4790EE</source_id>
+      <template>{"text_template":"{vt_TestPlan physical_part_id.name}"}</template>
+      <tree_row_ref_id>0913417ACB024C2DA5A1ED179A7C5120</tree_row_ref_id>
+     </Item>
+     <Item type="rb_ColumnMapping" id="5CAD3B7CF92F4C91910DBE10A3DC80C2" action="add">
+      <cell_view_type>Text</cell_view_type>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="EB7A141AA8C74D958B2278B53C4790EE" type="rb_ColumnDefinition">EB7A141AA8C74D958B2278B53C4790EE</source_id>
+      <template>{"text_template":"{vt_TestRun physical_part_id.name}"}</template>
+      <tree_row_ref_id>57B15A5B5F684A0B80076AC9789A8227</tree_row_ref_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="rb_ColumnDefinition" id="299122FC6992418583D6B95BC2215BA4" action="add">
+    <builder_method keyed_name="rb_DefaultColumnBuilderMethod" type="Method">AD1F071AA1B1437396D7ABCD67D10EA7</builder_method>
+    <header xml:lang="en">Repeat</header>
+    <name>2CABAB37ABE14C0E9955031F3CABD5A2</name>
+    <position_order>2</position_order>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="rb_TreeGridViewDefinition">B9A664C1114A4EAAB01E4E54F9FEC26D</source_id>
+    <width>67</width>
+    <Relationships>
+     <Item type="rb_ColumnMapping" id="503DDE9B843F48FE9A1A28A84E1ABCE1" action="add">
+      <cell_view_type>Text</cell_view_type>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="299122FC6992418583D6B95BC2215BA4" type="rb_ColumnDefinition">299122FC6992418583D6B95BC2215BA4</source_id>
+      <template>{"text_template":"{vt_TestRun physical_part_id.generation}"}</template>
+      <tree_row_ref_id>57B15A5B5F684A0B80076AC9789A8227</tree_row_ref_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="rb_ColumnDefinition" id="F42A0130B15E45DCA189758BE61B4407" action="add">
+    <builder_method keyed_name="rb_DefaultColumnBuilderMethod" type="Method">AD1F071AA1B1437396D7ABCD67D10EA7</builder_method>
+    <header xml:lang="en">Started On</header>
+    <name>F4DE1ECFE7364F82BFED0395C26496AC</name>
+    <position_order>4</position_order>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="rb_TreeGridViewDefinition">B9A664C1114A4EAAB01E4E54F9FEC26D</source_id>
+    <width>182</width>
+    <Relationships>
+     <Item type="rb_ColumnMapping" id="EFBB986E9431411DADEBD6782CF01B08" action="add">
+      <cell_view_type>Date</cell_view_type>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="F42A0130B15E45DCA189758BE61B4407" type="rb_ColumnDefinition">F42A0130B15E45DCA189758BE61B4407</source_id>
+      <template>{"text_template":"{vt_TestRun physical_part_id.started_on}","date_format":"short_date_time"}</template>
+      <tree_row_ref_id>57B15A5B5F684A0B80076AC9789A8227</tree_row_ref_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="rb_ColumnDefinition" id="69721F4B0B8546029C8977D016ED4450" action="add">
+    <builder_method keyed_name="rb_DefaultColumnBuilderMethod" type="Method">AD1F071AA1B1437396D7ABCD67D10EA7</builder_method>
+    <header xml:lang="en">Completed On</header>
+    <name>E66457BCDD064A20B5930334753BB56B</name>
+    <position_order>5</position_order>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="rb_TreeGridViewDefinition">B9A664C1114A4EAAB01E4E54F9FEC26D</source_id>
+    <width>168</width>
+    <Relationships>
+     <Item type="rb_ColumnMapping" id="84F350FE62D9429C80B71F46D7BF6D0B" action="add">
+      <cell_view_type>Date</cell_view_type>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="69721F4B0B8546029C8977D016ED4450" type="rb_ColumnDefinition">69721F4B0B8546029C8977D016ED4450</source_id>
+      <template>{"text_template":"{vt_TestRun physical_part_id.completed_on}","date_format":"short_date_time"}</template>
+      <tree_row_ref_id>57B15A5B5F684A0B80076AC9789A8227</tree_row_ref_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="rb_ColumnDefinition" id="A069B1F580B647BB8837FBEB67ED9B0E" action="add">
+    <builder_method keyed_name="rb_DefaultColumnBuilderMethod" type="Method">AD1F071AA1B1437396D7ABCD67D10EA7</builder_method>
+    <header xml:lang="en">Test Plan</header>
+    <name>79911428B82F406CB45DB6BB8CC9147B</name>
+    <position_order>6</position_order>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="rb_TreeGridViewDefinition">B9A664C1114A4EAAB01E4E54F9FEC26D</source_id>
+    <width>458</width>
+    <Relationships>
+     <Item type="rb_ColumnMapping" id="502C1CEC817F43629A0048FAE0ACCB70" action="add">
+      <cell_view_type>Item</cell_view_type>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="A069B1F580B647BB8837FBEB67ED9B0E" type="rb_ColumnDefinition">A069B1F580B647BB8837FBEB67ED9B0E</source_id>
+      <template>{"text_template":"[{vt_TestPlan.classification}] {vt_TestPlan.item_number} - {vt_TestPlan.name}","item_type_name":"vt_TestPlan","item_id":"{vt_TestPlan.id}"}</template>
+      <tree_row_ref_id>57B15A5B5F684A0B80076AC9789A8227</tree_row_ref_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="rb_TreeRowDefinition" id="6782EFA2E4FA4DE98ACED422C95D1FC7" action="add">
+    <query_item_ref_id>108DCF2A9EE646F4BE53B5864271B466</query_item_ref_id>
+    <ref_id>0913417ACB024C2DA5A1ED179A7C5120</ref_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="rb_TreeGridViewDefinition">B9A664C1114A4EAAB01E4E54F9FEC26D</source_id>
+   </Item>
+   <Item type="rb_TreeRowDefinition" id="44ED24278A26450F9C9F5CB7257FE437" action="add">
+    <query_item_ref_id>6B5AB46ACCFF486D88C9C53BB41E0D74</query_item_ref_id>
+    <ref_id>57B15A5B5F684A0B80076AC9789A8227</ref_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="rb_TreeGridViewDefinition">B9A664C1114A4EAAB01E4E54F9FEC26D</source_id>
+   </Item>
+   <Item type="rb_TreeRowDefinition" id="46B767D4E41F41C6B7896DF9DF990B44" action="add">
+    <query_item_ref_id>62AF071B8704480A92538335DB46207A</query_item_ref_id>
+    <ref_id>596F8945F22F4442A92E6ED3A4455D02</ref_id>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="rb_TreeGridViewDefinition">B9A664C1114A4EAAB01E4E54F9FEC26D</source_id>
+   </Item>
+   <Item type="rb_TreeRowDefinition" id="7C860BCF38204897AB99AE1A32A2C6E8" action="add">
+    <query_item_ref_id>37BCDA9422954A118D6980DDD0F0F442</query_item_ref_id>
+    <ref_id>D3AD24C1B763438AB2B0A53180D1910F</ref_id>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="rb_TreeGridViewDefinition">B9A664C1114A4EAAB01E4E54F9FEC26D</source_id>
+   </Item>
+   <Item type="rb_TreeRowReference" id="F332D09A9ADB4E8E820CB7FC7D8B257E" action="add">
+    <child_ref_id>0913417ACB024C2DA5A1ED179A7C5120</child_ref_id>
+    <reference_type>child</reference_type>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="rb_TreeGridViewDefinition">B9A664C1114A4EAAB01E4E54F9FEC26D</source_id>
+    <view_order>128</view_order>
+   </Item>
+   <Item type="rb_TreeRowReference" id="11E215B6F52B4BEABCE58B3C94D2A49C" action="add">
+    <child_ref_id>57B15A5B5F684A0B80076AC9789A8227</child_ref_id>
+    <reference_type>child</reference_type>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="rb_TreeGridViewDefinition">B9A664C1114A4EAAB01E4E54F9FEC26D</source_id>
+    <view_order>256</view_order>
+   </Item>
+   <Item type="rb_TreeRowReference" id="1AD50962B44C4DDCBA742CF12790A86D" action="add">
+    <child_ref_id>596F8945F22F4442A92E6ED3A4455D02</child_ref_id>
+    <parent_ref_id>57B15A5B5F684A0B80076AC9789A8227</parent_ref_id>
+    <reference_type>join</reference_type>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="rb_TreeGridViewDefinition">B9A664C1114A4EAAB01E4E54F9FEC26D</source_id>
+    <view_order>128</view_order>
+   </Item>
+   <Item type="rb_TreeRowReference" id="7A7BC005E64D4A7C81E987B0BE6963ED" action="add">
+    <child_ref_id>D3AD24C1B763438AB2B0A53180D1910F</child_ref_id>
+    <parent_ref_id>596F8945F22F4442A92E6ED3A4455D02</parent_ref_id>
+    <reference_type>join</reference_type>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="rb_TreeGridViewDefinition">B9A664C1114A4EAAB01E4E54F9FEC26D</source_id>
+    <view_order>128</view_order>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

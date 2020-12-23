@@ -1,0 +1,79 @@
+﻿<AML>
+ <Item type="Form" id="FCA50E7BF61444ADA01CE8BCABEA95DB" action="add">
+  <category_form>0</category_form>
+  <height>60</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>699</width>
+  <name>vt_Reqt SolutionElement</name>
+  <Relationships>
+   <Item type="Body" id="CF0384493EC54CC595F4B9424EA2919E" action="add">
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_Reqt SolutionElement" type="Form">FCA50E7BF61444ADA01CE8BCABEA95DB</source_id>
+    <Relationships>
+     <Item type="Field" id="59F8F90308B44B03A840B2BDC23E7195" action="add">
+      <border_width>0</border_width>
+      <display_length>200</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>item</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Solution Element</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="CF0384493EC54CC595F4B9424EA2919E" type="Body">CF0384493EC54CC595F4B9424EA2919E</source_id>
+      <tab_index>3712</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>425</x>
+      <y>15</y>
+      <name>related_id</name>
+     </Item>
+     <Item type="Field" id="266FF56BA41947129715C2429F67D460" action="add">
+      <border_width>0</border_width>
+      <display_length>200</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>item</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Requirement</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="CF0384493EC54CC595F4B9424EA2919E" type="Body">CF0384493EC54CC595F4B9424EA2919E</source_id>
+      <tab_index>2944</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>15</x>
+      <y>15</y>
+      <name>source_id</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="Field" id="59F8F90308B44B03A840B2BDC23E7195" action="edit">
+  <!-- Please note: this AML depends on the "sys_Reqt SolutionElement" ItemType. Please make sure it exists before running this. -->
+  <propertytype_id>
+   <Item type="Property" action="get" select="id">
+    <name>related_id</name>
+    <source_id type="ItemType" keyed_name="sys_Reqt SolutionElement">88EDB7B135E34351A2E10D38064FEE8A</source_id>
+   </Item>
+  </propertytype_id>
+ </Item>
+ <Item type="Field" id="266FF56BA41947129715C2429F67D460" action="edit">
+  <!-- Please note: this AML depends on the "sys_Reqt SolutionElement" ItemType. Please make sure it exists before running this. -->
+  <propertytype_id>
+   <Item type="Property" action="get" select="id">
+    <name>source_id</name>
+    <source_id type="ItemType" keyed_name="sys_Reqt SolutionElement">88EDB7B135E34351A2E10D38064FEE8A</source_id>
+   </Item>
+  </propertytype_id>
+ </Item>
+</AML>

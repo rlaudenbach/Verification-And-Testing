@@ -1,0 +1,220 @@
+﻿<AML>
+ <Item type="qry_QueryDefinition" id="AAA9BD51EB4A4714BF2ED74377468C4A" action="add">
+  <name>vt_PhysPart TestPlan Test Runs</name>
+  <Relationships>
+   <Item type="qry_QueryItem" id="6506DF3D1356406790CF08FC4EACACCD" action="add">
+    <item_type keyed_name="PhysicalPart" type="ItemType" name="PhysicalPart">63C54E049C974E9AAE25A7A0FE17CADA</item_type>
+    <ref_id>98B8C85C8F0B47C0A363420C8B6A2180</ref_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="qry_QueryDefinition">AAA9BD51EB4A4714BF2ED74377468C4A</source_id>
+    <alias>PhysicalPart</alias>
+   </Item>
+   <Item type="qry_QueryItem" id="F517F86B6B984C0EB45370F316087AD8" action="add">
+    <item_type keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</item_type>
+    <ref_id>108DCF2A9EE646F4BE53B5864271B466</ref_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="qry_QueryDefinition">AAA9BD51EB4A4714BF2ED74377468C4A</source_id>
+    <alias>vt_TestPlan physical_part_id</alias>
+    <Relationships>
+     <Item type="qry_QueryItemSelectProperty" id="A5103DE8509342EFA1C74DF72088D97D" action="add">
+      <property_name>id</property_name>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="vt_TestPlan physical_part_id" type="qry_QueryItem">F517F86B6B984C0EB45370F316087AD8</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="FCB46CD1FB4547698E9BE82A7B7521E4" action="add">
+      <property_name>state</property_name>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="vt_TestPlan physical_part_id" type="qry_QueryItem">F517F86B6B984C0EB45370F316087AD8</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="72F0C82A70154AF883545DD5FC9C90D9" action="add">
+      <property_name>item_number</property_name>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="vt_TestPlan physical_part_id" type="qry_QueryItem">F517F86B6B984C0EB45370F316087AD8</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="292B7A836A4940CA833B44C15676E59B" action="add">
+      <property_name>name</property_name>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="vt_TestPlan physical_part_id" type="qry_QueryItem">F517F86B6B984C0EB45370F316087AD8</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="F5EAEDDF09DA4F19B5B4D6E06A4E4398" action="add">
+      <property_name>major_rev</property_name>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="vt_TestPlan physical_part_id" type="qry_QueryItem">F517F86B6B984C0EB45370F316087AD8</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="4C84530BC1C3420F8004579CDB6EC2DC" action="add">
+      <property_name>generation</property_name>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="vt_TestPlan physical_part_id" type="qry_QueryItem">F517F86B6B984C0EB45370F316087AD8</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="8FE761B07D1E481EA7BA55ED740F5A76" action="add">
+      <property_name>classification</property_name>
+      <sort_order>896</sort_order>
+      <source_id keyed_name="vt_TestPlan physical_part_id" type="qry_QueryItem">F517F86B6B984C0EB45370F316087AD8</source_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="qry_QueryItem" id="9F72B1DFD0474638B1DFCC83A041F02E" action="add">
+    <item_type keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</item_type>
+    <ref_id>6B5AB46ACCFF486D88C9C53BB41E0D74</ref_id>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="qry_QueryDefinition">AAA9BD51EB4A4714BF2ED74377468C4A</source_id>
+    <alias>vt_TestRun physical_part_id</alias>
+    <Relationships>
+     <Item type="qry_QueryItemSelectProperty" id="8CA2383A3D564E85923E4E477363E6B1" action="add">
+      <property_name>id</property_name>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="vt_TestRun physical_part_id" type="qry_QueryItem">9F72B1DFD0474638B1DFCC83A041F02E</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="7F40163A89CC411691101727E1DD474F" action="add">
+      <property_name>item_number</property_name>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="vt_TestRun physical_part_id" type="qry_QueryItem">9F72B1DFD0474638B1DFCC83A041F02E</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="DE08A2C61ADA4489A14F092357FE6872" action="add">
+      <property_name>name</property_name>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="vt_TestRun physical_part_id" type="qry_QueryItem">9F72B1DFD0474638B1DFCC83A041F02E</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="5CC7E76B541C48E68C7DC446B8F8F06E" action="add">
+      <property_name>state</property_name>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="vt_TestRun physical_part_id" type="qry_QueryItem">9F72B1DFD0474638B1DFCC83A041F02E</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="12FA56A438104AAAA33097F838A45564" action="add">
+      <property_name>current_state_image</property_name>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="vt_TestRun physical_part_id" type="qry_QueryItem">9F72B1DFD0474638B1DFCC83A041F02E</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="4697732831BA4985AE839BD186229E34" action="add">
+      <property_name>classification</property_name>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="vt_TestRun physical_part_id" type="qry_QueryItem">9F72B1DFD0474638B1DFCC83A041F02E</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="CC1A4AAFB0484893A0101081266662DF" action="add">
+      <property_name>completed_on</property_name>
+      <sort_order>896</sort_order>
+      <source_id keyed_name="vt_TestRun physical_part_id" type="qry_QueryItem">9F72B1DFD0474638B1DFCC83A041F02E</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="EC3522AE5C2A467AAE52637C335D1635" action="add">
+      <property_name>started_on</property_name>
+      <sort_order>1024</sort_order>
+      <source_id keyed_name="vt_TestRun physical_part_id" type="qry_QueryItem">9F72B1DFD0474638B1DFCC83A041F02E</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="E637F4DB40E74822B02C750403D60D93" action="add">
+      <property_name>generation</property_name>
+      <sort_order>1152</sort_order>
+      <source_id keyed_name="vt_TestRun physical_part_id" type="qry_QueryItem">9F72B1DFD0474638B1DFCC83A041F02E</source_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="qry_QueryItem" id="0855EF6213A64BD9BFB61D4D5F961445" action="add">
+    <item_type keyed_name="vt_TestPlan_Run" type="ItemType" name="vt_TestPlan_Run">499399C15E324431AF828FCE1154CBCF</item_type>
+    <ref_id>62AF071B8704480A92538335DB46207A</ref_id>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="qry_QueryDefinition">AAA9BD51EB4A4714BF2ED74377468C4A</source_id>
+    <alias>vt_TestPlan_Run related_id</alias>
+   </Item>
+   <Item type="qry_QueryItem" id="BA455AC2EE7842208006BC1A349BE0E6" action="add">
+    <item_type keyed_name="vt_TestPlan" type="ItemType" name="vt_TestPlan">882DE843C30D4DCF9F3DFDE02C414092</item_type>
+    <ref_id>37BCDA9422954A118D6980DDD0F0F442</ref_id>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="qry_QueryDefinition">AAA9BD51EB4A4714BF2ED74377468C4A</source_id>
+    <alias>vt_TestPlan</alias>
+    <Relationships>
+     <Item type="qry_QueryItemSelectProperty" id="D69625E0643741CD9F7C36B914F03AF2" action="add">
+      <property_name>id</property_name>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="vt_TestPlan" type="qry_QueryItem">BA455AC2EE7842208006BC1A349BE0E6</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="11613464A49A42DE8E8EF9D8B312C228" action="add">
+      <property_name>state</property_name>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="vt_TestPlan" type="qry_QueryItem">BA455AC2EE7842208006BC1A349BE0E6</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="0297FAE459DD4A7E837D5944A745AC8C" action="add">
+      <property_name>item_number</property_name>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="vt_TestPlan" type="qry_QueryItem">BA455AC2EE7842208006BC1A349BE0E6</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="72F00AE74C01476C87FB52166373B1DC" action="add">
+      <property_name>name</property_name>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="vt_TestPlan" type="qry_QueryItem">BA455AC2EE7842208006BC1A349BE0E6</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="0D3BA81EA000483FB56F2FD385EF0DD0" action="add">
+      <property_name>major_rev</property_name>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="vt_TestPlan" type="qry_QueryItem">BA455AC2EE7842208006BC1A349BE0E6</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="74C2A9FAFCE346E6938A92C5E632DDF1" action="add">
+      <property_name>generation</property_name>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="vt_TestPlan" type="qry_QueryItem">BA455AC2EE7842208006BC1A349BE0E6</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="CA06759A5E0647E0B84BA580556288F6" action="add">
+      <property_name>classification</property_name>
+      <sort_order>896</sort_order>
+      <source_id keyed_name="vt_TestPlan" type="qry_QueryItem">BA455AC2EE7842208006BC1A349BE0E6</source_id>
+     </Item>
+    </Relationships>
+   </Item>
+   <Item type="qry_QueryReference" id="961063CA0C7741B2B54CE95803A35E80" action="add">
+    <child_ref_id>98B8C85C8F0B47C0A363420C8B6A2180</child_ref_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="qry_QueryDefinition">AAA9BD51EB4A4714BF2ED74377468C4A</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="B91C27CC2FD74981B1F7F0E16A6927BF" action="add">
+    <child_ref_id>108DCF2A9EE646F4BE53B5864271B466</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="id" />
+		<property name="physical_part_id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>98B8C85C8F0B47C0A363420C8B6A2180</parent_ref_id>
+    <ref_id>BD8BC0FCC0A8470E8756A07A388757F3</ref_id>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="qry_QueryDefinition">AAA9BD51EB4A4714BF2ED74377468C4A</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="3115AB42827442A685F4D7CA5679FD0B" action="add">
+    <child_ref_id>6B5AB46ACCFF486D88C9C53BB41E0D74</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="id" />
+		<property name="physical_part_id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>98B8C85C8F0B47C0A363420C8B6A2180</parent_ref_id>
+    <ref_id>2268128FF1B04B4CA063E649AB8AAFA2</ref_id>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="qry_QueryDefinition">AAA9BD51EB4A4714BF2ED74377468C4A</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="B47B8D50DFA64EF49510565F48C2CE02" action="add">
+    <child_ref_id>62AF071B8704480A92538335DB46207A</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="id" />
+		<property name="related_id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>6B5AB46ACCFF486D88C9C53BB41E0D74</parent_ref_id>
+    <ref_id>40E36072487B490F96C2532440A28AB2</ref_id>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="qry_QueryDefinition">AAA9BD51EB4A4714BF2ED74377468C4A</source_id>
+   </Item>
+   <Item type="qry_QueryReference" id="E3E12DDD8A8243F8A51E613BDA7FFA6C" action="add">
+    <child_ref_id>37BCDA9422954A118D6980DDD0F0F442</child_ref_id>
+    <filter_xml><![CDATA[<condition>
+	<eq>
+		<property query_items_xpath="parent::Item" name="source_id" />
+		<property name="id" />
+	</eq>
+</condition>]]></filter_xml>
+    <parent_ref_id>62AF071B8704480A92538335DB46207A</parent_ref_id>
+    <ref_id>4B960B750BDB40E688173D722F90C982</ref_id>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="vt_PhysPart TestPlan Test Runs" type="qry_QueryDefinition">AAA9BD51EB4A4714BF2ED74377468C4A</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>
