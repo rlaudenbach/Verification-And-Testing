@@ -1,0 +1,15 @@
+﻿<AML>
+ <Item type="Method" id="6B384142887E4032AA9018312FEA84F5" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[var nextState = "Fail";
+var testRunItem = document.thisItem;
+
+testRunItem = testRunItem.promote(nextState, "");
+if (testRunItem.isError()){
+    aras.AlertError(testRunItem.getErrorString());
+	return;
+}]]></method_code>
+  <method_type>JavaScript</method_type>
+  <name>vt_TestRun_Failed</name>
+ </Item>
+</AML>
