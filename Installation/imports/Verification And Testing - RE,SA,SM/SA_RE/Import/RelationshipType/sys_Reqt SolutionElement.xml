@@ -88,19 +88,6 @@
       <track_history>0</track_history>
       <name>req_title</name>
      </Item>
-     <Item type="View" id="64EDAF5A5FC640C1A45B45F4FEE0AAC5" action="add">
-      <client>js</client>
-      <related_id keyed_name="vt_Reqt SolutionElement" type="Form">FCA50E7BF61444ADA01CE8BCABEA95DB</related_id>
-      <role keyed_name="World" type="Identity">
-       <Item type="Identity" action="get" select="id">
-        <name>World</name>
-       </Item>
-      </role>
-      <show_ssvc>0</show_ssvc>
-      <sort_order>128</sort_order>
-      <source_id keyed_name="sys_Reqt SolutionElement" type="ItemType" name="sys_Reqt SolutionElement">88EDB7B135E34351A2E10D38064FEE8A</source_id>
-      <type>default</type>
-     </Item>
     </Relationships>
    </Item>
   </relationship_id>

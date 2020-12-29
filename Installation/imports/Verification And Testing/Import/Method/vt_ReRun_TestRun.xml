@@ -44,9 +44,9 @@ if(testRunItem.isNew() || testRunItem.getAttribute("isTemp", "").Equals("1", Str
 bool isInReleasedState = String.Equals(testRunItem.getProperty("is_released","0"), "1", StringComparison.Ordinal);
 
 // Item must be in the Released state
-if (!isInReleasedState && testRunItem.getProperty("state","") != "Fail")
+if (!isInReleasedState && testRunItem.getProperty("state","") != "Fail" && testRunItem.getProperty("state","") != "Pass")
 {
-  return inn.newError("This action can only be fun on 'Failed' test runs !");
+  return inn.newError("This action can only be run on 'Failed' test runs !");
 }
 
 // Make sure the current user is in the Owner identity
@@ -77,7 +77,8 @@ finally
 {
   // Revoke 'Aras PLM' permissions
   if (PermissionWasSet) Aras.Server.Security.Permissions.RevokeIdentity(plmIdentity);
-}]]></method_code>
+}
+  ]]></method_code>
   <method_type>C#</method_type>
   <name>vt_ReRun_TestRun</name>
  </Item>
