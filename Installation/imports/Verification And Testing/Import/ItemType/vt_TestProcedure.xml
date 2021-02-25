@@ -23,6 +23,12 @@
   <use_src_access>0</use_src_access>
   <name>vt_TestProcedure</name>
   <Relationships>
+   <Item type="ITPresentationConfiguration" id="D14695D8B20C5B9D6B77D6069BFA2DFF" action="add">
+    <client>js</client>
+    <related_id keyed_name="vt_TestProcedure_TOC_Configuration" type="PresentationConfiguration">D14695D8B20C5B9D36326AA7318BB90D</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestProcedure" type="ItemType" name="vt_TestProcedure">9BCB4CF7D5824B50A795DE10A1A50CD9</source_id>
+   </Item>
    <Item type="Property" id="B85702B1FC8A40C8AEF9F8CABD5023A3" action="add">
     <column_alignment>left</column_alignment>
     <column_width>30</column_width>
@@ -94,6 +100,26 @@
     <stored_length>64</stored_length>
     <track_history>0</track_history>
     <name>name</name>
+   </Item>
+   <Item type="Property" id="A64252B030B0485097B7D8DCB6EBE2D3" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>150</column_width>
+    <data_source keyed_name="tp_Block" type="ItemType" name="tp_Block">ED9F61ADA4334D7D94361F426C081DB5</data_source>
+    <data_type>item</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <item_behavior>float</item_behavior>
+    <label xml:lang="en">Tech Doc</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>80</sort_order>
+    <source_id keyed_name="vt_TestProcedure" type="ItemType" name="vt_TestProcedure">9BCB4CF7D5824B50A795DE10A1A50CD9</source_id>
+    <track_history>0</track_history>
+    <name>procedure_tech_doc_id</name>
    </Item>
    <Item type="Property" id="05FF9BC9A72B44DCAF1D63CB2294D1CB" action="add">
     <column_alignment>left</column_alignment>
