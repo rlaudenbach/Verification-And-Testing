@@ -5,7 +5,7 @@
 
 Release          | Notes                        | Supported Aras Versions
 -----------------|------------------------------|-------------------
-[v1](add link)   | Initial Release              | 12SP10, 12SP11
+[v1](add link)   | Initial Release              | 12SP10, 12SP11, 12SP12, 12SP14
 
 *add link to version location in repository on each row
 
@@ -60,7 +60,7 @@ NOTE: you must clear the browser cache of all clients after deploying the code t
 
 #### Import Packages
 
-The import of this solution requires 2 import cycles
+The import of this solution requires 4 import cycles (3 are optional)
 
 Import packages are located in folder "...Installation\imports" of this solution
 
@@ -78,14 +78,21 @@ Cycle 1:
 
 Cycle 2 (optional):
 1. Enter the package name in the TargetRelease field.
-2. Enter the path to your local *"...Installation\imports\2-imports - SA.mf" file in the Manifest File field.
+2. Enter the path to your local *"...Installation\imports\2-imports - PLM.mf" file in the Manifest File field.
 3. Select all packages in the Available for Import field.
 4. Select Type = **Merge** and Mode = **Thorough Mode**.
 5. Click **Import** in the top left corner.
 
 Cycle 3 (optional):
 1. Enter the package name in the TargetRelease field.
-2. Enter the path to your local *"...Installation\imports\3-imports - RE,SM.mf" file in the Manifest File field.
+2. Enter the path to your local *"...Installation\imports\3-imports - SA.mf" file in the Manifest File field.
+3. Select all packages in the Available for Import field.
+4. Select Type = **Merge** and Mode = **Thorough Mode**.
+5. Click **Import** in the top left corner.
+
+Cycle 3 (optional):
+1. Enter the package name in the TargetRelease field.
+2. Enter the path to your local *"...Installation\imports\4-imports - RE,SM.mf" file in the Manifest File field.
 3. Select all packages in the Available for Import field.
 4. Select Type = **Merge** and Mode = **Thorough Mode**.
 5. Click **Import** in the top left corner.
