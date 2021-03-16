@@ -1,0 +1,7 @@
+<imports>
+  <package name="Verification And Testing" path="Verification And Testing - PLM\Import" >
+    <dependson name="com.aras.innovator.solution.PLM" />
+    <dependson name="com.aras.innovator.solution.SA" />
+    <dependson name="com.aras.innovator.solution.SM" />
+  </package>
+</imports>
