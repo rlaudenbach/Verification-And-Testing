@@ -47,6 +47,43 @@
        </Item>
       </Relationships>
      </Item>
+     <Item type="Field" id="9F5D4857F8B642E5ABB9DA4182749AA5" action="add">
+      <bg_color>#228b22</bg_color>
+      <border_width>0</border_width>
+      <css>{$this field rule} input
+{
+  width: 90px;
+}</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>button</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Test Complete</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>2304</sort_order>
+      <source_id keyed_name="81330BE4D50244C5B275864E9D65CD6D" type="Body">81330BE4D50244C5B275864E9D65CD6D</source_id>
+      <tab_stop>1</tab_stop>
+      <x>700</x>
+      <y>10</y>
+      <name>btn_test_complete</name>
+      <Relationships>
+       <Item type="Field Event" id="067E5C4BB8EB4E16A2E5D6369280A377" action="add">
+        <field_event>onclick</field_event>
+        <related_id keyed_name="vt_TestRun_Complete" type="Method">
+         <Item type="Method" action="get" select="id">
+          <name>vt_TestRun_Complete</name>
+         </Item>
+        </related_id>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="btn_test_complete" type="Field">9F5D4857F8B642E5ABB9DA4182749AA5</source_id>
+       </Item>
+      </Relationships>
+     </Item>
      <Item type="Field" id="C12702F1E9194C9A9537F5327FA6DBCE" action="add">
       <bg_color>#ff0000</bg_color>
       <border_width>0</border_width>
@@ -81,43 +118,6 @@
         </related_id>
         <sort_order>128</sort_order>
         <source_id keyed_name="btn_test_failed" type="Field">C12702F1E9194C9A9537F5327FA6DBCE</source_id>
-       </Item>
-      </Relationships>
-     </Item>
-     <Item type="Field" id="9F5D4857F8B642E5ABB9DA4182749AA5" action="add">
-      <bg_color>#228b22</bg_color>
-      <border_width>0</border_width>
-      <css>{$this field rule} input
-{
-  width: 90px;
-}</css>
-      <display_length_unit>px</display_length_unit>
-      <field_type>button</field_type>
-      <font_color>#000000</font_color>
-      <font_family>arial, helvetica, sans-serif</font_family>
-      <font_size>8pt</font_size>
-      <font_weight>bold</font_weight>
-      <is_disabled>0</is_disabled>
-      <is_visible>1</is_visible>
-      <label xml:lang="en">Test Passed</label>
-      <label_position>top</label_position>
-      <list_no_blank>0</list_no_blank>
-      <sort_order>2304</sort_order>
-      <source_id keyed_name="81330BE4D50244C5B275864E9D65CD6D" type="Body">81330BE4D50244C5B275864E9D65CD6D</source_id>
-      <tab_stop>1</tab_stop>
-      <x>700</x>
-      <y>10</y>
-      <name>btn_test_passed</name>
-      <Relationships>
-       <Item type="Field Event" id="067E5C4BB8EB4E16A2E5D6369280A377" action="add">
-        <field_event>onclick</field_event>
-        <related_id keyed_name="vt_TestRun_Passed" type="Method">
-         <Item type="Method" action="get" select="id">
-          <name>vt_TestRun_Passed</name>
-         </Item>
-        </related_id>
-        <sort_order>128</sort_order>
-        <source_id keyed_name="btn_test_passed" type="Field">9F5D4857F8B642E5ABB9DA4182749AA5</source_id>
        </Item>
       </Relationships>
      </Item>
@@ -166,11 +166,10 @@
      </Item>
      <Item type="Field" id="DD12F43182004194A1D04686A5E72CFF" action="add">
       <border_width>0</border_width>
-      <css>{$this field rule} .img 
+      <css>{$this field rule}
 { 
-display: block;
-width: 20px;
-height: 20px;
+width: 35px;
+height: 35px;
 }</css>
       <display_length_unit>px</display_length_unit>
       <field_type>image</field_type>
@@ -187,8 +186,8 @@ height: 20px;
       <source_id keyed_name="81330BE4D50244C5B275864E9D65CD6D" type="Body">81330BE4D50244C5B275864E9D65CD6D</source_id>
       <tab_index>14</tab_index>
       <tab_stop>1</tab_stop>
-      <x>310</x>
-      <y>-2</y>
+      <x>515</x>
+      <y>5</y>
       <name>current_state_image</name>
      </Item>
      <Item type="Field" id="6C53B46C9D4442FCA34DFA65E376539E" action="add">
@@ -215,6 +214,51 @@ height: 20px;
       <y>90</y>
       <name>description</name>
      </Item>
+     <Item type="Field" id="9626603C6076455FB999227A77829482" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>checkbox</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Is Current</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="design_curr" type="Property">641783CCD2D34140BAD2EDFFCF984007</propertytype_id>
+      <sort_order>2688</sort_order>
+      <source_id keyed_name="81330BE4D50244C5B275864E9D65CD6D" type="Body">81330BE4D50244C5B275864E9D65CD6D</source_id>
+      <tab_index>103</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>703</x>
+      <y>129</y>
+      <name>design_curr</name>
+     </Item>
+     <Item type="Field" id="03F2448CBC924F14A29A295F5809AF87" action="add">
+      <border_width>0</border_width>
+      <display_length>50</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Design Gen</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="design_gen" type="Property">19B3420B0C9C46BBBCE4A9179C96A006</propertytype_id>
+      <sort_order>2432</sort_order>
+      <source_id keyed_name="81330BE4D50244C5B275864E9D65CD6D" type="Body">81330BE4D50244C5B275864E9D65CD6D</source_id>
+      <tab_index>102</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>625</x>
+      <y>130</y>
+      <name>design_gen</name>
+     </Item>
      <Item type="Field" id="74FA046AC4EE4985B3500BB9A4A7F86C" action="add">
       <border_width>0</border_width>
       <display_length_unit>px</display_length_unit>
@@ -237,6 +281,29 @@ height: 20px;
       <y>130</y>
       <name>design_representation_id</name>
      </Item>
+     <Item type="Field" id="C5630404128849EE9A37E3A2255E8193" action="add">
+      <border_width>0</border_width>
+      <display_length>50</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Design Rev</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="design_rev" type="Property">6E4A48C0DF0F499E9FA4558B7FC00AD6</propertytype_id>
+      <sort_order>2560</sort_order>
+      <source_id keyed_name="81330BE4D50244C5B275864E9D65CD6D" type="Body">81330BE4D50244C5B275864E9D65CD6D</source_id>
+      <tab_index>101</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>555</x>
+      <y>130</y>
+      <name>design_rev</name>
+     </Item>
      <Item type="Field" id="2CE262C20393441BA3B9254CE1B7C76A" action="add">
       <border_width>0</border_width>
       <display_length>30</display_length>
@@ -248,14 +315,14 @@ height: 20px;
       <font_weight>bold</font_weight>
       <is_disabled>1</is_disabled>
       <is_visible>1</is_visible>
-      <label xml:lang="en">Repeats</label>
+      <label xml:lang="en">Iteration</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
       <sort_order>512</sort_order>
       <source_id keyed_name="81330BE4D50244C5B275864E9D65CD6D" type="Body">81330BE4D50244C5B275864E9D65CD6D</source_id>
       <tab_index>2432</tab_index>
       <tab_stop>1</tab_stop>
-      <x>145</x>
+      <x>135</x>
       <y>10</y>
       <name>generation</name>
      </Item>
@@ -392,6 +459,54 @@ height: 20px;
       <y>130</y>
       <name>physical_part_serno</name>
      </Item>
+     <Item type="Field" id="D90796908B0647F8921FB02C6DB8EB0A" action="add">
+      <border_width>0</border_width>
+      <css>{$this field rule}
+{ 
+width: 35px;
+height: 35px;
+}</css>
+      <display_length_unit>px</display_length_unit>
+      <field_type>image</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="reqs_verification_image" type="Property">FA1F12FD87BE4CE480839CB8D3F0ACFC</propertytype_id>
+      <sort_order>2944</sort_order>
+      <source_id keyed_name="81330BE4D50244C5B275864E9D65CD6D" type="Body">81330BE4D50244C5B275864E9D65CD6D</source_id>
+      <tab_index>124</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>325</x>
+      <y>5</y>
+      <name>reqs_verification_image</name>
+     </Item>
+     <Item type="Field" id="FBEBB1F8A01A4FEB8A34BDD750A8346B" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Reqs Verification Status</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="reqs_verification_status" type="Property">1912DABD794143E0B9149492A906E8AD</propertytype_id>
+      <sort_order>2816</sort_order>
+      <source_id keyed_name="81330BE4D50244C5B275864E9D65CD6D" type="Body">81330BE4D50244C5B275864E9D65CD6D</source_id>
+      <tab_index>125</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>195</x>
+      <y>10</y>
+      <name>reqs_verification_status</name>
+     </Item>
      <Item type="Field" id="C334EF2AA0B2429A903477DC68B3BA23" action="add">
       <border_width>0</border_width>
       <display_length_unit>px</display_length_unit>
@@ -424,7 +539,7 @@ height: 20px;
       <font_weight>bold</font_weight>
       <is_disabled>0</is_disabled>
       <is_visible>1</is_visible>
-      <label xml:lang="en">state</label>
+      <label xml:lang="en">Test Run Status</label>
       <label_position>top</label_position>
       <list_no_blank>0</list_no_blank>
       <sort_order>640</sort_order>

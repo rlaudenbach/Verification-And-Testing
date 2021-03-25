@@ -1,0 +1,304 @@
+﻿<AML>
+ <Item type="Form" id="4E718798EEE5462AAFE73826C3787ACA" action="add">
+  <category_form>0</category_form>
+  <height>320</height>
+  <stylesheet><![CDATA[../styles/default.css]]></stylesheet>
+  <width>699</width>
+  <name>sm_Study</name>
+  <Relationships>
+   <Item type="Body" id="C08F073B8E7440D2A966558855E2156C" action="add">
+    <bg_color>#FFFFFF</bg_color>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="sm_Study" type="Form">4E718798EEE5462AAFE73826C3787ACA</source_id>
+    <Relationships>
+     <Item type="Field" id="4E33A85EDEBE4E2691F8D28CA1450E8C" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>class structure</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Type</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>1792</sort_order>
+      <source_id keyed_name="C08F073B8E7440D2A966558855E2156C" type="Body">C08F073B8E7440D2A966558855E2156C</source_id>
+      <tab_index>128</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>1</x>
+      <y>87</y>
+      <name>classification</name>
+     </Item>
+     <Item type="Field" id="56BFEBFF95B24995AF4E4B0CB8126138" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Description</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="description" type="Property">84D98630FE524E79A5869BD244D90C15</propertytype_id>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="C08F073B8E7440D2A966558855E2156C" type="Body">C08F073B8E7440D2A966558855E2156C</source_id>
+      <tab_index>3200</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>461</textarea_cols>
+      <textarea_rows>106</textarea_rows>
+      <x>0</x>
+      <y>130</y>
+      <name>description</name>
+     </Item>
+     <Item type="Field" id="93F98A4676604397824ADBDB0D0C365B" action="add">
+      <border_width>0</border_width>
+      <display_length>160</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Study Number</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="item_number" type="Property">4DE8F6CB66974FCF873F7C63BC479714</propertytype_id>
+      <sort_order>1408</sort_order>
+      <source_id keyed_name="C08F073B8E7440D2A966558855E2156C" type="Body">C08F073B8E7440D2A966558855E2156C</source_id>
+      <tab_index>4736</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>1</x>
+      <y>5</y>
+      <name>item_number</name>
+     </Item>
+     <Item type="Field" id="2C8E35D548434EA7BDC1B35486FFB80D" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Limitations</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="limitations" type="Property">099DCEBFA7F6477EA7D3226D1B4D5E45</propertytype_id>
+      <sort_order>1664</sort_order>
+      <source_id keyed_name="C08F073B8E7440D2A966558855E2156C" type="Body">C08F073B8E7440D2A966558855E2156C</source_id>
+      <tab_index>3584</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>384</textarea_cols>
+      <textarea_rows>180</textarea_rows>
+      <x>985</x>
+      <y>5</y>
+      <name>limitations</name>
+     </Item>
+     <Item type="Field" id="21E12226070743C2A546C8AE2433DEC4" action="add">
+      <border_width>0</border_width>
+      <display_length>307</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Name</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="name" type="Property">B10006F28E4941E1B37C0F21A60D0D2E</propertytype_id>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="C08F073B8E7440D2A966558855E2156C" type="Body">C08F073B8E7440D2A966558855E2156C</source_id>
+      <tab_index>3072</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>1</x>
+      <y>46</y>
+      <name>name</name>
+     </Item>
+     <Item type="Field" id="3DA072E45FEA43308BAC3085F92F14A6" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Objective</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="objective" type="Property">1B7EE8267FC24C79968DCAC7A784B85E</propertytype_id>
+      <sort_order>1920</sort_order>
+      <source_id keyed_name="C08F073B8E7440D2A966558855E2156C" type="Body">C08F073B8E7440D2A966558855E2156C</source_id>
+      <tab_index>3328</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>460</textarea_cols>
+      <textarea_rows>180</textarea_rows>
+      <x>495</x>
+      <y>5</y>
+      <name>objective</name>
+     </Item>
+     <Item type="Field" id="EA20299EF38D4B4E9C3AD7C3B35C48BF" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>textarea</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Recommendations</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="recommendations" type="Property">F8B4AD6AB7E943A08B07ABD5F7B85708</propertytype_id>
+      <sort_order>2048</sort_order>
+      <source_id keyed_name="C08F073B8E7440D2A966558855E2156C" type="Body">C08F073B8E7440D2A966558855E2156C</source_id>
+      <tab_index>3456</tab_index>
+      <tab_stop>1</tab_stop>
+      <textarea_cols>460</textarea_cols>
+      <textarea_rows>80</textarea_rows>
+      <x>495</x>
+      <y>210</y>
+      <name>recommendations</name>
+     </Item>
+     <Item type="Field" id="B6A8AAFF365D4451AAE18E384CDB7F1C" action="add">
+      <border_width>0</border_width>
+      <display_length>128</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>text</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">State</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>1536</sort_order>
+      <source_id keyed_name="C08F073B8E7440D2A966558855E2156C" type="Body">C08F073B8E7440D2A966558855E2156C</source_id>
+      <tab_index>1408</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>180</x>
+      <y>5</y>
+      <name>state</name>
+     </Item>
+     <Item type="Field" id="FEFDDCBF58C349D683750B9F5F71EB11" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>item</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Study Manager</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="C08F073B8E7440D2A966558855E2156C" type="Body">C08F073B8E7440D2A966558855E2156C</source_id>
+      <tab_index>3968</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>328</x>
+      <y>5</y>
+      <name>study_manager</name>
+     </Item>
+     <Item type="Field" id="884CEAEEB9FE433EAA8AA2DAE43FFE80" action="add">
+      <border_width>0</border_width>
+      <display_length_unit>px</display_length_unit>
+      <field_type>item</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Study Owner</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="C08F073B8E7440D2A966558855E2156C" type="Body">C08F073B8E7440D2A966558855E2156C</source_id>
+      <tab_index>4096</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>328</x>
+      <y>46</y>
+      <name>study_owner</name>
+     </Item>
+     <Item type="Field" id="401225957FAC4A1DA90B19E137DDB5E4" action="add">
+      <border_width>0</border_width>
+      <display_length>380</display_length>
+      <display_length_unit>px</display_length_unit>
+      <field_type>file item</field_type>
+      <font_color>#000000</font_color>
+      <font_family>arial, helvetica, sans-serif</font_family>
+      <font_size>8pt</font_size>
+      <font_weight>bold</font_weight>
+      <is_disabled>0</is_disabled>
+      <is_visible>1</is_visible>
+      <label xml:lang="en">Study Report</label>
+      <label_position>top</label_position>
+      <list_no_blank>0</list_no_blank>
+      <propertytype_id keyed_name="study_report" type="Property">CF634AA544B942D8AC291B1A156A7A05</propertytype_id>
+      <sort_order>896</sort_order>
+      <source_id keyed_name="C08F073B8E7440D2A966558855E2156C" type="Body">C08F073B8E7440D2A966558855E2156C</source_id>
+      <tab_index>4224</tab_index>
+      <tab_stop>1</tab_stop>
+      <x>5</x>
+      <y>265</y>
+      <name>study_report</name>
+     </Item>
+    </Relationships>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="Field" id="4E33A85EDEBE4E2691F8D28CA1450E8C" action="edit">
+  <!-- Please note: this AML depends on the "sm_Study" ItemType. Please make sure it exists before running this. -->
+  <propertytype_id>
+   <Item type="Property" action="get" select="id">
+    <name>classification</name>
+    <source_id type="ItemType" keyed_name="sm_Study">69C1280BA9434BD0A867DFB39CFB4EB1</source_id>
+   </Item>
+  </propertytype_id>
+ </Item>
+ <Item type="Field" id="B6A8AAFF365D4451AAE18E384CDB7F1C" action="edit">
+  <!-- Please note: this AML depends on the "sm_Study" ItemType. Please make sure it exists before running this. -->
+  <propertytype_id>
+   <Item type="Property" action="get" select="id">
+    <name>state</name>
+    <source_id type="ItemType" keyed_name="sm_Study">69C1280BA9434BD0A867DFB39CFB4EB1</source_id>
+   </Item>
+  </propertytype_id>
+ </Item>
+ <Item type="Field" id="FEFDDCBF58C349D683750B9F5F71EB11" action="edit">
+  <!-- Please note: this AML depends on the "sm_Study" ItemType. Please make sure it exists before running this. -->
+  <propertytype_id>
+   <Item type="Property" action="get" select="id">
+    <name>managed_by_id</name>
+    <source_id type="ItemType" keyed_name="sm_Study">69C1280BA9434BD0A867DFB39CFB4EB1</source_id>
+   </Item>
+  </propertytype_id>
+ </Item>
+ <Item type="Field" id="884CEAEEB9FE433EAA8AA2DAE43FFE80" action="edit">
+  <!-- Please note: this AML depends on the "sm_Study" ItemType. Please make sure it exists before running this. -->
+  <propertytype_id>
+   <Item type="Property" action="get" select="id">
+    <name>owned_by_id</name>
+    <source_id type="ItemType" keyed_name="sm_Study">69C1280BA9434BD0A867DFB39CFB4EB1</source_id>
+   </Item>
+  </propertytype_id>
+ </Item>
+</AML>

@@ -1,0 +1,10 @@
+<imports>
+  <package name="Verification And Testing" path="Verification And Testing - RE,SA,SM\Import" >
+    <dependson name="com.aras.innovator.solution.RE" />
+    <dependson name="com.aras.innovator.solution.SA" />
+    <dependson name="com.aras.innovator.solution.SM" />
+  </package>
+  <package name="com.aras.innovator.solution.RE" path="Verification And Testing - RE,SA,SM\RE\Import" />
+  <package name="com.aras.innovator.solution.SM" path="Verification And Testing - RE,SA,SM\SM\Import" />
+  <package name="com.aras.innovator.solution.SA" path="Verification And Testing - RE,SA,SM\SA\Import" />
+</imports>

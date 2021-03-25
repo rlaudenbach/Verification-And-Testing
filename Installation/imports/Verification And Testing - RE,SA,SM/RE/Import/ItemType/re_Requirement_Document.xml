@@ -1,0 +1,95 @@
+﻿<AML>
+ <Item type="ItemType" id="231ABCEFD2634AB3AD3B9A4748BFC4FA" action="add">
+  <name>re_Requirement_Document</name>
+  <Relationships>
+   <Item type="Property" id="70AD5E83AA8A4ADD96333C1A67E6BF9D" action="add">
+    <column_alignment>center</column_alignment>
+    <column_width>30</column_width>
+    <sort_order>129</sort_order>
+    <source_id keyed_name="re_Requirement_Document" type="ItemType" name="re_Requirement_Document">231ABCEFD2634AB3AD3B9A4748BFC4FA</source_id>
+    <name>current_state_image</name>
+   </Item>
+   <Item type="Property" id="C7CF242B50054B67A95DC8A9AA53844E" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>300</column_width>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="re_Requirement_Document" type="ItemType" name="re_Requirement_Document">231ABCEFD2634AB3AD3B9A4748BFC4FA</source_id>
+    <name>description</name>
+   </Item>
+   <Item type="Property" id="0317CB4DA840447CA9B256FE1EA4C2A9" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="re_Requirement_Document" type="ItemType" name="re_Requirement_Document">231ABCEFD2634AB3AD3B9A4748BFC4FA</source_id>
+    <name>reqdoc_category</name>
+   </Item>
+   <Item type="Property" id="39281A4E23514EB481D0EE0B6469A195" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="re_Requirement_Document" type="ItemType" name="re_Requirement_Document">231ABCEFD2634AB3AD3B9A4748BFC4FA</source_id>
+    <name>reqdoc_group</name>
+   </Item>
+   <Item type="Property" id="11E5821E53D34AC18C91493950546070" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <sort_order>896</sort_order>
+    <source_id keyed_name="re_Requirement_Document" type="ItemType" name="re_Requirement_Document">231ABCEFD2634AB3AD3B9A4748BFC4FA</source_id>
+    <name>reqdoc_tier</name>
+   </Item>
+   <Item type="Property" id="40BC65C6CDF843769B7E2C4AE5A30242" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>250</column_width>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="re_Requirement_Document" type="ItemType" name="re_Requirement_Document">231ABCEFD2634AB3AD3B9A4748BFC4FA</source_id>
+    <name>reqdoc_title</name>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="ItemType" id="231ABCEFD2634AB3AD3B9A4748BFC4FA" action="edit">
+  <Relationships>
+   <Item type="Property" id="5C5E14741B9C46499E03E205BD48C8D7" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>130</column_width>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="re_Requirement_Document" type="ItemType" name="re_Requirement_Document">231ABCEFD2634AB3AD3B9A4748BFC4FA</source_id>
+    <name>item_number</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='231ABCEFD2634AB3AD3B9A4748BFC4FA' and name='generation'">
+    <column_alignment>left</column_alignment>
+    <column_width>50</column_width>
+    <sort_order>301</sort_order>
+    <source_id keyed_name="re_Requirement_Document" type="ItemType" name="re_Requirement_Document">231ABCEFD2634AB3AD3B9A4748BFC4FA</source_id>
+    <name>generation</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='231ABCEFD2634AB3AD3B9A4748BFC4FA' and name='major_rev'">
+    <column_alignment>left</column_alignment>
+    <column_width>50</column_width>
+    <sort_order>300</sort_order>
+    <source_id keyed_name="re_Requirement_Document" type="ItemType" name="re_Requirement_Document">231ABCEFD2634AB3AD3B9A4748BFC4FA</source_id>
+    <name>major_rev</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='231ABCEFD2634AB3AD3B9A4748BFC4FA' and name='managed_by_id'">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <sort_order>1152</sort_order>
+    <source_id keyed_name="re_Requirement_Document" type="ItemType" name="re_Requirement_Document">231ABCEFD2634AB3AD3B9A4748BFC4FA</source_id>
+    <name>managed_by_id</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='231ABCEFD2634AB3AD3B9A4748BFC4FA' and name='owned_by_id'">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <sort_order>1024</sort_order>
+    <source_id keyed_name="re_Requirement_Document" type="ItemType" name="re_Requirement_Document">231ABCEFD2634AB3AD3B9A4748BFC4FA</source_id>
+    <name>owned_by_id</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='231ABCEFD2634AB3AD3B9A4748BFC4FA' and name='state'">
+    <column_alignment>left</column_alignment>
+    <column_width>100</column_width>
+    <sort_order>130</sort_order>
+    <source_id keyed_name="re_Requirement_Document" type="ItemType" name="re_Requirement_Document">231ABCEFD2634AB3AD3B9A4748BFC4FA</source_id>
+    <name>state</name>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

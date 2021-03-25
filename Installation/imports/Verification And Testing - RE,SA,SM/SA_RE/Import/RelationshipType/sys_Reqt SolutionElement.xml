@@ -4,6 +4,7 @@
   <behavior>float</behavior>
   <copy_permissions>0</copy_permissions>
   <create_related>0</create_related>
+  <grid_view>intermix</grid_view>
   <hide_in_all>0</hide_in_all>
   <inc_rel_key_name>1</inc_rel_key_name>
   <inc_related_key_name>1</inc_related_key_name>
@@ -54,6 +55,74 @@
       <track_history>0</track_history>
       <name>external_id</name>
      </Item>
+     <Item type="Property" id="991E48703D0B4EE9ADE38029D6AA9F75" action="add">
+      <column_alignment>center</column_alignment>
+      <column_width>65</column_width>
+      <data_source>
+       <Item type="Property" action="get" select="id">
+        <name>source_id</name>
+        <source_id>88EDB7B135E34351A2E10D38064FEE8A</source_id>
+       </Item>
+      </data_source>
+      <data_type>foreign</data_type>
+      <foreign_property>
+       <Item type="Property" action="get" select="id">
+        <keyed_name>generation</keyed_name>
+        <source_id>
+         <Item type="ItemType" action="get" select="id">
+          <name>re_Requirement</name>
+         </Item>
+        </source_id>
+       </Item>
+      </foreign_property>
+      <is_hidden>0</is_hidden>
+      <is_hidden2>0</is_hidden2>
+      <is_indexed>0</is_indexed>
+      <is_keyed>0</is_keyed>
+      <is_multi_valued>0</is_multi_valued>
+      <is_required>0</is_required>
+      <label xml:lang="en">Req Gen</label>
+      <range_inclusive>0</range_inclusive>
+      <readonly>0</readonly>
+      <sort_order>12</sort_order>
+      <source_id keyed_name="sys_Reqt SolutionElement" type="ItemType" name="sys_Reqt SolutionElement">88EDB7B135E34351A2E10D38064FEE8A</source_id>
+      <track_history>0</track_history>
+      <name>req_gen</name>
+     </Item>
+     <Item type="Property" id="3712E5CA16854ED9A09C00729455DC71" action="add">
+      <column_alignment>center</column_alignment>
+      <column_width>65</column_width>
+      <data_source>
+       <Item type="Property" action="get" select="id">
+        <name>source_id</name>
+        <source_id>88EDB7B135E34351A2E10D38064FEE8A</source_id>
+       </Item>
+      </data_source>
+      <data_type>foreign</data_type>
+      <foreign_property>
+       <Item type="Property" action="get" select="id">
+        <keyed_name>major_rev</keyed_name>
+        <source_id>
+         <Item type="ItemType" action="get" select="id">
+          <name>re_Requirement</name>
+         </Item>
+        </source_id>
+       </Item>
+      </foreign_property>
+      <is_hidden>0</is_hidden>
+      <is_hidden2>0</is_hidden2>
+      <is_indexed>0</is_indexed>
+      <is_keyed>0</is_keyed>
+      <is_multi_valued>0</is_multi_valued>
+      <is_required>0</is_required>
+      <label xml:lang="en">Req Rev</label>
+      <range_inclusive>0</range_inclusive>
+      <readonly>0</readonly>
+      <sort_order>11</sort_order>
+      <source_id keyed_name="sys_Reqt SolutionElement" type="ItemType" name="sys_Reqt SolutionElement">88EDB7B135E34351A2E10D38064FEE8A</source_id>
+      <track_history>0</track_history>
+      <name>req_rev</name>
+     </Item>
      <Item type="Property" id="59F1C9BCF7B34B6CA419C91A53643A6F" action="add">
       <column_alignment>left</column_alignment>
       <column_width>300</column_width>
@@ -88,6 +157,74 @@
       <track_history>0</track_history>
       <name>req_title</name>
      </Item>
+     <Item type="Property" id="F44D78AD6747499A8A4EE6A4E39CD035" action="add">
+      <column_alignment>left</column_alignment>
+      <column_width>65</column_width>
+      <data_source>
+       <Item type="Property" action="get" select="id">
+        <name>related_id</name>
+        <source_id>88EDB7B135E34351A2E10D38064FEE8A</source_id>
+       </Item>
+      </data_source>
+      <data_type>foreign</data_type>
+      <foreign_property>
+       <Item type="Property" action="get" select="id">
+        <keyed_name>generation</keyed_name>
+        <source_id>
+         <Item type="ItemType" action="get" select="id">
+          <name>sys_SolutionElement</name>
+         </Item>
+        </source_id>
+       </Item>
+      </foreign_property>
+      <is_hidden>0</is_hidden>
+      <is_hidden2>0</is_hidden2>
+      <is_indexed>0</is_indexed>
+      <is_keyed>0</is_keyed>
+      <is_multi_valued>0</is_multi_valued>
+      <is_required>0</is_required>
+      <label xml:lang="en">ItemGen</label>
+      <range_inclusive>0</range_inclusive>
+      <readonly>0</readonly>
+      <sort_order>132</sort_order>
+      <source_id keyed_name="sys_Reqt SolutionElement" type="ItemType" name="sys_Reqt SolutionElement">88EDB7B135E34351A2E10D38064FEE8A</source_id>
+      <track_history>0</track_history>
+      <name>sol_gen</name>
+     </Item>
+     <Item type="Property" id="A6175B3014074EF7ABBCD6A498D1DCC4" action="add">
+      <column_alignment>left</column_alignment>
+      <column_width>65</column_width>
+      <data_source>
+       <Item type="Property" action="get" select="id">
+        <name>related_id</name>
+        <source_id>88EDB7B135E34351A2E10D38064FEE8A</source_id>
+       </Item>
+      </data_source>
+      <data_type>foreign</data_type>
+      <foreign_property>
+       <Item type="Property" action="get" select="id">
+        <keyed_name>major_rev</keyed_name>
+        <source_id>
+         <Item type="ItemType" action="get" select="id">
+          <name>sys_SolutionElement</name>
+         </Item>
+        </source_id>
+       </Item>
+      </foreign_property>
+      <is_hidden>0</is_hidden>
+      <is_hidden2>0</is_hidden2>
+      <is_indexed>0</is_indexed>
+      <is_keyed>0</is_keyed>
+      <is_multi_valued>0</is_multi_valued>
+      <is_required>0</is_required>
+      <label xml:lang="en">ItemRev</label>
+      <range_inclusive>0</range_inclusive>
+      <readonly>0</readonly>
+      <sort_order>131</sort_order>
+      <source_id keyed_name="sys_Reqt SolutionElement" type="ItemType" name="sys_Reqt SolutionElement">88EDB7B135E34351A2E10D38064FEE8A</source_id>
+      <track_history>0</track_history>
+      <name>sol_rev</name>
+     </Item>
     </Relationships>
    </Item>
   </relationship_id>
@@ -119,7 +256,7 @@
    </Item>
    <Item type="Property" action="edit" where="source_id='88EDB7B135E34351A2E10D38064FEE8A' and name='source_id'">
     <column_alignment>left</column_alignment>
-    <column_width>150</column_width>
+    <column_width>120</column_width>
     <data_source keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</data_source>
     <data_type>item</data_type>
     <is_hidden>0</is_hidden>
@@ -139,4 +276,6 @@
    </Item>
   </Relationships>
  </Item>
+ <Item type="View" action="delete" where="source_id='88EDB7B135E34351A2E10D38064FEE8A'" />
+ <Item type="Form" action="delete" where="name='sys_Reqt SolutionElement'" />
 </AML>

@@ -7,7 +7,7 @@ if (res.isError()) {
     aras.AlertError(res.getErrorString());
     return;
 }
-aras.AlertSuccess("New Cycle got started. Please refresh the Test Plan.");
+aras.AlertSuccess("New Test Run Cycle got started. Please refresh the Main Grid or the open Test Plan.");
 return;
 ]]></method_code>
   <method_type>JavaScript</method_type>

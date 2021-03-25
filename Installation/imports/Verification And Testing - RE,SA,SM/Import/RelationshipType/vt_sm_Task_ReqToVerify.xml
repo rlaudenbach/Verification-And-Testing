@@ -20,7 +20,7 @@
     <enforce_discovery>0</enforce_discovery>
     <hide_where_used>0</hide_where_used>
     <implementation_type>table</implementation_type>
-    <instance_data>VT_SM_TASK_REQTOVerify</instance_data>
+    <instance_data>VT_SM_TASK_REQTOVERIFY</instance_data>
     <is_dependent>0</is_dependent>
     <is_relationship>1</is_relationship>
     <is_versionable>0</is_versionable>
@@ -31,9 +31,43 @@
     <use_src_access>1</use_src_access>
     <name>vt_sm_Task_ReqToVerify</name>
     <Relationships>
+     <Item type="Property" id="226914620CD4480BA71E0C0D713C4F48" action="add">
+      <column_alignment>center</column_alignment>
+      <column_width>100</column_width>
+      <data_source>
+       <Item type="Property" action="get" select="id">
+        <name>current_state</name>
+        <source_id>AAD9BC03B2924D0CA14CDFD843E1A289</source_id>
+       </Item>
+      </data_source>
+      <data_type>foreign</data_type>
+      <foreign_property>
+       <Item type="Property" action="get" select="id">
+        <keyed_name>image</keyed_name>
+        <source_id>
+         <Item type="ItemType" action="get" select="id">
+          <name>Life Cycle State</name>
+         </Item>
+        </source_id>
+       </Item>
+      </foreign_property>
+      <is_hidden>0</is_hidden>
+      <is_hidden2>0</is_hidden2>
+      <is_indexed>0</is_indexed>
+      <is_keyed>0</is_keyed>
+      <is_multi_valued>0</is_multi_valued>
+      <is_required>0</is_required>
+      <label xml:lang="en">Satisfies Req</label>
+      <range_inclusive>0</range_inclusive>
+      <readonly>0</readonly>
+      <sort_order>140</sort_order>
+      <source_id keyed_name="vt_sm_Task_ReqToVerify" type="ItemType" name="vt_sm_Task_ReqToVerify">AAD9BC03B2924D0CA14CDFD843E1A289</source_id>
+      <track_history>0</track_history>
+      <name>current_state_image</name>
+     </Item>
      <Item type="Property" id="366D46D4978545B5A120D63DF15FB35B" action="add">
       <column_alignment>left</column_alignment>
-      <column_width>300</column_width>
+      <column_width>150</column_width>
       <data_source>
        <Item type="Property" action="get" select="id">
         <name>related_id</name>
@@ -101,7 +135,7 @@
      </Item>
      <Item type="Property" id="A7AFE30F132C438191323D7952B4016B" action="add">
       <column_alignment>left</column_alignment>
-      <column_width>300</column_width>
+      <column_width>150</column_width>
       <data_source>
        <Item type="Property" action="get" select="id">
         <name>related_id</name>
@@ -125,13 +159,36 @@
       <is_keyed>0</is_keyed>
       <is_multi_valued>0</is_multi_valued>
       <is_required>0</is_required>
-      <label xml:lang="en">SolElem_Number</label>
+      <label xml:lang="en">Sol Item Number</label>
       <range_inclusive>0</range_inclusive>
       <readonly>0</readonly>
-      <sort_order>100</sort_order>
+      <sort_order>130</sort_order>
       <source_id keyed_name="vt_sm_Task_ReqToVerify" type="ItemType" name="vt_sm_Task_ReqToVerify">AAD9BC03B2924D0CA14CDFD843E1A289</source_id>
       <track_history>0</track_history>
       <name>solelem_number</name>
+     </Item>
+     <Item type="Property" id="F6F36BA808E64574B973052CB56DAFB0" action="add">
+      <column_alignment>left</column_alignment>
+      <column_width>300</column_width>
+      <data_type>text</data_type>
+      <is_hidden>0</is_hidden>
+      <is_hidden2>0</is_hidden2>
+      <is_indexed>0</is_indexed>
+      <is_keyed>0</is_keyed>
+      <is_multi_valued>0</is_multi_valued>
+      <is_required>0</is_required>
+      <label xml:lang="en">Notes</label>
+      <range_inclusive>0</range_inclusive>
+      <readonly>0</readonly>
+      <sort_order>141</sort_order>
+      <source_id keyed_name="vt_sm_Task_ReqToVerify" type="ItemType" name="vt_sm_Task_ReqToVerify">AAD9BC03B2924D0CA14CDFD843E1A289</source_id>
+      <track_history>0</track_history>
+      <name>verification_notes</name>
+     </Item>
+     <Item type="ItemType Life Cycle" id="C4F1E5B99AD4446A91275C2F4009A13F" action="add">
+      <related_id keyed_name="vt_Rel_ReqToVerify" type="Life Cycle Map">0E4871249ACD44238F2B59DEA4AF30BD</related_id>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="vt_sm_Task_ReqToVerify" type="ItemType" name="vt_sm_Task_ReqToVerify">AAD9BC03B2924D0CA14CDFD843E1A289</source_id>
      </Item>
     </Relationships>
    </Item>
@@ -142,6 +199,24 @@
  </Item>
  <Item type="ItemType" id="AAD9BC03B2924D0CA14CDFD843E1A289" action="edit">
   <Relationships>
+   <Item type="Property" action="edit" where="source_id='AAD9BC03B2924D0CA14CDFD843E1A289' and name='generation'">
+    <column_alignment>left</column_alignment>
+    <column_width>50</column_width>
+    <data_type>integer</data_type>
+    <is_hidden>1</is_hidden>
+    <is_hidden2>1</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en" />
+    <range_inclusive>0</range_inclusive>
+    <readonly>1</readonly>
+    <sort_order>11</sort_order>
+    <source_id keyed_name="vt_sm_Task_ReqToVerify" type="ItemType" name="vt_sm_Task_ReqToVerify">AAD9BC03B2924D0CA14CDFD843E1A289</source_id>
+    <track_history>0</track_history>
+    <name>generation</name>
+   </Item>
    <Item type="Property" action="edit" where="source_id='AAD9BC03B2924D0CA14CDFD843E1A289' and name='related_id'">
     <column_alignment>left</column_alignment>
     <column_width>1</column_width>

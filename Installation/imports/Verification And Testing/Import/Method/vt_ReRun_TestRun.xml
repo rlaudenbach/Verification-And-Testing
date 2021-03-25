@@ -2,39 +2,62 @@
  <Item type="Method" id="319AEB04DFB1416F9BBB9AB34D8EDAEC" action="add">
   <comments>called from an action</comments>
   <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
-  <method_code><![CDATA[// For test runs action "re Run" means creating a new version of a "released" (Pass or Fail) test run
+  <method_code><![CDATA[// For test runs action "re Run" means creating a new version of a "released" (Complete or Failed) test run
 
-// Cloned from "PE_CreateNewRevision"
-
-//System.Diagnostics.Debugger.Launch();System.Diagnostics.Debugger.Break();
-
+System.Diagnostics.Debugger.Launch();System.Diagnostics.Debugger.Break();
 
 Innovator inn = this.getInnovator();
 string thisType = this.getType();
 Item testRunItem = this;
 
 // the "re Run" action can trigger from item types:  "vt_TestPlan_Run"  or "vt_TestRun"
-if (thisType == "vt_TestPlan_Run") {
-    testRunItem = this.getRelatedItem();
-    bool reportError = false;
-    
-    Item testPlan = this.getInnovator().getItemById("vt_TestPlan", this.getProperty("source_id","invlaid"));
-    switch (testPlan.getProperty("state","")) {
-        case "Planning":
-        case "Running":
-            break;
-        default:
+bool reportError = false;
+switch (thisType) {
+    case "vt_TestPlan_Run":
+        testRunItem = this.getRelatedItem();
+        
+        Item testPlan = this.getInnovator().getItemById("vt_TestPlan", this.getProperty("source_id","invlaid"));
+        switch (testPlan.getProperty("state","")) {
+            case "Planning":
+            case "Running":
+                break;
+            default:
+                reportError = true;
+                break;
+        }
+        if (testPlan.getLockStatus() > 0) {
             reportError = true;
-            break;
-    }
-    if (testPlan.getLockStatus() > 0) {
-        reportError = true;
-    }
-    if (reportError) {
-        return inn.newError("Test Plan must be unclaimed and in status 'Planning' or 'Running' for this action!");
-    }
+        }
+        if (reportError) {
+            return inn.newError("Test Plan must be unclaimed and in status 'Planning' or 'Running' for this action!");
+        }
+        break;
+    case "vt_TestRun":
+        // check if test run is listed in a test plan
+        Item check = this.newItem("vt_TestPlan_Run","get");
+        check.setProperty("related_id",testRunItem.getID());
+        check = check.apply();
+        if (check.getItemCount() > 0) {
+            string tpKN = check.getItemByIndex(0).getPropertyAttribute("source_id","keyed_name","");
+            return inn.newError("This Test Run is part of a Test Plan '"+tpKN+"' and can only be re-run from within this Test Plan !");
+        }
+        
+        switch (testRunItem.getProperty("state","")) {
+            case "Test Complete":
+            case "Test Failed":
+                break;
+            default:
+                reportError = true;
+                break;
+        }
+        if (testRunItem.getLockStatus() > 0) {
+            reportError = true;
+        }
+        if (reportError) {
+            return inn.newError("Test Run must be unclaimed and in status 'Complete' or 'Failed' to start a re-run !");
+        }
+        break;
 }
-
 
 if(testRunItem.isNew() || testRunItem.getAttribute("isTemp", "").Equals("1", StringComparison.OrdinalIgnoreCase))
 {
@@ -44,9 +67,9 @@ if(testRunItem.isNew() || testRunItem.getAttribute("isTemp", "").Equals("1", Str
 bool isInReleasedState = String.Equals(testRunItem.getProperty("is_released","0"), "1", StringComparison.Ordinal);
 
 // Item must be in the Released state
-if (!isInReleasedState && testRunItem.getProperty("state","") != "Fail" && testRunItem.getProperty("state","") != "Pass")
+if (!isInReleasedState && testRunItem.getProperty("state","") != "Test Failed" && testRunItem.getProperty("state","") != "Test Complete")
 {
-  return inn.newError("This action can only be run on 'Failed' test runs !");
+  return inn.newError("This action can only be run on 'Complete' or 'Failed' test runs !");
 }
 
 // Make sure the current user is in the Owner identity
@@ -70,7 +93,30 @@ try
   // reset start/complete dates
   resItem.setProperty("started_on","");
   resItem.setProperty("completed_on","");
-  resItem = resItem.apply("merge");    // merge also unlocks the item !
+  resItem.setProperty("test_run_result_summary","");
+  resItem.setProperty("reqs_verification_image","");
+  resItem.setProperty("reqs_verification_status","");
+  
+
+  resItem = resItem.apply("update");    // merge also unlocks the item !
+  
+  // reset reqs verification states
+  resItem.fetchRelationships("vt_TestRun_ReqToVerify");
+  Item verifyRels = resItem.getRelationships("vt_TestRun_ReqToVerify");
+  for (int i=0; i<verifyRels.getItemCount(); i++) {
+    Item relItm = verifyRels.getItemByIndex(i);
+    relItm.setAction("merge");
+    relItm.setProperty("current_state","BE0297974E414370B2E0C8FC1BA760D7");
+    relItm.setProperty("state","In Review");
+    relItm = relItm.apply();
+  }
+  if (resItem.fetchLockStatus() == 1) {
+    resItem.unlockItem();
+  }
+  
+  Item tmp = resItem.promote("Planning", "from re-run action");    
+  if (tmp.isError()) return tmp;
+  
   return resItem; 
 }
 finally

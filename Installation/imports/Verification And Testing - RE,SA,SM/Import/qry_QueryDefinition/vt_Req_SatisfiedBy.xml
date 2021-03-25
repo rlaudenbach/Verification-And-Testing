@@ -8,6 +8,43 @@
     <sort_order>128</sort_order>
     <source_id keyed_name="vt_Req_SatisfiedBy" type="qry_QueryDefinition">3B2A7C84093C4B00BCB63A877F26B304</source_id>
     <alias>re_Requirement</alias>
+    <Relationships>
+     <Item type="qry_QueryItemSelectProperty" id="E96339020BB34913868DA29F889259B5" action="add">
+      <property_name>id</property_name>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="re_Requirement" type="qry_QueryItem">23233116A8B741289895D4273556C98D</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="93B39BE4981745D69F84508040795625" action="add">
+      <property_name>req_title</property_name>
+      <sort_order>256</sort_order>
+      <source_id keyed_name="re_Requirement" type="qry_QueryItem">23233116A8B741289895D4273556C98D</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="B890D523DC8C43CAB976225E2A1B09D9" action="add">
+      <property_name>classification</property_name>
+      <sort_order>384</sort_order>
+      <source_id keyed_name="re_Requirement" type="qry_QueryItem">23233116A8B741289895D4273556C98D</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="7C73D6DA6D2A404AB97AB8C1A1B91351" action="add">
+      <property_name>req_category</property_name>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="re_Requirement" type="qry_QueryItem">23233116A8B741289895D4273556C98D</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="464200D6B40A4C538B3E45E3E8FB8E34" action="add">
+      <property_name>major_rev</property_name>
+      <sort_order>640</sort_order>
+      <source_id keyed_name="re_Requirement" type="qry_QueryItem">23233116A8B741289895D4273556C98D</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="30EC225F8EC047A684C6E9090CBA1F73" action="add">
+      <property_name>generation</property_name>
+      <sort_order>768</sort_order>
+      <source_id keyed_name="re_Requirement" type="qry_QueryItem">23233116A8B741289895D4273556C98D</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="DB831D16637C4FE5B0C463A4F09EC73F" action="add">
+      <property_name>state</property_name>
+      <sort_order>896</sort_order>
+      <source_id keyed_name="re_Requirement" type="qry_QueryItem">23233116A8B741289895D4273556C98D</source_id>
+     </Item>
+    </Relationships>
    </Item>
    <Item type="qry_QueryItem" id="11D16816CB844254B301533ECA0CB89A" action="add">
     <item_type keyed_name="sys_Reqt SolutionElement" type="ItemType" name="sys_Reqt SolutionElement">88EDB7B135E34351A2E10D38064FEE8A</item_type>
@@ -29,6 +66,16 @@
      <Item type="qry_QueryItemSelectProperty" id="F5B5161B1F1C48F5BBCA22D21874C9B9" action="add">
       <property_name>id</property_name>
       <sort_order>384</sort_order>
+      <source_id keyed_name="sys_Reqt SolutionElement" type="qry_QueryItem">11D16816CB844254B301533ECA0CB89A</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="1D8D014A1CA54135888B8A3E7D72E729" action="add">
+      <property_name>req_gen</property_name>
+      <sort_order>512</sort_order>
+      <source_id keyed_name="sys_Reqt SolutionElement" type="qry_QueryItem">11D16816CB844254B301533ECA0CB89A</source_id>
+     </Item>
+     <Item type="qry_QueryItemSelectProperty" id="E6E60C55725A4AB49B3EEEBBF5DD729B" action="add">
+      <property_name>req_rev</property_name>
+      <sort_order>640</sort_order>
       <source_id keyed_name="sys_Reqt SolutionElement" type="qry_QueryItem">11D16816CB844254B301533ECA0CB89A</source_id>
      </Item>
     </Relationships>
@@ -58,7 +105,7 @@
     </Relationships>
    </Item>
    <Item type="qry_QueryItem" id="6D5AEC3AD9DA431EB16BDA98A4D0F327" action="add">
-    <item_type keyed_name="vt_TestRun_ReqToValidate" type="ItemType" name="vt_TestRun_ReqToValidate">9DE58E51C66A4A109838599A590ADB67</item_type>
+    <item_type keyed_name="vt_TestRun_ReqToVerify" type="ItemType" name="vt_TestRun_ReqToVerify">9DE58E51C66A4A109838599A590ADB67</item_type>
     <ref_id>DF6B6CD01BB04B0099AF640962572F74</ref_id>
     <sort_order>512</sort_order>
     <source_id keyed_name="vt_Req_SatisfiedBy" type="qry_QueryDefinition">3B2A7C84093C4B00BCB63A877F26B304</source_id>
@@ -193,7 +240,7 @@
     </Relationships>
    </Item>
    <Item type="qry_QueryItem" id="B667791BF99E4814905E7306FB37C556" action="add">
-    <item_type keyed_name="vt_sm_Task_ReqToValidate" type="ItemType" name="vt_sm_Task_ReqToValidate">AAD9BC03B2924D0CA14CDFD843E1A289</item_type>
+    <item_type keyed_name="vt_sm_Task_ReqToVerify" type="ItemType" name="vt_sm_Task_ReqToVerify">AAD9BC03B2924D0CA14CDFD843E1A289</item_type>
     <ref_id>C351B20B8F2D4788B4FE67F8505C24CA</ref_id>
     <sort_order>1280</sort_order>
     <source_id keyed_name="vt_Req_SatisfiedBy" type="qry_QueryDefinition">3B2A7C84093C4B00BCB63A877F26B304</source_id>

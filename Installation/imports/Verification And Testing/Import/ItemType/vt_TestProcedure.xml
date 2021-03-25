@@ -23,12 +23,6 @@
   <use_src_access>0</use_src_access>
   <name>vt_TestProcedure</name>
   <Relationships>
-   <Item type="ITPresentationConfiguration" id="D14695D8B20C5B9D6B77D6069BFA2DFF" action="add">
-    <client>js</client>
-    <related_id keyed_name="vt_TestProcedure_TOC_Configuration" type="PresentationConfiguration">D14695D8B20C5B9D36326AA7318BB90D</related_id>
-    <sort_order>128</sort_order>
-    <source_id keyed_name="vt_TestProcedure" type="ItemType" name="vt_TestProcedure">9BCB4CF7D5824B50A795DE10A1A50CD9</source_id>
-   </Item>
    <Item type="Property" id="B85702B1FC8A40C8AEF9F8CABD5023A3" action="add">
     <column_alignment>left</column_alignment>
     <column_width>30</column_width>

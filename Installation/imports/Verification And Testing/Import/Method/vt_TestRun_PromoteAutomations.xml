@@ -36,8 +36,8 @@ switch (promotedState) {
     case "Running":
         SetDateToNow (thisItem, "started_on");
         break;
-    case "Pass":
-    case "Fail":
+    case "Test Complete":
+    case "Test Failed":
         SetDateToNow (thisItem, "completed_on");
         break;
 }

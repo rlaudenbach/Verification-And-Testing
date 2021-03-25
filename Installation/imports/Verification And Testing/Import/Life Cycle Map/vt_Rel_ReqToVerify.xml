@@ -1,0 +1,103 @@
+﻿<AML>
+ <Item type="Life Cycle Map" id="0E4871249ACD44238F2B59DEA4AF30BD" action="add">
+  <start_state keyed_name="In Review" type="Life Cycle State">BE0297974E414370B2E0C8FC1BA760D7</start_state>
+  <name>vt_Rel_ReqToVerify</name>
+  <Relationships>
+   <Item type="Life Cycle State" id="755C1D709DC44B96B844DFD8335BB3C1" action="add">
+    <image>../Images/custom/vtFail.svg</image>
+    <item_behavior>fixed</item_behavior>
+    <set_is_released>1</set_is_released>
+    <set_not_lockable>1</set_not_lockable>
+    <sort_order>640</sort_order>
+    <source_id keyed_name="vt_Rel_ReqToVerify" type="Life Cycle Map">0E4871249ACD44238F2B59DEA4AF30BD</source_id>
+    <state_permission_id keyed_name="vt_TestRun Complete" type="Permission">58930278D0AE4BF995830B64A9B0E1AC</state_permission_id>
+    <x>354</x>
+    <y>133</y>
+    <name>Fail</name>
+   </Item>
+   <Item type="Life Cycle State" id="BE0297974E414370B2E0C8FC1BA760D7" action="add">
+    <image>../Images/custom/vtInReview.svg</image>
+    <set_is_released>0</set_is_released>
+    <set_not_lockable>0</set_not_lockable>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_Rel_ReqToVerify" type="Life Cycle Map">0E4871249ACD44238F2B59DEA4AF30BD</source_id>
+    <state_permission_id keyed_name="vt_TestRun" type="Permission">0ACBB932BA7A41D28C7B62520340CB61</state_permission_id>
+    <x>64</x>
+    <y>58</y>
+    <name>In Review</name>
+   </Item>
+   <Item type="Life Cycle State" id="7E7C49FDA3E5402584D0735007C8F370" action="add">
+    <image>../Images/custom/vtPass.svg</image>
+    <item_behavior>fixed</item_behavior>
+    <set_is_released>1</set_is_released>
+    <set_not_lockable>1</set_not_lockable>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="vt_Rel_ReqToVerify" type="Life Cycle Map">0E4871249ACD44238F2B59DEA4AF30BD</source_id>
+    <state_permission_id keyed_name="vt_TestRun Complete" type="Permission">58930278D0AE4BF995830B64A9B0E1AC</state_permission_id>
+    <x>350</x>
+    <y>29</y>
+    <name>Pass</name>
+   </Item>
+   <Item type="Life Cycle Transition" id="7138DB1AF8734A018318D3FB06B3521E" action="add">
+    <from_state keyed_name="Fail" type="Life Cycle State">755C1D709DC44B96B844DFD8335BB3C1</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments>258,143</segments>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_Rel_ReqToVerify" type="Life Cycle Map">0E4871249ACD44238F2B59DEA4AF30BD</source_id>
+    <to_state keyed_name="In Review" type="Life Cycle State">BE0297974E414370B2E0C8FC1BA760D7</to_state>
+    <x>-41</x>
+    <y>37</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="D54CDA917F6640C59ECE0890B8E9DC31" action="add">
+    <from_state keyed_name="Pass" type="Life Cycle State">7E7C49FDA3E5402584D0735007C8F370</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments>280,66</segments>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="vt_Rel_ReqToVerify" type="Life Cycle Map">0E4871249ACD44238F2B59DEA4AF30BD</source_id>
+    <to_state keyed_name="In Review" type="Life Cycle State">BE0297974E414370B2E0C8FC1BA760D7</to_state>
+    <x>-67</x>
+    <y>37</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="697BB83834D54DDA91C2906436E9EB2B" action="add">
+    <from_state keyed_name="In Review" type="Life Cycle State">BE0297974E414370B2E0C8FC1BA760D7</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments />
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_Rel_ReqToVerify" type="Life Cycle Map">0E4871249ACD44238F2B59DEA4AF30BD</source_id>
+    <to_state keyed_name="Pass" type="Life Cycle State">7E7C49FDA3E5402584D0735007C8F370</to_state>
+    <x>190</x>
+    <y>-17</y>
+   </Item>
+   <Item type="Life Cycle Transition" id="F00FE32B71234277B242574FEDCF13C9" action="add">
+    <from_state keyed_name="In Review" type="Life Cycle State">BE0297974E414370B2E0C8FC1BA760D7</from_state>
+    <get_comment>0</get_comment>
+    <role keyed_name="Owner" type="Identity">
+     <Item type="Identity" action="get" select="id">
+      <name>Owner</name>
+     </Item>
+    </role>
+    <segments />
+    <sort_order>256</sort_order>
+    <source_id keyed_name="vt_Rel_ReqToVerify" type="Life Cycle Map">0E4871249ACD44238F2B59DEA4AF30BD</source_id>
+    <to_state keyed_name="Fail" type="Life Cycle State">755C1D709DC44B96B844DFD8335BB3C1</to_state>
+    <x>149</x>
+    <y>45</y>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>

@@ -1,0 +1,130 @@
+﻿<AML>
+ <Item type="Method" id="C720A909EDA74C449AA35304F04182CF" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// Use onAfterAdd and onAfterPromote and onBeforeDelete
+
+// reads life cycle state of all relationships to calculate summary status to update on source item
+string thisAction = this.getAction();
+string thisId = this.getID();
+if (thisId == "") {
+    string tmp = this.getAttribute("idlist","");
+    if (tmp != "") {
+        thisId = tmp.Substring(0,32);
+    }
+}
+if (thisId == "") {
+    return this;  // this should not occur.
+}
+
+Item qry = this.newItem(this.getType(), "get");
+qry.setID(thisId);
+qry.setAttribute("select","source_id,item_number,name,generation,major_rev,reqs_verification_status,locked_by_id");
+qry = qry.apply();
+
+Item sourceItem = qry.getPropertyItem("source_id");
+
+qry = this.newItem(this.getType(), "get");
+qry.setProperty("source_id",sourceItem.getID());
+qry.setAttribute("select","state,id,related_id");
+qry = qry.apply();
+
+// read rels states into distinct list
+string reqsVerificationStates = "";
+for (int i=0; i<qry.getItemCount(); i++) {
+    Item relItm = qry.getItemByIndex(i);
+    
+    bool  skipState = false;
+    if (thisAction == "delete" && relItm.getID() == this.getID()) {
+        skipState = true;
+    }
+    
+    string relState = relItm.getProperty("state","");
+    string tmp = ","+reqsVerificationStates;
+    if (tmp.IndexOf(","+relState) <0 && !skipState) {
+        if (reqsVerificationStates == "") {
+           reqsVerificationStates = relState;
+        }
+        else {
+           reqsVerificationStates += ","+relState;
+        }
+    }
+}
+
+if (sourceItem.getProperty("locked_by_id","") == "") {
+    sourceItem.setAction("edit");
+}
+else {
+    sourceItem.setAction("update");
+}
+
+string[] reqsVerificationSummaryState = {"",""};
+if (reqsVerificationStates != "") {
+    reqsVerificationSummaryState = CalculateReqsVerificationSummaryState(reqsVerificationStates).Split('|');
+}
+
+sourceItem = ForceUpdateSourceItem (this.getInnovator(), sourceItem, reqsVerificationSummaryState[0], reqsVerificationSummaryState[1]);
+
+return this;
+}
+
+//------------
+private string CalculateReqsVerificationSummaryState(string reqsVerificationStates) {
+
+    if (reqsVerificationStates == "") {
+        return "In Review|../Images/Custom/vtInReview.svg";
+    }
+    string[] reqsVerificationStates_a = reqsVerificationStates.Split(',');
+
+    // if any state is "In Review" --> summary state = "In Review"
+    for (int i=0; i<reqsVerificationStates_a.Length; i++) {
+        if (reqsVerificationStates_a[i] == "In Review") {return "In Review|../Images/Custom/vtInReview.svg";}
+    }
+    // from here on none of the states is "In Review" ..
+    
+    // if all states are "Pass" --> summary state = "Pass"
+    bool breakLoop = false;
+    for (int i=0; i<reqsVerificationStates_a.Length && !breakLoop; i++) {
+        if (reqsVerificationStates_a[i] != "Pass") {breakLoop = true;}
+    }
+    if (!breakLoop) { return "Pass|../Images/Custom/vtPass.svg"; }
+
+    // if all states are "Fail" --> summary state = "Fail"
+    breakLoop = false;
+    for (int i=0; i<reqsVerificationStates_a.Length && !breakLoop; i++) {
+        if (reqsVerificationStates_a[i] != "Fail") {breakLoop = true;}
+    }
+    if (!breakLoop) { return "Fail|../Images/Custom/vtFail.svg"; }
+    
+    // at this point some states are "Fail" and some states are "Pass"
+    //if any state is "Fail" and some are "Pass" --> summary state = "Partial Pass"
+    return "Partial Pass|../Images/Custom/vtPartialPass.svg";
+}
+
+// -----
+private Item ForceUpdateSourceItem (Innovator inn, Item sourceItem, string reqs_verification_status, string reqs_verification_image) {
+
+    if (sourceItem.getProperty("locked_by_id","") == "") {
+        sourceItem.setAction("edit");
+    }
+    else {
+        sourceItem.setAction("update");
+    }
+    sourceItem.setProperty("reqs_verification_status",reqs_verification_status);
+    sourceItem.setProperty("reqs_verification_image",reqs_verification_image);
+
+    // do update as super user
+    var adminIdentity = Aras.Server.Security.Identity.GetByName("Super User");
+    bool PermissionWasSet = Aras.Server.Security.Permissions.GrantIdentity(adminIdentity);
+    
+    sourceItem = sourceItem.apply();
+    
+    if (PermissionWasSet) Aras.Server.Security.Permissions.RevokeIdentity(adminIdentity);    
+    
+    return sourceItem;
+
+
+]]></method_code>
+  <method_type>C#</method_type>
+  <name>vt_setReqVerificnStatusOnSource</name>
+ </Item>
+</AML>

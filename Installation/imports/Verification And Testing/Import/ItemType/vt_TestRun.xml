@@ -23,6 +23,50 @@
   <use_src_access>0</use_src_access>
   <name>vt_TestRun</name>
   <Relationships>
+   <Item type="DiscussionTemplate" id="F158E2C0A1474782869C7B05298BCC9E" action="add">
+    <file_selection_depth>-1</file_selection_depth>
+    <item_selection_depth>-1</item_selection_depth>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
+    <visibility_supported>1</visibility_supported>
+    <Relationships>
+     <Item type="FeedTemplate" id="477D092852EB42F98C585EDDEA3B6822" action="add">
+      <feed_type>Board</feed_type>
+      <reference>this</reference>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="F158E2C0A1474782869C7B05298BCC9E" type="DiscussionTemplate">F158E2C0A1474782869C7B05298BCC9E</source_id>
+      <Relationships>
+       <Item type="FileSelectorTemplate" id="4B4B3D710CB04E279864862780263B5A" action="add">
+        <filter>7869D76D50ED4BD4985BECB20B1102F7|50AF497B7A114235979F882CEC8EFDF6|8A85DD9A6E0346F5AE423314E3650041</filter>
+        <reference><![CDATA[vt_TestRun_Result File(viewable_file)]]></reference>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="477D092852EB42F98C585EDDEA3B6822" type="FeedTemplate">477D092852EB42F98C585EDDEA3B6822</source_id>
+        <tooltip_template xml:lang="en">File ${File:filename} from ${ItemType:label} ${Item:keyed_name}</tooltip_template>
+       </Item>
+       <Item type="FileSelectorTemplate" id="DDAAFFB126554F52B0B0D02661E5C549" action="add">
+        <filter>7869D76D50ED4BD4985BECB20B1102F7|50AF497B7A114235979F882CEC8EFDF6|8A85DD9A6E0346F5AE423314E3650041</filter>
+        <reference><![CDATA[vt_TestRun_Result File(related_id)]]></reference>
+        <sort_order>128</sort_order>
+        <source_id keyed_name="477D092852EB42F98C585EDDEA3B6822" type="FeedTemplate">477D092852EB42F98C585EDDEA3B6822</source_id>
+        <tooltip_template xml:lang="en">File ${File:filename} from ${ItemType:label} ${Item:keyed_name}</tooltip_template>
+       </Item>
+      </Relationships>
+     </Item>
+     <Item type="DiscussionTemplateView" id="B0852F8351A8421F8F4CA7352427B6F2" action="add">
+      <client>js</client>
+      <related_id keyed_name="AEB8FBE43E9647F6AF0FB75D189AEF46" type="SSVCPresentationConfiguration">
+       <Item type="SSVCPresentationConfiguration" id="AEB8FBE43E9647F6AF0FB75D189AEF46" action="add">
+        <discussion_panel_behavior>discPanelOff</discussion_panel_behavior>
+        <form_tooltip_template xml:lang="en">Form of ${ItemType:keyed_name}</form_tooltip_template>
+        <sm_template keyed_name="F1E9620C1AB3408588708B68E18D51DE" type="SecureMessageViewTemplate">F1E9620C1AB3408588708B68E18D51DE</sm_template>
+        <name>AEB8FBE43E9647F6AF0FB75D189AEF46</name>
+       </Item>
+      </related_id>
+      <sort_order>128</sort_order>
+      <source_id keyed_name="F158E2C0A1474782869C7B05298BCC9E" type="DiscussionTemplate">F158E2C0A1474782869C7B05298BCC9E</source_id>
+     </Item>
+    </Relationships>
+   </Item>
    <Item type="Property" id="31526AE7212E4C93BE737C12BC4D8279" action="add">
     <column_alignment>left</column_alignment>
     <column_width>150</column_width>
@@ -96,6 +140,74 @@
     <track_history>0</track_history>
     <name>description</name>
    </Item>
+   <Item type="Property" id="641783CCD2D34140BAD2EDFFCF984007" action="add">
+    <column_alignment>center</column_alignment>
+    <column_width>80</column_width>
+    <data_source>
+     <Item type="Property" action="get" select="id">
+      <name>design_representation_id</name>
+      <source_id>649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
+     </Item>
+    </data_source>
+    <data_type>foreign</data_type>
+    <foreign_property>
+     <Item type="Property" action="get" select="id">
+      <keyed_name>is_current</keyed_name>
+      <source_id>
+       <Item type="ItemType" action="get" select="id">
+        <name>sm_DesignRepresentation</name>
+       </Item>
+      </source_id>
+     </Item>
+    </foreign_property>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Design Curr</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>103</sort_order>
+    <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
+    <track_history>0</track_history>
+    <name>design_curr</name>
+   </Item>
+   <Item type="Property" id="19B3420B0C9C46BBBCE4A9179C96A006" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>80</column_width>
+    <data_source>
+     <Item type="Property" action="get" select="id">
+      <name>design_representation_id</name>
+      <source_id>649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
+     </Item>
+    </data_source>
+    <data_type>foreign</data_type>
+    <foreign_property>
+     <Item type="Property" action="get" select="id">
+      <keyed_name>generation</keyed_name>
+      <source_id>
+       <Item type="ItemType" action="get" select="id">
+        <name>sm_DesignRepresentation</name>
+       </Item>
+      </source_id>
+     </Item>
+    </foreign_property>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Design Gen</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>102</sort_order>
+    <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
+    <track_history>0</track_history>
+    <name>design_gen</name>
+   </Item>
    <Item type="Property" id="7FF8FB012FF04A0ABF6DA5DCA4EBCFC9" action="add">
     <column_alignment>left</column_alignment>
     <column_width>120</column_width>
@@ -107,7 +219,7 @@
     <is_keyed>0</is_keyed>
     <is_multi_valued>0</is_multi_valued>
     <is_required>0</is_required>
-    <item_behavior>float</item_behavior>
+    <item_behavior>hard_fixed</item_behavior>
     <label xml:lang="en">Design Representation</label>
     <range_inclusive>0</range_inclusive>
     <readonly>0</readonly>
@@ -115,6 +227,40 @@
     <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
     <track_history>0</track_history>
     <name>design_representation_id</name>
+   </Item>
+   <Item type="Property" id="6E4A48C0DF0F499E9FA4558B7FC00AD6" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>80</column_width>
+    <data_source>
+     <Item type="Property" action="get" select="id">
+      <name>design_representation_id</name>
+      <source_id>649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
+     </Item>
+    </data_source>
+    <data_type>foreign</data_type>
+    <foreign_property>
+     <Item type="Property" action="get" select="id">
+      <keyed_name>major_rev</keyed_name>
+      <source_id>
+       <Item type="ItemType" action="get" select="id">
+        <name>sm_DesignRepresentation</name>
+       </Item>
+      </source_id>
+     </Item>
+    </foreign_property>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Design Rev</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>0</readonly>
+    <sort_order>101</sort_order>
+    <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
+    <track_history>0</track_history>
+    <name>design_rev</name>
    </Item>
    <Item type="Property" id="6AD656FF74284A4C9F2CC260847B671F" action="add">
     <column_alignment>left</column_alignment>
@@ -131,7 +277,7 @@
     <label xml:lang="en">Physical Part</label>
     <range_inclusive>0</range_inclusive>
     <readonly>0</readonly>
-    <sort_order>101</sort_order>
+    <sort_order>110</sort_order>
     <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
     <track_history>0</track_history>
     <name>physical_part_id</name>
@@ -165,10 +311,47 @@
     <label xml:lang="en">Physical Part SerNo</label>
     <range_inclusive>0</range_inclusive>
     <readonly>0</readonly>
-    <sort_order>102</sort_order>
+    <sort_order>111</sort_order>
     <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
     <track_history>0</track_history>
     <name>physical_part_serno</name>
+   </Item>
+   <Item type="Property" id="FA1F12FD87BE4CE480839CB8D3F0ACFC" action="add">
+    <column_alignment>center</column_alignment>
+    <column_width>100</column_width>
+    <data_type>image</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Reqs Verification</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>1</readonly>
+    <sort_order>24</sort_order>
+    <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
+    <track_history>0</track_history>
+    <name>reqs_verification_image</name>
+   </Item>
+   <Item type="Property" id="1912DABD794143E0B9149492A906E8AD" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <data_type>string</data_type>
+    <is_hidden>0</is_hidden>
+    <is_hidden2>0</is_hidden2>
+    <is_indexed>0</is_indexed>
+    <is_keyed>0</is_keyed>
+    <is_multi_valued>0</is_multi_valued>
+    <is_required>0</is_required>
+    <label xml:lang="en">Reqs Verification Status</label>
+    <range_inclusive>0</range_inclusive>
+    <readonly>1</readonly>
+    <sort_order>25</sort_order>
+    <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
+    <stored_length>32</stored_length>
+    <track_history>0</track_history>
+    <name>reqs_verification_status</name>
    </Item>
    <Item type="Property" id="EE07FF7ADFD444B9B3060ED9B8BC2F4E" action="add">
     <column_alignment>left</column_alignment>
@@ -215,7 +398,7 @@
       <name>World</name>
      </Item>
     </role>
-    <show_ssvc>0</show_ssvc>
+    <show_ssvc>1</show_ssvc>
     <sort_order>128</sort_order>
     <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
     <type>default</type>
@@ -232,6 +415,18 @@
     <sort_order>256</sort_order>
     <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
    </Item>
+   <Item type="Server Event" id="CAAD2275CF4D47DB9F9F084951A3FC57" action="add">
+    <event_version>version_1</event_version>
+    <is_required>0</is_required>
+    <related_id keyed_name="vt_SetCurrUserToItemOwner" type="Method">
+     <Item type="Method" action="get" select="id">
+      <name>vt_SetCurrUserToItemOwner</name>
+     </Item>
+    </related_id>
+    <server_event>onBeforeAdd</server_event>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
+   </Item>
    <Item type="Server Event" id="0B0A2AB194E247E4A38FFB704106DB0F" action="add">
     <event_version>version_1</event_version>
     <is_required>0</is_required>
@@ -242,6 +437,21 @@
     </related_id>
     <server_event>onBeforePromote</server_event>
     <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
+   </Item>
+   <Item type="Item Action" id="860AC5A549B945A393697FF64772D93A" action="add">
+    <related_id keyed_name="vt_ReRun_TestRun" type="Action">15AD7FD47F3447FB8942565ACE9A5922</related_id>
+    <sort_order>10</sort_order>
+    <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
+   </Item>
+   <Item type="Item Action" id="EB1E2A9C4E995B6DFCA86F91283C4734" action="add">
+    <related_id keyed_name="Change Discussion Definition" type="Action">5B155B40AD8F405D812EF95BC5848214</related_id>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
+   </Item>
+   <Item type="Item Action" id="113CD030B2C64F63AA093A6DCF06BE4C" action="add">
+    <related_id keyed_name="VC_AddItemsToBookmarks" type="Action">FD4D2BE9E2B14919BF1973842A556AFD</related_id>
+    <sort_order>256</sort_order>
     <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
    </Item>
    <Item type="ItemType Life Cycle" id="94BFBD300FA544518AD3AE43F0AEB908" action="add">
@@ -284,6 +494,7 @@
     <is_required>0</is_required>
     <keyed_name_order>1</keyed_name_order>
     <label xml:lang="en">Number</label>
+    <order_by>1</order_by>
     <range_inclusive>0</range_inclusive>
     <readonly>0</readonly>
     <sort_order>10</sort_order>
@@ -306,7 +517,7 @@
     <readonly>0</readonly>
     <sort_order>20</sort_order>
     <source_id keyed_name="vt_TestRun" type="ItemType" name="vt_TestRun">649075A9EDBC4D55ACFF015E8D98A7A6</source_id>
-    <stored_length>64</stored_length>
+    <stored_length>128</stored_length>
     <track_history>0</track_history>
     <name>name</name>
    </Item>
@@ -339,7 +550,7 @@
     <is_keyed>0</is_keyed>
     <is_multi_valued>0</is_multi_valued>
     <is_required>0</is_required>
-    <label xml:lang="en">Repeats</label>
+    <label xml:lang="en">Iteration</label>
     <range_inclusive>0</range_inclusive>
     <readonly>1</readonly>
     <sort_order>12</sort_order>

@@ -1,0 +1,27 @@
+﻿<AML>
+ <Item type="Method" id="944850E795B040ED9D735252F10BB8A9" action="add">
+  <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
+  <method_code><![CDATA[// can be used on any Item Type - Server Side . OnBeforeAdd
+/// there is also another client side method for this . 
+/// (which will set the value first so server side method will not override user's settings
+
+/// will Set the owned_by_id To the current user's id (creator), if not set already
+//System.Diagnostics.Debugger.Break();
+String owner = this.getProperty("owned_by_id","");
+
+if (owner == "") {
+  String aliasId = this.getInnovator().getUserAliases();
+  if (aliasId != "") {
+    aliasId = aliasId.Substring(0,32);
+    Item AliasItem = this.getInnovator().getItemById("Identity", aliasId);
+    if (AliasItem.getItemCount() == 1) {
+      this.setProperty("owned_by_id", AliasItem.getAttribute("id"));
+      this.setPropertyAttribute("owned_by_id", "keyed_name", AliasItem.getProperty("keyed_name", ""));
+	}
+  }
+}
+return this;]]></method_code>
+  <method_type>C#</method_type>
+  <name>vt_SetCurrUserToItemOwner</name>
+ </Item>
+</AML>

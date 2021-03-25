@@ -2,22 +2,36 @@
  <Item type="Method" id="F9235974BDA843048FC7FE93A7A8F172" action="add">
   <execution_allowed_to keyed_name="World" type="Identity">A73B655731924CD0B027E4F4D5FCC0A9</execution_allowed_to>
   <method_code><![CDATA[//debugger;
+if (document.isEditMode) {
+    setFieldVisibility("current_state_image", false);
+    setFieldVisibility("reqs_verification_image", false);
+}
+
 var classification = document.thisItem.getProperty("classification","");
 var state = document.thisItem.getProperty("state","");
 
 switch (classification) {
     case "Design Validation":
         setFieldVisibility("design_representation_id", true);
+        setFieldVisibility("design_rev", true);
+        setFieldVisibility("design_gen", true);
+        setFieldVisibility("design_curr", true);
         setFieldVisibility("physical_part_id", false);
         setFieldVisibility("physical_part_serno", false);
         break;
     case "Physical Testing":
         setFieldVisibility("design_representation_id", false);
+        setFieldVisibility("design_rev", false);
+        setFieldVisibility("design_gen", false);
+        setFieldVisibility("design_curr", false);
         setFieldVisibility("physical_part_id", true);
         setFieldVisibility("physical_part_serno", true);
         break;
     default:
         setFieldVisibility("design_representation_id", false);
+        setFieldVisibility("design_rev", false);
+        setFieldVisibility("design_gen", false);
+        setFieldVisibility("design_curr", false);
         setFieldVisibility("physical_part_id", false);
         setFieldVisibility("physical_part_serno", false);
         break;
@@ -26,17 +40,17 @@ switch (classification) {
 switch (state) {
     case "Planning":
         setFieldVisibility("btn_start_test_run", true);
-        setFieldVisibility("btn_test_passed", false);
+        setFieldVisibility("btn_test_complete", false);
         setFieldVisibility("btn_test_failed", false);
         break;
     case "Running":
         setFieldVisibility("btn_start_test_run", false);
-        setFieldVisibility("btn_test_passed", true);
+        setFieldVisibility("btn_test_complete", true);
         setFieldVisibility("btn_test_failed", true);
         break;
     default:
         setFieldVisibility("btn_start_test_run", false);
-        setFieldVisibility("btn_test_passed", false);
+        setFieldVisibility("btn_test_complete", false);
         setFieldVisibility("btn_test_failed", false);
         break;
 }

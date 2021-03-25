@@ -1,0 +1,112 @@
+﻿<AML>
+ <Item type="ItemType" id="55515617CB224C90AB5A9DAC0F061C2A" action="add">
+  <name>re_Requirement</name>
+  <Relationships>
+   <Item type="Property" id="1DDA7333A27846389EA0939EE9DC94FA" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>160</column_width>
+    <sort_order>128</sort_order>
+    <source_id keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</source_id>
+    <name>item_number</name>
+   </Item>
+   <Item type="Property" id="FE7740B4AEED4F3580B4AC595D6840F5" action="add">
+    <column_width>120</column_width>
+    <sort_order>600</sort_order>
+    <source_id keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</source_id>
+    <name>req_category</name>
+   </Item>
+   <Item type="Property" id="DE8258C905294CABA9075C67EE199822" action="add">
+    <column_width>100</column_width>
+    <sort_order>4224</sort_order>
+    <source_id keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</source_id>
+    <name>req_complexity</name>
+   </Item>
+   <Item type="Property" id="0A9BFC44FD364729A54A972F6E2D8239" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <sort_order>3584</sort_order>
+    <source_id keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</source_id>
+    <name>req_group</name>
+   </Item>
+   <Item type="Property" id="2A1431BA304C4834A233BDD0D9E6ACA9" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>80</column_width>
+    <sort_order>4352</sort_order>
+    <source_id keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</source_id>
+    <name>req_priority</name>
+   </Item>
+   <Item type="Property" id="1D674D56B7944C34B01B51216F0C616C" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>80</column_width>
+    <sort_order>4608</sort_order>
+    <source_id keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</source_id>
+    <name>req_risk</name>
+   </Item>
+   <Item type="Property" id="ED171498FE6B451AB8EB1E1C8C619410" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>100</column_width>
+    <sort_order>3712</sort_order>
+    <source_id keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</source_id>
+    <name>req_tier</name>
+   </Item>
+   <Item type="Property" id="44BECD8DF24D4B4790F00705701B5E92" action="add">
+    <column_alignment>left</column_alignment>
+    <column_width>250</column_width>
+    <sort_order>256</sort_order>
+    <source_id keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</source_id>
+    <name>req_title</name>
+   </Item>
+   <Item type="Item Action" id="B00F0503726044498EE356F5062D298F" action="add">
+    <related_id keyed_name="re_CreateNewRevision" type="Action">D3E02D24B05F4E53846F1DCE7E3D2173</related_id>
+    <sort_order>512</sort_order>
+    <source_id keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</source_id>
+   </Item>
+  </Relationships>
+ </Item>
+ <Item type="ItemType" id="55515617CB224C90AB5A9DAC0F061C2A" action="edit">
+  <Relationships>
+   <Item type="Property" action="edit" where="source_id='55515617CB224C90AB5A9DAC0F061C2A' and name='classification'">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <sort_order>384</sort_order>
+    <source_id keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</source_id>
+    <name>classification</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='55515617CB224C90AB5A9DAC0F061C2A' and name='generation'">
+    <column_alignment>left</column_alignment>
+    <column_width>50</column_width>
+    <sort_order>311</sort_order>
+    <source_id keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</source_id>
+    <name>generation</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='55515617CB224C90AB5A9DAC0F061C2A' and name='major_rev'">
+    <column_alignment>left</column_alignment>
+    <column_width>50</column_width>
+    <sort_order>310</sort_order>
+    <source_id keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</source_id>
+    <name>major_rev</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='55515617CB224C90AB5A9DAC0F061C2A' and name='managed_by_id'">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <sort_order>320</sort_order>
+    <source_id keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</source_id>
+    <name>managed_by_id</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='55515617CB224C90AB5A9DAC0F061C2A' and name='owned_by_id'">
+    <column_alignment>left</column_alignment>
+    <column_width>120</column_width>
+    <sort_order>768</sort_order>
+    <source_id keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</source_id>
+    <name>owned_by_id</name>
+   </Item>
+   <Item type="Property" action="edit" where="source_id='55515617CB224C90AB5A9DAC0F061C2A' and name='state'">
+    <column_alignment>left</column_alignment>
+    <column_width>100</column_width>
+    <sort_order>300</sort_order>
+    <source_id keyed_name="re_Requirement" type="ItemType" name="re_Requirement">55515617CB224C90AB5A9DAC0F061C2A</source_id>
+    <name>state</name>
+   </Item>
+  </Relationships>
+ </Item>
+</AML>
